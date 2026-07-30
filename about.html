@@ -1,0 +1,3389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly // Next-Gen Software Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🌟 MODERN PRELOADER OVERLAY -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <!-- Animated Vector Logo Matrix -->
+            <div class="vector-logo-container">
+                <svg class="glow-vector" viewBox="0 0 100 100" xmlns="http://w3.org">
+                    <!-- Outer Ring Path -->
+                    <circle class="ring-track" cx="50" cy="50" r="40" />
+                    <circle class="ring-pulse" cx="50" cy="50" r="40" />
+                    <!-- Inner Core Tech Node Vector -->
+                    <polygon class="core-node" points="50,28 69,39 69,61 50,72 31,61 31,39" />
+                </svg>
+            </div>
+            
+            <!-- Branding Text Matrix -->
+            <div class="loading-text-group">
+                <h2 class="loading-brand">Stackly<span>Nexus</span></h2>
+                <p class="loading-status">Initializing Core Modules...</p>
+            </div>
+
+            <!-- Sleek Linear Progress Track -->
+            <div class="progress-bar-container">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const preloader = document.getElementById("preloader");
+    const progressFill = document.querySelector(".progress-fill");
+    const appContent = document.getElementById("app-content");
+    const statusText = document.querySelector(".loading-status");
+
+    // Dynamic loading text states array
+    const trackingPhrases = [
+        "Initializing core modules...",
+        "Establishing secure connection layers...",
+        "Optimizing cloud pipeline paths...",
+        "Rendering visualization grids..."
+    ];
+
+    let currentProgress = 0;
+    let phraseIndex = 0;
+
+    // 1. Loading Sequence Pipeline Simulation
+    const preloaderInterval = setInterval(() => {
+        // Increment loading metrics non-linearly for real-world simulation feel
+        currentProgress += Math.floor(Math.random() * 12) + 4;
+        
+        if (currentProgress >= 100) {
+            currentProgress = 100;
+            clearInterval(preloaderInterval);
+            terminatePreloader();
+        }
+
+        // Apply progressive width to CSS element
+        progressFill.style.width = `${currentProgress}%`;
+
+        // Cycle through dynamic feedback states contextually
+        if (currentProgress > (phraseIndex + 1) * 25 && phraseIndex < trackingPhrases.length - 1) {
+            phraseIndex++;
+            statusText.innerText = trackingPhrases[phraseIndex];
+        }
+    }, 500);
+
+    // 2. Clear preloader overlay smoothly out of user focus
+    function terminatePreloader() {
+        statusText.innerText = "Ready.";
+        
+        setTimeout(() => {
+            // Apply layout exit shifts
+            preloader.classList.add("preloader-hidden");
+            
+            // Bring primary layout container cleanly into vision
+            if(appContent) {
+                appContent.classList.remove("content-hidden");
+                appContent.classList.add("content-visible");
+            }
+        }, 1000);
+    }
+});
+
+   </script>
+
+  <!-- 🌟 FIXED, CENTER-ALIGNED HEADER MODULE -->
+<header class="navbar-fixed">
+    <div class="nav-container">
+        
+        <!-- Brand Logo Unit (Clicking refreshes the active viewport window) -->
+        <a href="javascript:void(0);" class="brand-logo" onclick="window.location.reload();" aria-label="StacklyNexus Home">
+            <!-- Scalable SVG tech vector node avoids broken network image paths -->
+            <svg class="logo-img" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span class="logo-text">Stackly<span>Nexus</span></span>
+        </a>
+
+        <!-- Responsive Mobile Drawer Toggle -->
+        <button class="hamburger-trigger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </button>
+
+        <!-- Desktop and Mobile Menu Control Hub -->
+        <nav class="nav-menu-wrapper">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-item ">Home</a></li>
+                <li><a href="about.html" class="nav-item active">About Us</a></li>
+                <li><a href="services.html" class="nav-item">Services</a></li>
+                <li><a href="blogs.html" class="nav-item">Blogs</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Aligned Authentication Container -->
+        <div class="nav-auth-panel">
+            <a href="login.html" class="btn-auth">Login</a>
+        </div>
+
+    </div>
+</header>
+
+
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburgerTrigger = document.querySelector(".hamburger-trigger");
+    const navMenuWrapper = document.querySelector(".nav-menu-wrapper");
+    const navLinks = document.querySelectorAll(".nav-item");
+    const authPanel = document.querySelector(".nav-auth-panel");
+
+    // 1. Mobile Drawer Toggle Control Mechanics
+    const toggleMobileMenu = () => {
+        const isOpen = navMenuWrapper.classList.toggle("drawer-open");
+        hamburgerTrigger.classList.toggle("hamburger-active");
+        hamburgerTrigger.setAttribute("aria-expanded", isOpen);
+        
+        if (isOpen) {
+            // Append auth logic internally inside layout drawer on tiny viewports
+            navMenuWrapper.appendChild(authPanel);
+            document.body.style.overflow = "hidden"; // Freeze underlying scroll tracks
+        } else {
+            // Restore auth node cleanly back onto core grid setup track line
+            document.querySelector(".nav-container").appendChild(authPanel);
+            document.body.style.overflow = "";
+        }
+    };
+
+    hamburgerTrigger.addEventListener("click", toggleMobileMenu);
+
+    // 2. Click Navigation and Class State Refinement
+    navLinks.forEach(item => {
+        item.addEventListener("click", function() {
+            // Clear prior active classes
+            document.querySelector(".nav-item.active")?.classList.remove("active");
+            
+            // Apply fresh current active rule assignments
+            this.classList.add("active");
+
+            // Fast close drawer if screen size triggers a click action inside responsive layout viewports
+            if (navMenuWrapper.classList.contains("drawer-open")) {
+                toggleMobileMenu();
+            }
+        });
+    });
+});
+
+
+</script>
+
+<!-- 🌟 ULTRA-MODERN ABOUT HERO SUBSECTION LAYER -->
+<section id="about-hero" class="ab-hero-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="ab-hero-bg-layer">
+        <img src="./Assests/hand and robot - ai.webp" alt="Cyber security tech grid layout background spatial map" class="ab-hero-mesh-img">
+        <div class="ab-hero-glow-orb spectrum-cyan"></div>
+        <div class="ab-hero-glow-orb spectrum-indigo"></div>
+    </div>
+
+    <div class="ab-hero-container">
+        
+        <!-- Left Side Column Text & Interactive Mission Core -->
+        <div class="ab-hero-text-block">
+            <div class="ab-hero-badge">
+                <span class="beacon-pulse-dot"></span>
+                <span>Our Core Blueprint</span>
+            </div>
+            
+            <h1 class="ab-hero-main-title">
+                Pioneering the Next <br>
+                <span class="ab-neon-gradient-text">Computational Layer</span>
+            </h1>
+            
+            <p class="ab-hero-subtitle-desc">
+                We are a distributed collective of infrastructure architects, data scientists, and systems engineers obsessed with reducing pipeline latency. StacklyNexus builds decentralized automation engines that empower high-growth development operations globally.
+            </p>
+            
+            <!-- Quick Telemetry Specs Row Inside Text Block -->
+            <div class="ab-mini-telemetry-row">
+                <div class="telemetry-item">
+                    <h4>2024</h4>
+                    <p>Genesis Launch</p>
+                </div>
+                <div class="telemetry-item">
+                    <h4>15+</h4>
+                    <p>Global Edge Hubs</p>
+                </div>
+                <div class="telemetry-item">
+                    <h4>99.99%</h4>
+                    <p>Cluster Integrity</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Column Visual Showcase Asset Box -->
+        <div class="ab-hero-showcase-block">
+            <div class="ab-showcase-backdrop-glow"></div>
+            <div class="ab-showcase-hull-frame">
+                <!-- High-contrast architectural preview image serves as the graphic centerpiece -->
+                <img src="./Assests/network visualization.webp" alt="Global team collaborative network telemetry visualization chart" class="ab-showcase-main-img">
+                
+                <!-- Floating Dashboard Telemetry Card Mockup Overlay -->
+                <div class="ab-floating-card metric-overlay-tl">
+                    <span class="metric-pulse-icon">🔮</span>
+                    <div class="metric-content-box">
+                        <p class="metric-node-label">Network Protocol</p>
+                        <h4 class="metric-node-val">Zero-Trust Active</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 ABOUT PAGE HERO SECTION ENGINE */
+.ab-hero-frame {
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13; /* Seamless midnight tech base canvas backing color */
+    overflow: hidden;
+}
+
+/* Background Graphical Layer Tracks mapping */
+.ab-hero-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ab-hero-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1; /* Highly subtle texture background mapping */
+    filter: saturate(1.4) contrast(1.1) hue-rotate(180deg);
+}
+
+/* Layered Radial Ambient Light Blur Patches */
+.ab-hero-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.12;
+    mix-blend-mode: screen;
+}
+
+.spectrum-cyan {
+    top: -10%;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+}
+
+.spectrum-indigo {
+    bottom: -5%;
+    left: 5%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+}
+
+/* Two-Column Responsive Presentation Grid Layout Setup */
+.ab-hero-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 4.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Column Descriptive Typography Elements */
+.ab-hero-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ab-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #22d3ee;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.05);
+}
+
+.beacon-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #06b6d4;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #06b6d4;
+    animation: beaconGlowPulse 1.5s infinite alternate;
+}
+
+.ab-hero-main-title {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.25px;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+}
+
+.ab-neon-gradient-text {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.25));
+}
+
+.ab-hero-subtitle-desc {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: whitesmoke; /* Replaces text-muted field color tokens for deep theme reading contrast */
+    max-width: 620px;
+    margin: 0 0 2.5rem 0;
+}
+
+/* Dynamic Inline Technical Metrics Micro Grid */
+.ab-mini-telemetry-row {
+    display: flex;
+    gap: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.75rem;
+    width: 100%;
+}
+
+.telemetry-item h4 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.telemetry-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+/* Right Column Visual Media Asset Blocks */
+.ab-hero-showcase-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ab-showcase-backdrop-glow {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ab-showcase-hull-frame {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    z-index: 2;
+    animation: floatingOscillation 6s ease-in-out infinite;
+}
+
+.ab-showcase-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    filter: brightness(0.8) saturate(0.95) contrast(1.05);
+    transition: all 0.5s ease;
+}
+
+/* Floating HUD Dashboard Component Card element */
+.ab-floating-card {
+    position: absolute;
+    background-color: rgba(19, 26, 38, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.metric-overlay-tl {
+    top: 12%;
+    left: -20px;
+}
+
+.metric-pulse-icon {
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 4px #a855f7);
+}
+
+.metric-node-label {
+    margin: 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: whitesmoke;
+    letter-spacing: 0.5px;
+}
+
+.metric-node-val {
+    margin: 2px 0 0 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+
+.ab-hero-container:hover .telemetry-item h4 {
+    color: #22d3ee;
+    text-shadow: 0 0 12px rgba(34, 211, 238, 0.4);
+}
+
+.ab-showcase-hull-frame:hover .ab-showcase-main-img {
+    filter: brightness(0.95) saturate(1.1) contrast(1.1);
+    border-color: rgba(34, 211, 238, 0.3);
+    box-shadow: 0 25px 45px rgba(34, 211, 238, 0.15);
+}
+
+.ab-showcase-hull-frame:hover .ab-floating-card {
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 12px 30px rgba(168, 85, 247, 0.2);
+}
+
+/* 🌀 KEYFRAME TRANSFORMATION LOOP RIGS */
+@keyframes beaconGlowPulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.25); opacity: 1; filter: drop-shadow(0 0 5px #06b6d4); }
+}
+
+@keyframes floatingOscillation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .ab-hero-main-title { font-size: 3rem; }
+    .ab-hero-container { gap: 2.5rem; }
+}
+
+@media (max-width: 900px) {
+    .ab-hero-container {
+        grid-template-columns: 1fr; /* Stacks column grids lineally on tablet and small viewports */
+        text-align: center;
+        gap: 4rem;
+    }
+    .ab-hero-text-block { align-items: center; }
+    .ab-mini-telemetry-row { justify-content: center; gap: 2.5rem; }
+    .metric-overlay-tl { left: 10px; top: 10px; } /* Safety adjustment zone margins inside smaller frameworks */
+}
+
+@media (max-width: 480px) {
+    .ab-hero-main-title { font-size: 2.25rem; }
+    .ab-mini-telemetry-row { flex-direction: column; gap: 1.5rem; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Tracker Animation for About Hero Section Content Hub
+    const abHeroTextContainer = document.querySelector(".ab-hero-text-block");
+    const abHeroVisualContainer = document.querySelector(".ab-hero-showcase-block");
+
+    if (abHeroTextContainer && abHeroVisualContainer) {
+        // Configure safe initialization hidden metrics parameters
+        abHeroTextContainer.style.opacity = "0";
+        abHeroTextContainer.style.transform = "translateY(20px)";
+        abHeroTextContainer.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        abHeroVisualContainer.style.opacity = "0";
+        abHeroVisualContainer.style.transform = "translateY(25px)";
+        abHeroVisualContainer.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        // Execute rapid layout activation immediately on DOM Mount loading phases
+        setTimeout(() => {
+            abHeroTextContainer.style.opacity = "1";
+            abHeroTextContainer.style.transform = "translateY(0)";
+            
+            abHeroVisualContainer.style.opacity = "1";
+            abHeroVisualContainer.style.transform = "translateY(0)";
+        }, 300);
+    }
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH "OUR TEAM" ENGINEERING GRID COMPONENT -->
+<section id="engineering-team" class="team-frame">
+    
+    <!-- Background Canvas Layer Architecture -->
+    <div class="team-bg-layer">
+        <img src="https://unsplash.com" alt="Technical network node layout background grid" class="team-mesh-img">
+        <div class="team-ambient-glow neon-cyan-glow"></div>
+    </div>
+
+    <div class="team-container">
+        
+        <!-- Section Title & Meta Header Box -->
+        <div class="team-header-block">
+            <span class="team-badge">Operative Matrix</span>
+            <h2 class="team-main-title">The Architects Behind <br><span>The Computational Layer</span></h2>
+            <p class="team-subtitle-desc">Meet the core engineering team drafting decentralized cluster blueprints and managing automated real-time optimization pipelines globally.</p>
+        </div>
+
+        <!-- 3-Column Adaptable Responsive Grid System -->
+        <div class="team-grid-track">
+            
+            <!-- Team Member Card 01 -->
+            <div class="team-card-node">
+                <div class="team-card-inner">
+                    <div class="member-image-hull">
+                        <img src="https://unsplash.com" alt="Dr. Evelyn Vance Principal Infrastructure Architect" class="member-main-img">
+                        <!-- Neon status telemetry tag overlay -->
+                        <span class="member-status-indicator">Active Node</span>
+                    </div>
+                    <div class="member-meta-details">
+                        <h3 class="member-name">Dr. Evelyn Vance</h3>
+                        <p class="member-role">Principal Systems Architect</p>
+                        <p class="member-bio">Former kernel engineer specializing in decentralized consensus metrics and sub-millisecond edge routing loops.</p>
+                        
+                        <!-- Floating Micro Code Badge -->
+                        <div class="member-tech-tag">TLS 1.3 / Rust</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member Card 02 -->
+            <div class="team-card-node">
+                <div class="team-card-inner">
+                    <div class="member-image-hull">
+                        <img src="https://unsplash.com" alt="Arjun Raghav Lead Cryptographer" class="member-main-img">
+                        <span class="member-status-indicator">Active Node</span>
+                    </div>
+                    <div class="member-meta-details">
+                        <h3 class="member-name">Arjun Raghav</h3>
+                        <p class="member-role">Lead Network Cryptographer</p>
+                        <p class="member-bio">Drafts advanced quantum-resistant state cryptography layers and secure continuous audit proxy perimeters.</p>
+                        
+                        <div class="member-tech-tag">Zero-Trust / WebAuthn</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member Card 03 -->
+            <div class="team-card-node">
+                <div class="team-card-inner">
+                    <div class="member-image-hull">
+                        <img src="https://unsplash.com" alt="Liam Sterling Director of Automation Pipelines" class="member-main-img">
+                        <span class="member-status-indicator">Active Node</span>
+                    </div>
+                    <div class="member-meta-details">
+                        <h3 class="member-name">Liam Sterling</h3>
+                        <p class="member-role">VP of Orchestration Pipelines</p>
+                        <p class="member-bio">Manages telemetry pattern scanners and predictive AI engines designed to isolate runtime cluster logic bottlenecks.</p>
+                        
+                        <div class="member-tech-tag">AI-Telemetry / Go</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 HIGH-TECH TEAM GRID SECTION CORE ENGINE */
+.team-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #090d1a; /* Synchronized depth layer pattern matching the system flow */
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic */
+.team-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.team-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Soft subtle background layout lines footprint */
+    filter: saturate(1.5) contrast(1.1) hue-rotate(180deg);
+}
+
+.team-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.1;
+    width: 550px;
+    height: 550px;
+}
+
+.neon-cyan-glow {
+    bottom: -15%;
+    right: -10%;
+    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+}
+
+/* Core Presentation Layout Grid Setup */
+.team-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Header Component Configuration Details */
+.team-header-block {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.team-badge {
+    display: inline-block;
+    background-color: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: #22d3ee;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.team-header-block h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.team-header-block h2 span {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25));
+}
+
+.team-subtitle-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 3-Column Adaptable Responsive Grid System Track */
+.team-grid-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* High-Tech Grid Card Node Box */
+.team-card-node {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(19, 26, 38, 0.4);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+/* Outer Border Track Line Engine */
+.team-card-node::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.team-card-inner {
+    padding: 2.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Image Containment Mask & HUD Indicators Mapping */
+.member-image-hull {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 1.5rem;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.member-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(40%) contrast(1.05) brightness(0.9);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.member-status-indicator {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(11, 15, 25, 0.9);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    color: #22d3ee;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.15rem 0.6rem;
+    border-radius: 100px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Metadata Profile Details Groupings */
+.member-meta-details {
+    width: 100%;
+}
+
+.member-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.member-role {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #22d3ee;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-bio {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: whitesmoke; /* Whitesmoke color configuration layer replaces dark text-muted fields */
+    margin: 0 0 1.5rem 0;
+    min-height: 70px; /* Aligns card nodes neatly by preserving vertical height bounds */
+}
+
+/* Dynamic Inline Technical Code Tag */
+.member-tech-tag {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: whitesmoke;
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.team-card-node:hover {
+    transform: translateY(-5px);
+    background-color: rgba(19, 26, 38, 0.75);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 30px rgba(6, 182, 212, 0.1);
+}
+
+/* Morph outer border properties smoothly into an active neon path */
+.team-card-node:hover::before {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+}
+
+.team-card-node:hover .member-image-hull {
+    border-color: #22d3ee;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.35);
+}
+
+.team-card-node:hover .member-main-img {
+    filter: grayscale(0%) contrast(1.1) brightness(1);
+    transform: scale(1.02);
+}
+
+.team-card-node:hover .member-status-indicator {
+    background-color: #22d3ee;
+    color: #070a13;
+    box-shadow: 0 0 12px #22d3ee;
+    border-color: #22d3ee;
+}
+
+.team-card-node:hover .member-name {
+    color: #22d3ee;
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
+
+.team-card-node:hover .member-tech-tag {
+    background-color: rgba(34, 211, 238, 0.08);
+    border-color: rgba(34, 211, 238, 0.3);
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.15);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 768px) {
+    .team-header-block h2 {
+        font-size: 2rem;
+    }
+    .team-grid-track {
+        grid-template-columns: 1fr; /* Stacks column sets vertically on tablet and smaller screen viewports */
+    }
+    .team-card-inner {
+        padding: 2rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Animation Logic for Team Member Node Cards
+    const operationalTeamCards = document.querySelectorAll(".team-card-node");
+    
+    operationalTeamCards.forEach((card, pos) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease";
+        card.style.transitionDelay = `${pos * 100}ms`; // Cascading staggered reveal entries
+    });
+
+    const activeTeamObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                activeTeamObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -30px 0px"
+    });
+
+    operationalTeamCards.forEach(card => activeTeamObserver.observe(card));
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH COMPANY TIMELINE & MILESTONE COMPONENT -->
+<section id="company-timeline" class="timeline-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="timeline-bg-layer">
+        <img src="./Assests/network visualization.webp" alt="Cyber telemetry matrix space canvas digital trace layout" class="timeline-mesh-img">
+        <div class="timeline-ambient-glow amethyst-blur"></div>
+    </div>
+
+    <div class="timeline-container">
+        
+        <!-- Section Title & Meta Header Box -->
+        <div class="timeline-header-block">
+            <span class="timeline-badge">Chronicle Log</span>
+            <h2 class="timeline-main-title">Our Architectural <br><span>Evolution Track</span></h2>
+            <p class="timeline-subtitle-desc">A retrospective tracking timeline of how we scaled from a private testing sandbox into a globally resilient decentralized cloud ecosystem.</p>
+        </div>
+
+        <!-- 🌟 Horizontal Side-By-Side Timeline Track -->
+        <div class="timeline-horizontal-track">
+            
+            <!-- Milestone Node 01 -->
+            <div class="timeline-node-card">
+                <div class="node-hull-inner">
+                    <div class="node-time-badge">Q1 2024</div>
+                    <div class="node-icon-box">
+                        <img src="./Assests/cluster.webp" alt="Sandbox initial cluster trace schematic illustration" class="node-graphic">
+                    </div>
+                    <h3 class="node-title">Project Genesis</h3>
+                    <p class="node-desc">Decoupled state validation layers from core processors inside a private staging laboratory sandbox framework.</p>
+                </div>
+            </div>
+
+            <!-- Milestone Node 02 -->
+            <div class="timeline-node-card active-node-card">
+                <div class="node-hull-inner">
+                    <div class="node-time-badge">Q4 2024</div>
+                    <div class="node-icon-box">
+                        <img src="./Assests/zero.webp" alt="Zero-trust perimeter cryptography testing matrix blueprint" class="node-graphic">
+                    </div>
+                    <h3 class="node-title">Mesh Node Alpha</h3>
+                    <p class="node-desc">Successfully deployed first 5 decentralized core cluster regions featuring end-to-end continuous audit proxy perimeters.</p>
+                </div>
+            </div>
+
+            <!-- Milestone Node 03 -->
+            <div class="timeline-node-card">
+                <div class="node-hull-inner">
+                    <div class="node-time-badge">Q2 2025</div>
+                    <div class="node-icon-box">
+                        <img src="./Assests/AI engine.webp" alt="AI engine prediction telemetry tracking console grid" class="node-graphic">
+                    </div>
+                    <h3 class="node-title">Autonomic Release</h3>
+                    <p class="node-desc">Integrated predictive AI telemetry models to auto-patch runtime microservice memory cascades under heavy operational scale.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 COMPANY TIMELINE MATRIX CORE ENGINE */
+.timeline-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13; /* Alternating dark theme backdrop sequence matching */
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.timeline-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.timeline-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Maintains soft subtle layout texture footprint depth visibility */
+    filter: saturate(1.4) contrast(1.1) hue-rotate(280deg);
+}
+
+.timeline-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.08;
+    width: 550px;
+    height: 550px;
+}
+
+.amethyst-blur {
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, #c084fc 0%, transparent 70%);
+}
+
+/* Core Content Presentation Container Setup */
+.timeline-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Header Component Configuration Details */
+.timeline-header-block {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.timeline-badge {
+    display: inline-block;
+    background-color: rgba(192, 132, 252, 0.1);
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    color: #c084fc;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.timeline-header-block h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.timeline-header-block h2 span {
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(192, 132, 252, 0.25));
+}
+
+.timeline-subtitle-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 🌟 FORCED HORIZONTAL PAIR GRID TRACK ROW ASSEMBLY */
+.timeline-horizontal-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces side-by-side milestones layout track */
+    gap: 2.5rem;
+    width: 100%;
+    position: relative;
+}
+
+/* Continuous connection path track baseline behind row metrics cards */
+.timeline-horizontal-track::after {
+    content: '';
+    position: absolute;
+    top: 140px; /* Aligns horizontally right behind the image vector bubbles */
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.02) 100%);
+    z-index: 1;
+}
+
+/* Individual Milestone Node Box */
+.timeline-node-card {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(19, 26, 38, 0.4);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+.timeline-node-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.node-hull-inner {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Highlighted / Active historical landmark status rule templates mapping */
+.active-node-card {
+    background-color: rgba(192, 132, 252, 0.03);
+}
+
+.active-node-card::before {
+    background: linear-gradient(180deg, rgba(192, 132, 252, 0.25) 0%, rgba(192, 132, 252, 0.02) 100%);
+}
+
+/* Upper Temporal Identity Badges */
+.node-time-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #c084fc;
+    background-color: rgba(192, 132, 252, 0.08);
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    padding: 0.35rem 0.95rem;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Vector Graphic Bubble Housing */
+.node-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 5;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.node-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(1.2);
+    transition: all 0.4s ease;
+}
+
+.node-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.75rem 0;
+    transition: color 0.3s ease;
+}
+
+.node-desc {
+    font-size: 0.9rem;
+    color: whitesmoke; /* Optimal contrast white/whitesmoke fonts */
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.timeline-node-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(19, 26, 38, 0.7);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 30px rgba(192, 132, 252, 0.1);
+}
+
+.timeline-node-card:hover::before {
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+}
+
+.timeline-node-card:hover .node-time-badge {
+    background-color: #c084fc;
+    color: #070a13;
+    box-shadow: 0 0 10px #c084fc;
+    border-color: #c084fc;
+}
+
+.timeline-node-card:hover .node-icon-box {
+    background-color: rgba(192, 132, 252, 0.1);
+    border-color: rgba(192, 132, 252, 0.3);
+    box-shadow: 0 0 15px rgba(192, 132, 252, 0.2);
+}
+
+.timeline-node-card:hover .node-graphic {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.05);
+}
+
+.timeline-node-card:hover .node-title {
+    color: #c084fc;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.2);
+}
+
+/* Active pre-set nodes configurations */
+.active-node-card .node-icon-box { border-color: rgba(192, 132, 252, 0.4); background-color: rgba(192, 132, 252, 0.05); }
+.active-node-card .node-graphic { filter: grayscale(20%) brightness(1.1); }
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 950px) {
+    /* 🌟 Safely reflows the horizontal rows into standard clear vertical tracks on smartphone displays */
+    .timeline-horizontal-track {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .timeline-horizontal-track::after {
+        display: none; /* Safely strips the horizontal connector path on vertical reflow stacks */
+    }
+    
+    .node-hull-inner {
+        padding: 2.25rem 1.75rem;
+    }
+}
+
+</style>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Animation Logic for Timeline Milestone Cards
+    const tacticalTimelineCards = document.querySelectorAll(".timeline-node-card");
+    
+    tacticalTimelineCards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease";
+        card.style.transitionDelay = `${index * 120}ms`; // Cascading staggered reveal entries
+    });
+
+    const milestoneObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                milestoneObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -20px 0px"
+    });
+
+    tacticalTimelineCards.forEach(card => milestoneObserver.observe(card));
+});
+
+</script>
+
+<section id="cta-action" class="cta-frame">
+    
+    <!-- Background Canvas Layer Mapping -->
+    <div class="cta-bg-layer">
+        <img src="./Assests/lite bg - cloud.webp" alt="Futuristic abstract network flow connection background" class="cta-mesh-img">
+        <div class="cta-ambient-glow indigo-glow"></div>
+    </div>
+
+    <div class="cta-container">
+        
+        <!-- Two-Line Impactful Content Frame -->
+        <div class="cta-content-wrapper">
+            <h2 class="cta-title">
+                Ready to Accelerate Your Deployments? <br>
+                <span>Launch Your Cloud Cluster in Seconds.</span>
+            </h2>
+            <p class="cta-subtitle">
+                Join thousands of fast-moving infrastructure teams shipping high-scale software daily. No credit card required. Cancel anytime.
+            </p>
+        </div>
+
+        <!-- Right Aligned Interactive Deployment Target Actions -->
+        <div class="cta-actions-hub">
+            <a href="404.html" class="btn-cta-glow">Initialize Infrastructure</a>
+            <a href="404.html" class="btn-cta-outline">Speak With Engineer</a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 TWO-LINE CTA SECTION CORE ENGINE */
+.cta-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #0b111e; /* Deep dark tech base canvas backing color */
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Background Canvas Graphics Logic */
+.cta-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cta-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.06; /* Highly subtle image layer footprint background texturing */
+    filter: saturate(1.5) contrast(1.2) hue-rotate(220deg);
+}
+
+.cta-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    width: 600px;
+    height: 350px;
+}
+
+.indigo-glow {
+    bottom: -20%;
+    left: 40%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, #3b82f6 0%, #6366f1 50%, transparent 70%);
+}
+
+/* Fluid Flex Row/Grid Core Presentation Setup */
+.cta-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Two-Line Title Formatting Text Layout Blocks */
+.cta-content-wrapper {
+    max-width: 850px;
+}
+
+.cta-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.75px;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+}
+
+.cta-title span {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(96, 165, 250, 0.25));
+}
+
+.cta-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: whitesmoke; /* Clean high-contrast readability */
+    margin: 0;
+}
+
+/* Action Button Panels Wrapper Track */
+.cta-actions-hub {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Glow-Injected Solid Primary Button */
+.btn-cta-glow {
+    display: inline-block;
+    padding: 0.95rem 2.2rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* High Contrast Modern Transparent Outline Button Variant */
+.btn-cta-outline {
+    display: inline-block;
+    padding: 0.95rem 1.8rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* 🌟 MODERN INTERACTIVE HOVER AND NEON GLOW ACTIONS */
+
+.btn-cta-glow:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+    box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5), 0 0 15px #60a5fa;
+}
+
+.btn-cta-outline:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: #60a5fa;
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.1);
+}
+
+/* Accent highlight triggers across full headline block wrapper on container targets */
+.cta-container:hover .cta-title {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .cta-title { font-size: 2rem; }
+    .cta-container { gap: 2.5rem; }
+}
+
+@media (max-width: 900px) {
+    .cta-container {
+        flex-direction: column; /* Collapses flex layout rows clean into unified column columns on narrow viewports */
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .cta-actions-hub {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-title { font-size: 1.65rem; }
+    .cta-actions-hub {
+        flex-direction: column; /* Forces absolute linear vertical stacks on tiny viewports */
+        gap: 1rem;
+    }
+    .btn-cta-glow, .btn-cta-outline {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Fade Entry Rig Integration for CTA Action Frame Layer
+    const ctaLayoutWrapper = document.querySelector(".cta-container");
+
+    if (ctaLayoutWrapper) {
+        // Apply initial hidden base values safely
+        ctaLayoutWrapper.style.opacity = "0";
+        ctaLayoutWrapper.style.transform = "translateY(20px)";
+        ctaLayoutWrapper.style.transition = "opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)";
+
+        const ctaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    ctaLayoutWrapper.style.opacity = "1";
+                    ctaLayoutWrapper.style.transform = "translateY(0)";
+                    ctaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        const ctaTargetSection = document.getElementById("cta-action");
+        if (ctaTargetSection) ctaObserver.observe(ctaTargetSection);
+    }
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH SERVER DEPLOYMENT GRID HUB -->
+<section id="cluster-nodes" class="cluster-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="cluster-bg-layer">
+        <img src="./Assests/cluster.webp" alt="Cyber telemetry space grid backdrop graphic" class="cluster-mesh-img">
+        <div class="cluster-ambient-glow sky-blue-glow"></div>
+    </div>
+
+    <div class="cluster-container">
+        
+        <!-- Interactive Section Header Block -->
+        <div class="cluster-header-block">
+            <span class="cluster-badge">Architecture Mapping</span>
+            <h2 class="cluster-main-title">Decentralized Clusters <br><span>Built For Fault Tolerance</span></h2>
+            <p class="cluster-subtitle-desc">Deploy workloads onto automated, isolated computing environments that eliminate centralized single points of system failure.</p>
+        </div>
+
+        <!-- 2-Column Responsive Layout Tracking Setup Grid -->
+        <div class="cluster-dual-track">
+            
+            <!-- Left Side: Interactive Vector Core Panel Grid -->
+            <div class="cluster-visual-card">
+                <div class="visual-inner-hull">
+                    <img src="./Assests/micro service.webp" alt="High speed processing microservice server racks hardware illustration" class="visual-main-img">
+                    
+                    <!-- Floating Telemetry Card Mockup Overlay -->
+                    <div class="cluster-floating-hud hud-top-right">
+                        <span class="hud-beacon-active"></span>
+                        <div>
+                            <h5>Cluster Status</h5>
+                            <p>All Nodes Synchronized</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Tactical Content Summary Matrix List -->
+            <div class="cluster-spec-details">
+                
+                <!-- Spec Node Item 01 -->
+                <div class="spec-card-row">
+                    <div class="spec-icon-frame">
+                        <img src="./Assests/encryption.webp" alt="Isolated hardware pipeline asset tracking logic symbol" class="spec-inner-icon">
+                    </div>
+                    <div class="spec-text-node">
+                        <h4>Asynchronous Sharding Layers</h4>
+                        <p>Distribute ledger mutation workflows seamlessly across horizontal databases without scaling log locks.</p>
+                    </div>
+                </div>
+
+                <!-- Spec Node Item 02 -->
+                <div class="spec-card-row">
+                    <div class="spec-icon-frame">
+                        <img src="./Assests/security protocol.webp" alt="Encrypted security protocol logic token symbol" class="spec-inner-icon">
+                    </div>
+                    <div class="spec-text-node">
+                        <h4>Continuous Kernel Sandboxing</h4>
+                        <p>Isolate unstable third-party API query loads instantly inside protected virtualization environments.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 DECENTRALIZED INFRASTRUCTURE SYSTEM CORE ENGINE */
+.cluster-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13; /* Seamlessly matches alternating dark theme backdrop structures */
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.cluster-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cluster-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Soft abstract digital layout lines footprint */
+    filter: saturate(1.5) contrast(1.1) hue-rotate(185deg);
+}
+
+.cluster-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.1;
+    width: 500px;
+    height: 500px;
+}
+
+/* Sky blue glowing gradient ambient light spot */
+.sky-blue-glow {
+    top: -15%;
+    right: 5%;
+    background: radial-gradient(circle, #0284c7 0%, transparent 70%);
+}
+
+/* Core Content Presentation Container Setup */
+.cluster-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Header Component Configuration Details */
+.cluster-header-block {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.cluster-badge {
+    display: inline-block;
+    background-color: rgba(2, 132, 199, 0.1);
+    border: 1px solid rgba(2, 132, 199, 0.3);
+    color: #38bdf8;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.cluster-header-block h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.cluster-header-block h2 span {
+    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.25));
+}
+
+.cluster-subtitle-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Two-Column Responsive Layout Tracking Setup Grid */
+.cluster-dual-track {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+/* Left Side Visual Frame Components */
+.cluster-visual-card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-inner-hull {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visual-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    filter: brightness(0.75) contrast(1.05) grayscale(15%);
+    transition: filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Floating HUD Dashboard Component Card element mapping */
+.cluster-floating-hud {
+    position: absolute;
+    background-color: rgba(19, 26, 38, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.7rem 1.35rem;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.hud-top-right {
+    top: -15px;
+    right: -20px;
+}
+
+.hud-beacon-active {
+    width: 7px;
+    height: 7px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22c55e;
+    animation: beaconRadarWave 1.5s infinite alternate;
+}
+
+.cluster-floating-hud h5 { margin: 0; font-size: 0.8rem; color: #ffffff; }
+.cluster-floating-hud p { margin: 1px 0 0 0; font-size: 0.7rem; color: #22c55e; font-weight: 600; }
+
+/* Right Side Descriptive Tactical Panel Text Column */
+.cluster-spec-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.spec-card-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: rgba(19, 26, 38, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon Asset Box */
+.spec-icon-frame {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.spec-inner-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(1.2);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.spec-text-node h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.spec-text-node p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: whitesmoke; /* Optimal high contrast white/whitesmoke fonts */
+    line-height: 1.55;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+
+.visual-inner-hull:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.visual-inner-hull:hover .visual-main-img {
+    filter: brightness(0.9) contrast(1.1) grayscale(0%);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+.visual-inner-hull:hover .cluster-floating-hud {
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 0 0 20px rgba(56, 189, 248, 0.2);
+    transform: scale(1.02);
+}
+
+/* Highlight variables for active list row items on focus hover */
+.spec-card-row:hover {
+    transform: translateY(-3px);
+    background-color: rgba(19, 26, 38, 0.5);
+    border-color: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(56, 189, 248, 0.04);
+}
+
+.spec-card-row:hover .spec-icon-frame {
+    background-color: rgba(56, 189, 248, 0.08);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.spec-card-row:hover .spec-inner-icon {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.04);
+}
+
+.spec-card-row:hover .spec-text-node h4 {
+    color: #38bdf8;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
+}
+
+/* 🌀 KEYFRAME TRANSFORMATION LOOP BEACONS */
+@keyframes beaconRadarWave {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.25); opacity: 1; filter: drop-shadow(0 0 4px #22c55e); }
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .cluster-header-block h2 { font-size: 2.1rem; }
+    .cluster-dual-track { gap: 3rem; }
+}
+
+@media (max-width: 900px) {
+    .cluster-dual-track {
+        grid-template-columns: 1fr; /* Collapses structural horizontal tracks into vertical layouts on small displays */
+        gap: 4rem;
+        text-align: center;
+    }
+    .cluster-visual-card { grid-row: 2; } /* Shifts graphics node card smoothly underneath header blocks on mobile viewports */
+    .spec-card-row { flex-direction: column; align-items: center; text-align: center; padding: 2rem 1.5rem; }
+    .hud-top-right { right: 10px; top: 10px; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Fade Entry Rig Integration for Infrastructure Cluster Grid
+    const visualFrameHull = document.querySelector(".cluster-visual-card");
+    const specsDetailHub = document.querySelector(".cluster-spec-details");
+
+    if (visualFrameHull && specsDetailHub) {
+        // Set up initial offscreen visibility rules safely
+        visualFrameHull.style.opacity = "0";
+        visualFrameHull.style.transform = "translateY(25px)";
+        visualFrameHull.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        specsDetailHub.style.opacity = "0";
+        specsDetailHub.style.transform = "translateY(25px)";
+        specsDetailHub.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        const infraGridObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    visualFrameHull.style.opacity = "1";
+                    visualFrameHull.style.transform = "translateY(0)";
+                    
+                    specsDetailHub.style.opacity = "1";
+                    specsDetailHub.style.transform = "translateY(0)";
+                    
+                    infraGridObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        const targetClusterSection = document.getElementById("cluster-nodes");
+        if (targetClusterSection) infraGridObserver.observe(targetClusterSection);
+    }
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH CORE VALUES & PHILOSOPHY GRID -->
+<section id="core-philosophy" class="philosophy-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="philosophy-bg-layer">
+        <img src="./Assests/cyptography shield.webp" alt="Cyber telemetry space grid backdrop graphic" class="philosophy-mesh-img">
+        <div class="philosophy-ambient-glow amethyst-glow-orb"></div>
+    </div>
+
+    <div class="philosophy-container">
+        
+        <!-- Section Title & Meta Header Box -->
+        <div class="philosophy-header-block">
+            <span class="philosophy-badge">Ideology Layer</span>
+            <h2 class="philosophy-main-title">The Principles Driving <br><span>Our Architecture</span></h2>
+            <p class="philosophy-subtitle-desc">How we balance system optimization with strict security protocols to engineer a better global decentralized cloud network layer.</p>
+        </div>
+
+        <!-- 3-Column Adaptable Responsive Grid System -->
+        <div class="philosophy-grid-track">
+            
+            <!-- Value Node Card 01 -->
+            <div class="philosophy-card-node">
+                <div class="philosophy-card-inner">
+                    <div class="philosophy-icon-box">
+                        <img src="./Assests/cloud framework.webp" alt="Decentralized network balance logic asset" class="philosophy-graphic">
+                    </div>
+                    <h3 class="philosophy-node-title">Absolute Decentralization</h3>
+                    <p class="philosophy-node-desc">We isolate structural server data across independent, globally distributed edge nodes to prevent centralized logic leaks or single points of system block failures.</p>
+                </div>
+            </div>
+
+            <!-- Value Node Card 02 -->
+            <div class="philosophy-card-node active-philosophy-card">
+                <div class="featured-halo-ribbon">Core Engine</div>
+                <div class="philosophy-card-inner">
+                    <div class="philosophy-icon-box">
+                        <img src="./Assests/cyptography shield.webp" alt="Zero-trust perimeter cryptography testing token asset" class="philosophy-graphic">
+                    </div>
+                    <h3 class="philosophy-node-title">Continuous Verification</h3>
+                    <p class="philosophy-node-desc">Security isn't a passive parameter layer—it's an active runtime workflow. Every mutation query undergoes real-time cryptographical confirmation proxy checks.</p>
+                </div>
+            </div>
+
+            <!-- Value Node Card 03 -->
+            <div class="philosophy-card-node">
+                <div class="philosophy-card-inner">
+                    <div class="philosophy-icon-box">
+                        <img src="./Assests/cloud eco.webp" alt="Sub millisecond cloud speed optimization layout icon asset" class="philosophy-graphic">
+                    </div>
+                    <h3 class="philosophy-node-title">Performance Obsession</h3>
+                    <p class="philosophy-node-desc">We build for development teams that refuse to accept microservice pipeline latency. If a routing tract can be shaved by half a millisecond, we engineer a solution.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 PHILOSOPHY IMPRESSED CORE GRID SYSTEM STYLES */
+.philosophy-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #090d1a; /* Synchronized depth layer matching your tech theme */
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.philosophy-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.philosophy-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Subdued structural mesh hint background footprint */
+    filter: saturate(1.4) contrast(1.1) hue-rotate(145deg);
+}
+
+.philosophy-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.08;
+    width: 500px;
+    height: 500px;
+}
+
+.amethyst-glow-orb {
+    bottom: -15%;
+    right: 5%;
+    background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+}
+
+/* Core Content Presentation Container Setup */
+.philosophy-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Header Component Configuration Details */
+.philosophy-header-block {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.philosophy-badge {
+    display: inline-block;
+    background-color: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: #c084fc;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.philosophy-header-block h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.philosophy-header-block h2 span {
+    background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.25));
+}
+
+.philosophy-subtitle-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 3-Column Adaptable Responsive Grid System Track */
+.philosophy-grid-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* High-Tech Grid Card Node Box */
+.philosophy-card-node {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(19, 26, 38, 0.4);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+/* Outer Border Track Line Engine */
+.philosophy-card-node::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.philosophy-card-inner {
+    padding: 3rem 2.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Featured Node Highlighting Specifics mapping */
+.active-philosophy-card {
+    background-color: rgba(168, 85, 247, 0.02);
+}
+
+.active-philosophy-card::before {
+    background: linear-gradient(180deg, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.02) 100%);
+}
+
+.featured-halo-ribbon {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: linear-gradient(90deg, #a855f7, #c084fc);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.25);
+}
+
+/* Icon Asset Box */
+.philosophy-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.philosophy-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(1.2);
+    transition: all 0.4s ease;
+}
+
+.philosophy-node-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.philosophy-node-desc {
+    font-size: 0.95rem;
+    color: whitesmoke; /* Optimal high contrast white/whitesmoke fonts */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.philosophy-card-node:hover {
+    transform: translateY(-5px);
+    background-color: rgba(19, 26, 38, 0.7);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 30px rgba(168, 85, 247, 0.08);
+}
+
+.philosophy-card-node:hover::before {
+    background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+}
+
+.philosophy-card-node:hover .philosophy-icon-box {
+    background-color: rgba(168, 85, 247, 0.08);
+    border-color: rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+}
+
+.philosophy-card-node:hover .philosophy-graphic {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.04);
+}
+
+.philosophy-card-node:hover .philosophy-node-title {
+    color: #c084fc;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.2);
+}
+
+.active-philosophy-card .philosophy-icon-box { border-color: rgba(192, 132, 252, 0.4); background-color: rgba(192, 132, 252, 0.03); }
+.active-philosophy-card .philosophy-graphic { filter: grayscale(15%) brightness(1.1); }
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 768px) {
+    .philosophy-header-block h2 {
+        font-size: 2rem;
+    }
+    .philosophy-grid-track {
+        grid-template-columns: 1fr; /* Stacks response cards vertically on handset screens */
+    }
+    .philosophy-card-inner {
+        padding: 2.25rem 1.75rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Animation Logic for Philosophy Node Cards
+    const matrixPhilosophyCards = document.querySelectorAll(".philosophy-card-node");
+    
+    matrixPhilosophyCards.forEach((card, idx) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease";
+        card.style.transitionDelay = `${idx * 100}ms`; // Cascading staggered reveal entries
+    });
+
+    const philosophyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                philosophyObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -30px 0px"
+    });
+
+    matrixPhilosophyCards.forEach(card => philosophyObserver.observe(card));
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH ECOSYSTEM PARTNERS SECTION -->
+<section id="network-ecosystem" class="eco-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="eco-bg-layer">
+        <svg class="eco-bg-vector-grid" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://w3.org">
+            <defs>
+                <pattern id="eco-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.015)" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#eco-grid)" />
+        </svg>
+        <div class="eco-ambient-glow sky-cyan-blur"></div>
+    </div>
+
+    <div class="eco-container">
+        
+        <!-- Left Column: Tactical Content Summary Matrix Text -->
+        <div class="eco-text-block">
+            <span class="eco-tag-badge">Network Alliances</span>
+            <h2 class="eco-title">Our Global Cloud <br><span>Ecosystem Matrix</span></h2>
+            <p class="eco-desc">
+                We bridge our autonomic workflow engines with industry-leading hardware networks and compliance centers. Through secure hardware partnerships, our nodes sit inside hardened Tier-4 data facilities worldwide.
+            </p>
+            
+            <!-- Quick Telemetry Infrastructure Row -->
+            <div class="eco-stats-mini-flex">
+                <div class="eco-stat-unit">
+                    <h3>200+</h3>
+                    <p>Interconnected Nodes</p>
+                </div>
+                <div class="eco-stat-unit">
+                    <h3>Zero</h3>
+                    <p>Single Point Failures</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: 4-Cell Interactive Glass Partner Grid Box -->
+        <div class="eco-grid-block">
+            <div class="eco-grid-neon-glow"></div>
+            <div class="eco-partner-grid">
+                
+                <!-- Partner Node 01: Apex Telemetry -->
+                <div class="partner-cell-node">
+                    <div class="cell-inner">
+                        <div class="partner-vector-frame">
+                            <svg class="partner-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                            </svg>
+                        </div>
+                        <h4>Apex Telemetry</h4>
+                    </div>
+                </div>
+
+                <!-- Partner Node 02: Quantum Core -->
+                <div class="partner-cell-node active-partner-cell">
+                    <div class="cell-inner">
+                        <div class="partner-vector-frame">
+                            <svg class="partner-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v4M12 18v4M4 12H2M22 12h-4"></path>
+                            </svg>
+                        </div>
+                        <h4>Quantum Core</h4>
+                    </div>
+                </div>
+
+                <!-- Partner Node 03: Stratum Cloud -->
+                <div class="partner-cell-node">
+                    <div class="cell-inner">
+                        <div class="partner-vector-frame">
+                            <svg class="partner-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h4>Stratum Cloud</h4>
+                    </div>
+                </div>
+
+                <!-- Partner Node 04: Vortex Crypto -->
+                <div class="partner-cell-node">
+                    <div class="cell-inner">
+                        <div class="partner-vector-frame">
+                            <svg class="partner-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h4>Vortex Crypto</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 GLOBAL ECOSYSTEM PARTNERS MATRIX SYSTEM */
+.eco-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13;
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.eco-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.eco-bg-vector-grid {
+    width: 100%;
+    height: 100%;
+}
+
+.eco-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.12;
+    width: 500px;
+    height: 500px;
+}
+
+.sky-cyan-blur {
+    bottom: -10%;
+    left: -5%;
+    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+}
+
+/* Two-Column Responsive Presentation Grid Layout Setup */
+.eco-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.eco-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.eco-tag-badge {
+    display: inline-block;
+    background-color: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: #22d3ee;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+}
+
+.eco-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 1.25rem 0;
+    letter-spacing: -0.75px;
+}
+
+.eco-title span {
+    background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25));
+}
+
+.eco-desc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 0 2.5rem 0;
+}
+
+.eco-stats-mini-flex {
+    display: flex;
+    gap: 3.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.75rem;
+    width: 100%;
+}
+
+.eco-stat-unit h3 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.eco-stat-unit p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: whitesmoke;
+}
+
+/* Right Column: 4-Cell Interactive Glass Partner Grid Box */
+.eco-grid-block {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.eco-grid-neon-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.06) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.eco-partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Individual Cell Container Boxes */
+.partner-cell-node {
+    position: relative;
+    border-radius: 14px;
+    background-color: rgba(19, 26, 38, 0.3);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.partner-cell-node::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.cell-inner {
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+/* 🌟 Vector Icon Housing Box */
+.partner-vector-frame {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.partner-vector-icon {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+
+.partner-cell-node h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: whitesmoke;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.partner-cell-node:hover {
+    transform: translateY(-4px) scale(1.02);
+    background-color: rgba(19, 26, 38, 0.7);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(6, 182, 212, 0.08);
+}
+
+.partner-cell-node:hover::before {
+    background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+}
+
+.partner-cell-node:hover .partner-vector-frame {
+    color: #22d3ee;
+    background-color: rgba(6, 182, 212, 0.08);
+    border-color: rgba(6, 182, 212, 0.2);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.3);
+}
+
+.partner-cell-node:hover .partner-vector-icon {
+    transform: scale(1.05) rotate(4deg);
+}
+
+.partner-cell-node:hover h4 {
+    color: #22d3ee;
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.2);
+}
+
+.eco-container:hover .eco-stat-unit h3 {
+    color: #22d3ee;
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+}
+
+/* Pre-set active cell state highlighting tracking rules */
+.active-partner-cell { background-color: rgba(6, 182, 212, 0.02); }
+.active-partner-cell::before { background: linear-gradient(180deg, rgba(6, 182, 212, 0.2) 0%, rgba(255, 255, 255, 0.01) 100%); }
+.active-partner-cell .partner-vector-frame { color: #06b6d4; border-color: rgba(6, 182, 212, 0.3); }
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .eco-title { font-size: 2.1rem; }
+    .eco-container { gap: 3rem; }
+}
+
+@media (max-width: 900px) {
+    .eco-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4rem;
+    }
+    .eco-text-block { align-items: center; }
+    .eco-stats-mini-flex { justify-content: center; gap: 3rem; }
+}
+
+@media (max-width: 480px) {
+    .eco-partner-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    .cell-inner { padding: 2rem 1.25rem; }
+}
+
+</style>
+
+
+<!-- 🌟 ONE-LINE HIGH-CONVERTING CTA COMPONENT -->
+<section id="fast-cta" class="one-line-cta-frame">
+    
+    <!-- Background Canvas Layer Mapping -->
+    <div class="one-line-cta-bg">
+        <img src="./Assests/lite bg - cloud.webp" alt="Futuristic digital neon vector track network stream" class="one-line-mesh-img">
+        <div class="one-line-ambient-glow sky-glow-patch"></div>
+    </div>
+
+    <div class="one-line-cta-container">
+        
+        <!-- Compact Single-Line Layout Core Row Track -->
+        <div class="one-line-flex-row">
+            <h2 class="one-line-title">
+                Ready to accelerate your operations? <span>Launch your cluster engine instantly.</span>
+            </h2>
+            
+            <div class="one-line-actions">
+                <a href="#deploy" class="btn-one-line-glow">Provision Node</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 ONE-LINE CTA SECTION CORE SYSTEM */
+.one-line-cta-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #090d1a; /* Dark tech base canvas backing color sequence matching */
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Background Canvas Graphics Logic */
+.one-line-cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.one-line-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05; /* Highly subtle image layer footprint background texturing */
+    filter: saturate(1.8) contrast(1.1) hue-rotate(190deg);
+}
+
+.one-line-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.12;
+    width: 450px;
+    height: 250px;
+}
+
+.sky-glow-patch {
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, #38bdf8 0%, #3b82f6 60%, transparent 70%);
+}
+
+/* Fluid Flex Row/Grid Core Presentation Setup */
+.one-line-cta-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Horizontal Line Row Alignment Parameters */
+.one-line-flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.one-line-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.one-line-title span {
+    background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.25));
+}
+
+/* Action Button Panels Wrapper Track */
+.one-line-actions {
+    flex-shrink: 0;
+}
+
+/* Glow-Injected Solid Primary Button */
+.btn-one-line-glow {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+/* 🌟 MODERN INTERACTIVE HOVER AND NEON GLOW ACTIONS */
+
+.btn-one-line-glow:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+    box-shadow: 0 6px 22px rgba(59, 130, 246, 0.45), 0 0 15px #38bdf8;
+}
+
+/* Accent highlight triggers across full headline block wrapper on container targets */
+.one-line-cta-container:hover .one-line-title {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 950px) {
+    .one-line-title {
+        font-size: 1.45rem;
+    }
+    .one-line-flex-row {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Collapses structural horizontal row clean into single column tracks on smartphone viewports */
+    .one-line-flex-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.75rem;
+    }
+    
+    .one-line-actions {
+        width: 100%;
+    }
+    
+    .btn-one-line-glow {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem 0;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Fade Entry Rig Integration for One-Line CTA Frame Layer
+    const fastCtaContainer = document.querySelector(".one-line-cta-container");
+
+    if (fastCtaContainer) {
+        // Apply initial hidden base values safely
+        fastCtaContainer.style.opacity = "0";
+        fastCtaContainer.style.transform = "translateY(15px)";
+        fastCtaContainer.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+
+        const fastCtaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    fastCtaContainer.style.opacity = "1";
+                    fastCtaContainer.style.transform = "translateY(0)";
+                    fastCtaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const fastCtaSection = document.getElementById("fast-cta");
+        if (fastCtaSection) fastCtaObserver.observe(fastCtaSection);
+    }
+});
+
+</script>
+<!-- 🌟 HIGH-TECH COMPRESSED HORIZONTAL FOOTER -->
+<footer class="tech-footer-root">
+    <div class="footer-grid-container">
+        
+        <!-- Column 1: Core Corporate Branding Box -->
+        <div class="footer-summary-block">
+            <a href="javascript:void(0);" class="footer-brand-anchor" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Scroll back to top fold">
+                <svg class="footer-brand-vector" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                </svg>
+                <span class="footer-brand-text">Stackly<span>Nexus</span></span>
+            </a>
+            
+            <p class="footer-corporate-desc">
+                Engineering premium autonomic workflow orchestrations designed to bridge decentralized neural network models with corporate efficiency metrics.
+            </p>
+            
+            <div class="footer-location-line">
+                <span class="location-pin-icon">📍</span>
+                <p class="location-string-text">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+            </div>
+            
+            <div class="footer-social-row">
+                <a href="#facebook" class="social-circle-node" aria-label="Facebook Operator Track">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="#instagram" class="social-circle-node" aria-label="Instagram Telemetry Channel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="#telegram" class="social-circle-node" aria-label="Telegram Signal Relay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="m22 2-7 20-4-9-9-4Z"/>
+                        <path d="M22 2 11 13"/>
+                    </svg>
+                </a>
+                <a href="#youtube" class="social-circle-node" aria-label="YouTube Visual Streaming Panel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Column 2: Navigation Links Block A -->
+        <div class="footer-links-column">
+            <h4 class="column-title-heading">Quick Links</h4>
+            <ul class="footer-links-stack">
+                <li><a href="#workflows">Workflows</a></li>
+                <li><a href="#ai-agents">AI Agents</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Navigation Links Block B -->
+        <div class="footer-links-column">
+            <h4 class="column-title-heading">Support Hub</h4>
+            <ul class="footer-links-stack">
+                <li><a href="#sla">SLA & Warranties</a></li>
+                <li><a href="#model-swap">Model Swap Portals</a></li>
+                <li><a href="#faq">Help & FAQ Center</a></li>
+                <li><a href="#patch-logs">Kernel Patch Logs</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter Subscription Panel -->
+        <div class="footer-dispatch-column">
+            <h4 class="column-title-heading">The Playground Dispatch</h4>
+            <p class="dispatch-instructions-text">Subscribe to unlock premium custom blueprint designs and private product launches.</p>
+            
+            <form id="footer-dispatch-form" class="dispatch-input-row" novalidate>
+                <div class="dispatch-input-hull">
+                    <input type="email" id="dispatch-email-field" placeholder="Enter your email..." class="dispatch-text-input">
+                    <button type="submit" class="btn-dispatch-arrow" aria-label="Submit Email Dispatch Payload">
+                        <svg class="dispatch-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <span class="dispatch-error-alert" id="dispatch-error-msg"></span>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Bottom Compliance Section -->
+    <div class="footer-base-compliance-row">
+        <div class="compliance-inner-flex">
+            <p class="footer-copyright-statement">&copy; 2026 Stackly Industries. All rights reserved.</p>
+            <div class="compliance-links-track">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#cookies">Cookie Management</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🌟 FLOATING CORNER BACK-TO-TOP TRIGGER ARROW BOX -->
+    <button class="floating-back-top-trigger" id="back-to-top-anchor" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Return to top fold">
+        <svg class="back-top-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+</footer>
+
+<style>
+/* 🌟 CORE TECHNICAL FOOTER ENGINE */
+.tech-footer-root {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+/* 🌟 Tighter Column Grid Track Definition */
+.footer-grid-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.4fr; 
+    gap: 2rem; /* Tightened horizontal space gaps */
+}
+
+.footer-summary-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand-anchor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: filter 0.3s ease;
+}
+
+.footer-brand-vector {
+    width: 32px;
+    height: 32px;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 5px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 6px;
+}
+
+.footer-brand-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.footer-brand-text span { color: #3b82f6; }
+
+.footer-corporate-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem 0;
+}
+
+.footer-location-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.location-pin-icon {
+    font-size: 1rem;
+    filter: drop-shadow(0 0 4px #3b82f6);
+}
+
+.location-string-text {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: whitesmoke;
+}
+
+.footer-social-row {
+    display: flex;
+    gap: 0.85rem;
+}
+
+.social-circle-node {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-svg-path {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* 🌟 Center Column Compression Logic Hooks */
+.footer-links-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: center; /* Pulls central column tracks tightly inward */
+    min-width: 150px;
+}
+
+.column-title-heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.column-title-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #3b82f6;
+    box-shadow: 0 0 8px #3b82f6;
+    border-radius: 10px;
+}
+
+.footer-links-stack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links-stack a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* 🌟 Far-Right Column Compression Hook */
+.footer-dispatch-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: end; /* Locks subscribe row to the far-right container margin edge */
+    width: 100%;
+    max-width: 360px;
+}
+
+.dispatch-instructions-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem 0;
+}
+
+.dispatch-input-row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dispatch-input-hull {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dispatch-text-input {
+    width: 100%;
+    background-color: rgba(11, 15, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    padding: 0.75rem 3.5rem 0.75rem 1.25rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.btn-dispatch-arrow {
+    position: absolute;
+    right: 4px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    border: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dispatch-arrow-vector { width: 14px; height: 14px; }
+
+.dispatch-error-alert {
+    font-size: 0.75rem;
+    color: #ef4444;
+    font-weight: 600;
+    min-height: 16px;
+    padding-left: 1rem;
+    display: block;
+    opacity: 0;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.dispatch-error-alert.alert-visible { opacity: 1; transform: translateY(0); }
+
+.footer-base-compliance-row {
+    max-width: 1400px;
+    margin: 3.5rem auto 0 auto;
+    padding: 1.5rem 2rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.compliance-inner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-copyright-statement { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+.compliance-links-track { display: flex; gap: 1.5rem; }
+.compliance-links-track a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s ease; }
+
+/* 🌟 INTERACTIVE GLOW EFFECTS */
+.footer-brand-anchor:hover { filter: drop-shadow(0 0 8px #3b82f6); }
+
+.social-circle-node:hover {
+    color: #ffffff;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+.social-circle-node:hover .social-svg-path { transform: scale(1.05) rotate(4deg); }
+.footer-links-stack a:hover { color: #3b82f6; text-shadow: 0 0 8px rgba(96, 165, 250, 0.4); padding-left: 3px; }
+.dispatch-text-input:focus { border-color: #3b82f6; box-shadow: 0 0 12px rgba(59, 130, 246, 0.15); }
+.dispatch-text-input.input-error-state { border-color: #ef4444; box-shadow: 0 0 12px rgba(239, 68, 68, 0.15); }
+.btn-dispatch-arrow:hover { background-color: #2563eb; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5), 0 0 8px #60a5fa; }
+.compliance-links-track a:hover { color: #ffffff; }
+
+/* 🌟 FLOATING CORNER BACK-TO-TOP TRIGGER ARROW BOX */
+.floating-back-top-trigger {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: rgba(19, 26, 38, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 9999;
+}
+
+.back-top-arrow-icon { width: 18px; height: 18px; }
+.floating-back-top-trigger.trigger-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.floating-back-top-trigger:hover { color: #ffffff; border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.15); box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); transform: translateY(-3px); }
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 900px) {
+    .footer-grid-container { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .footer-summary-block, .footer-dispatch-column { grid-column: span 2; max-width: 100%; justify-self: start; }
+    .footer-links-column { justify-self: start; }
+}
+
+@media (max-width: 480px) {
+    .footer-grid-container { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+    .footer-summary-block, .footer-links-column, .footer-dispatch-column { align-items: center; grid-column: span 1; justify-self: center; }
+    .column-title-heading::after { left: 50%; transform: translateX(-50%); }
+    .footer-location-line, .footer-social-row { justify-content: center; }
+    .compliance-inner-flex { flex-direction: column; text-align: center; }
+    .compliance-links-track { justify-content: center; }
+    .floating-back-top-trigger { bottom: 1.5rem; right: 1.5rem; }
+}
+
+
+</style>
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. Floating Back-to-Top Toggle Visual State Trigger Mechanics
+    const backToTopAnchor = document.getElementById("back-to-top-anchor");
+
+    const assessScrollElevation = () => {
+        if (window.scrollY > 400) {
+            backToTopAnchor.classList.add("trigger-visible");
+        } else {
+            backToTopAnchor.classList.remove("trigger-visible");
+        }
+    };
+
+    window.addEventListener("scroll", assessScrollElevation);
+
+    // 2. Newsletter Subscription Validation and 404 Route Forward Pipeline
+    const dispatchForm = document.getElementById("footer-dispatch-form");
+    const dispatchEmailInput = document.getElementById("dispatch-email-field");
+    const errorAlertSpan = document.getElementById("dispatch-error-msg");
+
+    if (dispatchForm) {
+        dispatchForm.addEventListener("submit", (event) => {
+            event.preventDefault(); 
+
+            const innerStringValue = dispatchEmailInput.value.trim();
+
+            if (innerStringValue === "") {
+                triggerFieldError("Please fill out this field.");
+                return;
+            }
+
+            const secureEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!secureEmailRegex.test(innerStringValue)) {
+                triggerFieldError("Please provide a valid routing address.");
+                return;
+            }
+
+            clearFieldError();
+            window.location.href = "404.html";
+        });
+
+        dispatchEmailInput.addEventListener("input", () => {
+            if (dispatchEmailInput.classList.contains("input-error-state")) {
+                clearFieldError();
+            }
+        });
+    }
+
+    function triggerFieldError(alertMessageString) {
+        errorAlertSpan.innerText = alertMessageString;
+        errorAlertSpan.classList.add("alert-visible");
+        dispatchEmailInput.classList.add("input-error-state");
+        
+        dispatchEmailInput.style.transform = "translateX(-4px)";
+        setTimeout(() => dispatchEmailInput.style.transform = "translateX(4px)", 80);
+        setTimeout(() => dispatchEmailInput.style.transform = "", 160);
+    }
+
+    function clearFieldError() {
+        errorAlertSpan.innerText = "";
+        errorAlertSpan.classList.remove("alert-visible");
+        dispatchEmailInput.classList.remove("input-error-state");
+    }
+});
+
+</script>
+</body>
+</html>
