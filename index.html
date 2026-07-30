@@ -1,0 +1,4035 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNexus // Next-Gen Software Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🌟 MODERN PRELOADER OVERLAY -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <!-- Animated Vector Logo Matrix -->
+            <div class="vector-logo-container">
+                <svg class="glow-vector" viewBox="0 0 100 100" xmlns="http://w3.org">
+                    <!-- Outer Ring Path -->
+                    <circle class="ring-track" cx="50" cy="50" r="40" />
+                    <circle class="ring-pulse" cx="50" cy="50" r="40" />
+                    <!-- Inner Core Tech Node Vector -->
+                    <polygon class="core-node" points="50,28 69,39 69,61 50,72 31,61 31,39" />
+                </svg>
+            </div>
+            
+            <!-- Branding Text Matrix -->
+            <div class="loading-text-group">
+                <h2 class="loading-brand">Stackly<span>Nexus</span></h2>
+                <p class="loading-status">Initializing Core Modules...</p>
+            </div>
+
+            <!-- Sleek Linear Progress Track -->
+            <div class="progress-bar-container">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const preloader = document.getElementById("preloader");
+    const progressFill = document.querySelector(".progress-fill");
+    const appContent = document.getElementById("app-content");
+    const statusText = document.querySelector(".loading-status");
+
+    // Dynamic loading text states array
+    const trackingPhrases = [
+        "Initializing core modules...",
+        "Establishing secure connection layers...",
+        "Optimizing cloud pipeline paths...",
+        "Rendering visualization grids..."
+    ];
+
+    let currentProgress = 0;
+    let phraseIndex = 0;
+
+    // 1. Loading Sequence Pipeline Simulation
+    const preloaderInterval = setInterval(() => {
+        // Increment loading metrics non-linearly for real-world simulation feel
+        currentProgress += Math.floor(Math.random() * 12) + 4;
+        
+        if (currentProgress >= 100) {
+            currentProgress = 100;
+            clearInterval(preloaderInterval);
+            terminatePreloader();
+        }
+
+        // Apply progressive width to CSS element
+        progressFill.style.width = `${currentProgress}%`;
+
+        // Cycle through dynamic feedback states contextually
+        if (currentProgress > (phraseIndex + 1) * 25 && phraseIndex < trackingPhrases.length - 1) {
+            phraseIndex++;
+            statusText.innerText = trackingPhrases[phraseIndex];
+        }
+    }, 500);
+
+    // 2. Clear preloader overlay smoothly out of user focus
+    function terminatePreloader() {
+        statusText.innerText = "Ready.";
+        
+        setTimeout(() => {
+            // Apply layout exit shifts
+            preloader.classList.add("preloader-hidden");
+            
+            // Bring primary layout container cleanly into vision
+            if(appContent) {
+                appContent.classList.remove("content-hidden");
+                appContent.classList.add("content-visible");
+            }
+        }, 1000);
+    }
+});
+
+   </script>
+
+  <!-- 🌟 FIXED, CENTER-ALIGNED HEADER MODULE -->
+<header class="navbar-fixed">
+    <div class="nav-container">
+        
+        <!-- Brand Logo Unit (Clicking refreshes the active viewport window) -->
+        <a href="javascript:void(0);" class="brand-logo" onclick="window.location.reload();" aria-label="StacklyNexus Home">
+            <!-- Scalable SVG tech vector node avoids broken network image paths -->
+            <svg class="logo-img" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span class="logo-text">Stackly<span>Nexus</span></span>
+        </a>
+
+        <!-- Responsive Mobile Drawer Toggle -->
+        <button class="hamburger-trigger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </button>
+
+        <!-- Desktop and Mobile Menu Control Hub -->
+        <nav class="nav-menu-wrapper">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#blog" class="nav-item">Blog</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Aligned Authentication Container -->
+        <div class="nav-auth-panel">
+            <a href="#login" class="btn-auth">Login</a>
+        </div>
+
+    </div>
+</header>
+
+
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburgerTrigger = document.querySelector(".hamburger-trigger");
+    const navMenuWrapper = document.querySelector(".nav-menu-wrapper");
+    const navLinks = document.querySelectorAll(".nav-item");
+    const authPanel = document.querySelector(".nav-auth-panel");
+
+    // 1. Mobile Drawer Toggle Control Mechanics
+    const toggleMobileMenu = () => {
+        const isOpen = navMenuWrapper.classList.toggle("drawer-open");
+        hamburgerTrigger.classList.toggle("hamburger-active");
+        hamburgerTrigger.setAttribute("aria-expanded", isOpen);
+        
+        if (isOpen) {
+            // Append auth logic internally inside layout drawer on tiny viewports
+            navMenuWrapper.appendChild(authPanel);
+            document.body.style.overflow = "hidden"; // Freeze underlying scroll tracks
+        } else {
+            // Restore auth node cleanly back onto core grid setup track line
+            document.querySelector(".nav-container").appendChild(authPanel);
+            document.body.style.overflow = "";
+        }
+    };
+
+    hamburgerTrigger.addEventListener("click", toggleMobileMenu);
+
+    // 2. Click Navigation and Class State Refinement
+    navLinks.forEach(item => {
+        item.addEventListener("click", function() {
+            // Clear prior active classes
+            document.querySelector(".nav-item.active")?.classList.remove("active");
+            
+            // Apply fresh current active rule assignments
+            this.classList.add("active");
+
+            // Fast close drawer if screen size triggers a click action inside responsive layout viewports
+            if (navMenuWrapper.classList.contains("drawer-open")) {
+                toggleMobileMenu();
+            }
+        });
+    });
+});
+
+
+</script>
+
+<!-- 🌟 HIGH-TECH SCALABLE HERO COMPONENT -->
+<section id="home" class="hero-frame">
+    
+    <!-- Background Asset Layer Mapping -->
+    <div class="hero-bg-layer">
+        <img src="./Assests/lite bg - cloud.webp" alt="Tech Infrastructure Grid Mesh Overlay" class="bg-mesh-img">
+        <div class="ambient-glow-orb pink-orb"></div>
+        <div class="ambient-glow-orb blue-orb"></div>
+    </div>
+
+    <!-- Core Grid Presentation Container -->
+    <div class="hero-container">
+        
+        <!-- Left Side Column Text & Interactive Targets -->
+        <div class="hero-text-block">
+            <div class="version-tag-badge">
+                <span class="pulsing-dot"></span>
+                <span>System Update v2.4 Live</span>
+            </div>
+            
+            <h1 class="hero-main-title">
+                Engineering Next-Gen <br>
+                <span class="glowing-neon-gradient">Cloud Ecosystems</span>
+            </h1>
+            
+            <p class="hero-subtitle-desc">
+                Deploy blazing fast, automated multi-tenant microservices across a high-availability decentralized architecture. Built for teams that refuse to compromise on latency.
+            </p>
+            
+            <div class="hero-actions-row">
+                <a href="404.html" class="btn-hero-primary">Deploy Core Engine</a>
+                <a href="404.html" class="btn-hero-secondary">
+                    <span>Read Architecture Specifications</span>
+                    <svg class="arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side Column Visual Showcase Asset Box -->
+        <div class="hero-showcase-block">
+            <div class="showcase-glowing-backdrop"></div>
+            <div class="showcase-frame">
+                <img src="./Assests/cloud eco.webp" alt="Futuristic Clean Matrix Engineering Console IDE Interface" class="showcase-main-img">
+                
+                <!-- Floating Dashboard Metric Card Mockup Overlay -->
+                <div class="floating-panel-card metric-card-tr">
+                    <div class="card-glow-pulse"></div>
+                    <div class="metric-flex-box">
+                        <span class="metric-icon">⚡</span>
+                        <div>
+                            <p class="metric-label">Latency Optimization</p>
+                            <h4 class="metric-val">1.2ms Avg</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 HERO COMPONENT CORE STYLES */
+.hero-frame {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #070a13; /* Ultra deep midnight space matrix base color */
+    padding: 30px 0;
+}
+
+/* Background Graphic Vector Layers */
+.hero-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bg-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.12; /* Subtle structural mesh hint background footprint */
+    filter: saturate(1.5) contrast(1.1);
+}
+
+/* Ambient Radial Light Orbs */
+.ambient-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.15;
+    mix-blend-mode: screen;
+}
+
+.blue-orb {
+    top: -10%;
+    right: 5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+}
+
+.pink-orb {
+    bottom: -5%;
+    left: 10%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #ec4899 0%, transparent 70%);
+}
+
+/* Grid Layout Grid Setup */
+.hero-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Side Content Styles */
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Update Version Tag */
+.version-tag-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 0.45rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #60a5fa;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.05);
+}
+
+.pulsing-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #3b82f6;
+    animation: beaconPulse 1.6s infinite alternate;
+}
+
+/* Core Title Presentation H1 */
+.hero-main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    color: var(--text-main);
+    margin: 0 0 1.5rem 0;
+}
+
+.glowing-neon-gradient {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.25));
+}
+
+.hero-subtitle-desc {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 0 2.5rem 0;
+}
+
+/* Button UI Configurations */
+.hero-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+    box-shadow: 0 6px 25px rgba(59, 130, 246, 0.55);
+}
+
+.btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.5rem;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.arrow-vector {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-hero-secondary:hover {
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+.btn-hero-secondary:hover .arrow-vector {
+    transform: translateX(4px);
+}
+
+/* Right Side Showcase Image Block Layout */
+.hero-showcase-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-glowing-backdrop {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.showcase-frame {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    z-index: 2;
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.showcase-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    filter: grayscale(15%) contrast(1.05);
+    transition: all 0.5s ease;
+}
+
+/* Hover Interactive Action Target for the Image Component Frame */
+.showcase-frame:hover .showcase-main-img {
+    filter: grayscale(0%) contrast(1.1);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.25);
+}
+
+/* Floating Metrics Overlay HUD Panel */
+.floating-panel-card {
+    position: absolute;
+    background-color: rgba(19, 26, 38, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.metric-card-tr {
+    top: 10%;
+    right: -20px;
+}
+
+.floating-panel-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(236, 72, 153, 0.4);
+    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.2);
+}
+
+.metric-flex-box {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.metric-icon {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 5px #f59e0b);
+}
+
+.metric-label {
+    margin: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.metric-val {
+    margin: 2px 0 0 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* 🌀 KEYFRAME TRANSFORMATION LOOP RIGS */
+@keyframes beaconPulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.2); opacity: 1; filter: drop-shadow(0 0 6px #3b82f6); }
+}
+
+@keyframes gentleFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 📱 RESPONSIVE ADAPTIVE MEDIA BREAKPOINT HUB */
+@media (max-width: 1024px) {
+    .hero-main-title {
+        font-size: 3.2rem;
+    }
+    .hero-container {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-frame {
+        padding: 5rem 0 4rem 0;
+    }
+    .hero-container {
+        grid-template-columns: 1fr; /* Stacks column sections vertically on handheld mobile interfaces */
+        text-align: center;
+        gap: 4rem;
+    }
+    .hero-text-block {
+        align-items: center;
+    }
+    .hero-subtitle-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-actions-row {
+        justify-content: center;
+        width: 100%;
+    }
+    .metric-card-tr {
+        right: 10px; /* Pulls floating overlay panels safe zones cleanly inside screen gutters */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-main-title {
+        font-size: 2.4rem;
+    }
+    .hero-actions-row {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    .btn-hero-primary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+<!-- 🌟 INFINITE ROLLING BRAND CAROUSEL MODULE -->
+<section id="brand-ticker" class="ticker-frame">
+    
+    <!-- Background Architectural Canvas Components -->
+    <div class="ticker-bg-layer">
+        <div class="ticker-ambient-glow cyan-glow"></div>
+    </div>
+
+    <div class="ticker-container">
+        
+        <!-- Subtle Upper Descriptive Anchor Header -->
+        <div class="ticker-header-anchor">
+            <p class="ticker-lead-text">Empowering Tech Infrastructure Across Global Scale Enterprises</p>
+        </div>
+
+        <!-- Masked Viewport Rolling Track Window -->
+        <div class="ticker-viewport-window">
+            <div class="ticker-infinite-track">
+                
+                <!-- 🚀 Core Vector Logo Nodes Set (Set 1) -->
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span class="ticker-brand-name">Cloud<span>Grid</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span class="ticker-brand-name">Cyber<span>Shield</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4 12H2M22 12h-4"/></svg>
+                    <span class="ticker-brand-name">Edge<span>Core</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+                    <span class="ticker-brand-name">Orbit<span>Data</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span class="ticker-brand-name">Data<span>Wave</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span class="ticker-brand-name">Sys<span>Pulse</span></span>
+                </div>
+
+                <!-- 🔄 Duplicate Cloned Track Loop Array for Seamless CSS Flow transitions (Set 2) -->
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span class="ticker-brand-name">Cloud<span>Grid</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span class="ticker-brand-name">Cyber<span>Shield</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4 12H2M22 12h-4"/></svg>
+                    <span class="ticker-brand-name">Edge<span>Core</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+                    <span class="ticker-brand-name">Orbit<span>Data</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span class="ticker-brand-name">Data<span>Wave</span></span>
+                </div>
+                <div class="logo-marquee-node">
+                    <svg class="marquee-vector-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span class="ticker-brand-name">Sys<span>Pulse</span></span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 INFINITE BRAND CAROUSEL LOOP SYSTEM */
+.ticker-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13; /* Dark matrix backing backdrop */
+    overflow: hidden;
+}
+
+/* Ambient Vector Lighting Matrix Glows */
+.ticker-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ticker-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.08;
+    width: 500px;
+    height: 300px;
+}
+
+.cyan-glow {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+}
+
+.ticker-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+/* Label text styles above ticker tracking channel lines */
+.ticker-header-anchor {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 0 2rem;
+}
+
+.ticker-lead-text {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Masked Viewport Window featuring Edge Fades */
+.ticker-viewport-window {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+}
+
+/* Infinite Flex Ribbon Assembly */
+.ticker-infinite-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 5rem; /* Layout padding keeps brand elements spacious */
+    animation: linearMarquee 30s linear infinite; /* Hardware-accelerated rolling engine */
+}
+
+/* Individual Brand Logo Housing Nodes */
+.logo-marquee-node {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0.35; /* Subdued baseline state */
+}
+
+/* Vector Icon Modifications */
+.marquee-vector-icon {
+    width: 28px;
+    height: 28px;
+    color: white;
+    transition: color 0.4s ease, filter 0.4s ease;
+}
+
+/* Typography Branding Text Layout */
+.ticker-brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.ticker-brand-name span {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* 🌟 MODERN INTERACTIVE HOVER AND NEON GLOW ACTIONS */
+
+/* Pause tracking movement gracefully when the user targets a specific node icon */
+.ticker-viewport-window:hover .ticker-infinite-track {
+    animation-play-state: paused;
+}
+
+/* Highlight the active card block nodes */
+.logo-marquee-node:hover {
+    transform: scale(1.06);
+    opacity: 1;
+}
+
+.logo-marquee-node:hover .marquee-vector-icon {
+    color: #3b82f6;
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+}
+
+.logo-marquee-node:hover .ticker-brand-name {
+    color: var(--text-main);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 🌀 MARQUEE ROLLING KEYFRAME LOOPS */
+@keyframes linearMarquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        /* Loops exactly halfway through the duplicated tracks layout to ensure seamless reset */
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 768px) {
+    .ticker-infinite-track {
+        gap: 3rem; /* Tightens track gaps inside smaller smartphone gutters */
+        animation-duration: 20s; /* Adjusts crawl speed slightly on narrow screens */
+    }
+    .marquee-vector-icon {
+        width: 24px;
+        height: 24px;
+    }
+    .ticker-brand-name {
+        font-size: 1rem;
+    }
+    .ticker-lead-text {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+</style>
+
+<!-- 🌟 HIGH-TECH CENTRAL SERVICES MATRIX COMPONENT -->
+<section id="services" class="services-frame">
+    
+    <!-- Background Canvas Graphic Matrices -->
+    <div class="services-bg-layer">
+        <img src="./Assests/cloud eco.webp" alt="Abstract digital network wire mesh grid background canvas" class="services-mesh-img">
+        <div class="services-ambient-glow-orb purple-orb"></div>
+    </div>
+
+    <div class="services-container">
+        
+        <!-- Interactive Section Header Block -->
+        <div class="services-header-block">
+            <span class="services-mini-badge">Core Capabilities</span>
+            <h2 class="services-main-title">Built for Production <br><span>Scale Automation</span></h2>
+            <p class="services-subtitle-desc">Eliminate provisioning bottlenecks with highly secure, instant-on decentralized network architecture modules.</p>
+        </div>
+
+        <!-- 3-Column Adaptable Responsive Grid System -->
+        <div class="services-grid-track">
+            
+            <!-- Service Card 01 -->
+            <div class="service-card-node">
+                <div class="card-border-glow-line"></div>
+                <div class="card-inner-hull">
+                    <div class="service-icon-box">
+                        <img src="./Assests/lite bg - cloud.webp" alt="Cloud Network Datacenter Infrastructure Icon" class="icon-graphic">
+                    </div>
+                    <h3 class="service-node-title">Edge Mesh Networks</h3>
+                    <p class="service-node-desc">Route worldwide user queries via latency-optimized edge clusters automatically with no structural routing overhead updates.</p>
+                    <a href="404.html" class="service-node-link">
+                        <span>Explore Architecture</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card 02 -->
+            <div class="service-card-node">
+                <div class="card-border-glow-line"></div>
+                <div class="card-inner-hull">
+                    <div class="service-icon-box">
+                        <img src="./Assests/cyptography shield.webp" alt="Shield Cryptography Secure Analytics Icon" class="icon-graphic">
+                    </div>
+                    <h3 class="service-node-title">Zero-Trust Protocol</h3>
+                    <p class="service-node-desc">Isolate delicate storage engine database tables behind identity-aware proxy perimeters featuring continuous validation checks.</p>
+                    <a href="404.html" class="service-node-link">
+                        <span>Explore Security</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Card 03 -->
+            <div class="service-card-node">
+                <div class="card-border-glow-line"></div>
+                <div class="card-inner-hull">
+                    <div class="service-icon-box">
+                        <img src="./Assests/hand and robot - ai.webp" alt="Autonomous AI Core Matrix Processor Logic Icon" class="icon-graphic">
+                    </div>
+                    <h3 class="service-node-title">AI Predictive Pipelines</h3>
+                    <p class="service-node-desc">Pre-emptively scan execution stack execution tracks to fix logic bugs before runtime execution memory leaks happen.</p>
+                    <a href="404.html" class="service-node-link">
+                        <span>Explore Engine</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 SERVICES SECTION MATRIX CORE ENGINE */
+.services-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0; 
+    background-color: #090d1a; /* Synchronized depth layer matching your tech theme */
+    overflow: hidden;
+}
+
+/* Background Graphic Vector Integration Canvas */
+.services-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.services-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05; /* Keeps focus strictly balanced over your active grid cards text blocks */
+    filter: saturate(2) contrast(1.2);
+}
+
+.services-ambient-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(160px);
+    opacity: 0.12;
+}
+
+.purple-orb {
+    bottom: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #a78bfa 0%, transparent 70%);
+}
+
+/* Grid Framing Setup */
+.services-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Header Component Configuration Details */
+.services-header-block {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.services-mini-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(167, 139, 250, 0.1));
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    color: #a78bfa;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.services-header-block h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.services-header-block h2 span {
+    color: #3b82f6;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+}
+
+.services-subtitle-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 3-Column Responsive Flex Grid Track */
+.services-grid-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+/* High-Tech Card Core Node */
+.service-card-node {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(19, 26, 38, 0.4);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2;
+}
+
+/* Outer Border Track Line Engine */
+.service-card-node::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px; /* Emulates a modern border track spacing line */
+    background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+/* Inner Structural Hull Wrapper */
+.card-inner-hull {
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Icon Asset Box */
+.service-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.75rem;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.icon-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(1.2);
+    transition: all 0.4s ease;
+}
+
+.service-node-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.service-node-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+}
+
+/* Dynamic Action Link Modules inside card bases */
+.service-node-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link-arrow {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 🌟 DYNAMIC GLOW AND HOVER INTERACTION OVERLAYS */
+.service-card-node:hover {
+    transform: translateY(-6px);
+    background-color: rgba(19, 26, 38, 0.7);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+/* Morph outer border properties smoothly into an active neon path */
+.service-card-node:hover::before {
+    background: linear-gradient(135deg, #3b82f6 0%, #a78bfa 100%);
+}
+
+.service-card-node:hover .service-icon-box {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.service-card-node:hover .icon-graphic {
+    filter: grayscale(0%) brightness(1); /* Brings custom card graphic back into vibrant tone */
+    transform: scale(1.05);
+}
+
+.service-card-node:hover .service-node-title {
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.2);
+}
+
+.service-card-node:hover .service-node-link {
+    color: #a78bfa;
+}
+
+.service-card-node:hover .link-arrow {
+    transform: translateX(4px);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 768px) {
+    .services-header-block h2 {
+        font-size: 2rem;
+    }
+    .services-grid-track {
+        grid-template-columns: 1fr; /* Stacks column sets vertically on tablet and smaller screen viewports */
+    }
+    .card-inner-hull {
+        padding: 2rem;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Animation Trigger Logic for Card Matrices
+    const serviceCards = document.querySelectorAll(".service-card-node");
+    
+    // Set initial invisibility rules programmatically so non-js fallback profiles degrade safely
+    serviceCards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+        // Stagger transitions incrementally based on node arrays indices
+        card.style.transitionDelay = `${index * 100}ms`;
+    });
+
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                cardObserver.unobserve(entry.target); // Unobserves target node once animation triggers successfully
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px" // Triggers early just before scroll footprint snaps full line sight
+    });
+
+    serviceCards.forEach(card => cardObserver.observe(card));
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH PERFORMANCE METRICS PANEL -->
+<section id="metrics" class="metrics-frame">
+    
+    <!-- Background Canvas Layout Architecture -->
+    <div class="metrics-bg-layer">
+        <img src="./Assests/cyptography shield.webp" alt="Cyber telemetry space grid backdrop graphic" class="metrics-mesh-img">
+        <div class="metrics-glow-orb magenta-glow"></div>
+    </div>
+
+    <div class="metrics-container">
+        
+        <!-- Left Side: Interactive Metrics Data Summary Track -->
+        <div class="metrics-summary-block">
+            <span class="metrics-tag">Live Analytics Tracking</span>
+            <h2 class="metrics-title">Uncompromising Speed <br>For <span>Heavy Enterprise Workloads</span></h2>
+            <p class="metrics-desc">
+                Monitor global computation limits live. Our runtime environment actively shreds traditional infrastructure limitations by shifting tasks instantly across distributed network pipelines.
+            </p>
+            
+            <!-- Real-time Counter Grid Assembly -->
+            <div class="counters-grid-wrapper">
+                <div class="counter-node-item">
+                    <h3 class="counter-numeric-val" data-target="99">0</h3>
+                    <p class="counter-metric-label">Uptime SLA Guarantee</p>
+                </div>
+                <div class="counter-node-item">
+                    <h3 class="counter-numeric-val" data-target="450">0</h3>
+                    <p class="counter-metric-label">Global Edge Regions</p>
+                </div>
+                <div class="counter-node-item">
+                    <h3 class="counter-numeric-val" data-target="12">0</h3>
+                    <p class="counter-metric-label">Million Ops / Second</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Graphic Visual Telemetry System Dashboard Screen -->
+        <div class="metrics-visual-block">
+            <div class="visual-glowing-backdrop"></div>
+            <div class="dashboard-terminal-frame">
+                <img src="./Assests/status analytics.webp" alt="Production status visualization control node display map" class="dashboard-main-img">
+                
+                <!-- Micro Floating Overlay Component Frame -->
+                <div class="terminal-status-overlay">
+                    <span class="pulse-beacon-indicator"></span>
+                    <p class="overlay-telemetry-text">Network Health Cluster: Optimal</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 PERFORMANCE METRICS MATRIX MODULE */
+.metrics-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #0b0f19; /* Seamless background integration layer */
+    overflow: hidden;
+}
+
+/* Background Graphic Vector Integration Canvas */
+.metrics-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.metrics-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.04; /* Subdued structural background element footprints */
+    filter: saturate(1.8) contrast(1.1);
+}
+
+.metrics-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.1;
+    width: 450px;
+    height: 450px;
+}
+
+.magenta-glow {
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle, #d946ef 0%, transparent 70%);
+}
+
+/* Structural Two-Column Grid Setup */
+.metrics-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Side Descriptive Summary Block */
+.metrics-summary-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.metrics-tag {
+    display: inline-block;
+    background-color: rgba(217, 70, 239, 0.1);
+    border: 1px solid rgba(217, 70, 239, 0.3);
+    color: #f472b6;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+}
+
+.metrics-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.75px;
+    color: #ffffff; /* Requested: White Typography */
+    margin: 0 0 1.25rem 0;
+}
+
+.metrics-title span {
+    background: linear-gradient(135deg, #d946ef 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.metrics-desc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: whitesmoke; /* Requested: Whitesmoke Typography replaces old text-muted values */
+    max-width: 600px;
+    margin: 0 0 2.5rem 0;
+}
+
+/* Live Analytics Numeric Grid Layout */
+.counters-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 2rem;
+}
+
+.counter-node-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.counter-numeric-val {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff; /* Requested: High Contrast White Numbers */
+    line-height: 1;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.counter-metric-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: whitesmoke; /* Requested: High Contrast Whitesmoke Text description fields */
+    letter-spacing: 0.25px;
+}
+
+/* Right Side Graphic Telemetry Dashboard Frame Component */
+.metrics-visual-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-glowing-backdrop {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.12) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.dashboard-terminal-frame {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.dashboard-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    filter: brightness(0.9) contrast(1.05);
+    transition: filter 0.4s ease, border-color 0.4s ease;
+}
+
+/* Floating HUD Component Frame inside visual layout */
+.terminal-status-overlay {
+    position: absolute;
+    bottom: -15px;
+    left: -20px;
+    background-color: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.pulse-beacon-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22c55e;
+    animation: beaconFlash 1.4s infinite alternate;
+}
+
+.overlay-telemetry-text {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff; /* Explicit White text overlay */
+}
+
+/* 🌟 INTERACTIVE GLOW AND NEON HOVER OVERLAYS */
+.metrics-container:hover .counter-numeric-val {
+    color: #d946ef;
+    text-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
+}
+
+.dashboard-terminal-frame:hover {
+    transform: translateY(-5px) rotate(0.5deg);
+    box-shadow: 0 25px 45px rgba(217, 70, 239, 0.2);
+}
+
+.dashboard-terminal-frame:hover .dashboard-main-img {
+    filter: brightness(1) contrast(1.1);
+    border-color: rgba(217, 70, 239, 0.4);
+}
+
+.dashboard-terminal-frame:hover .terminal-status-overlay {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 🌀 ANIMATION SEQUENCE TIMELINES */
+@keyframes beaconFlash {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.25); opacity: 1; filter: drop-shadow(0 0 4px #22c55e); }
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .metrics-title { font-size: 2.1rem; }
+    .metrics-container { gap: 3rem; }
+}
+
+@media (max-width: 900px) {
+    .metrics-container {
+        grid-template-columns: 1fr; /* Stacks layout elements into single columns on mobile mobile interfaces */
+        text-align: center;
+        gap: 4rem;
+    }
+    .metrics-summary-block { align-items: center; }
+    .counters-grid-wrapper { padding-top: 1.5rem; }
+    .terminal-status-overlay { left: 10px; bottom: 10px; } /* Clean layout alignment fixes inside small responsive views */
+}
+
+@media (max-width: 550px) {
+    .counters-grid-wrapper {
+        grid-template-columns: 1fr; /* Converted into vertical column flow charts for smartphone viewports */
+        gap: 1.5rem;
+    }
+    .counter-numeric-val { font-size: 2.4rem; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Counter Acceleration Engine Logic Blocks
+    const metricNumbers = document.querySelectorAll(".counter-numeric-val");
+    
+    const triggerNumericRoll = () => {
+        metricNumbers.forEach(node => {
+            const targetVal = parseInt(node.getAttribute("data-target"), 10);
+            
+            const processIncrement = () => {
+                const activeNum = parseInt(node.innerText, 10);
+                const accelerationStep = Math.ceil(targetVal / 40);
+
+                if (activeNum < targetVal) {
+                    node.innerText = activeNum + accelerationStep > targetVal ? targetVal : activeNum + accelerationStep;
+                    setTimeout(processIncrement, 35);
+                } else {
+                    node.innerText = targetVal;
+                }
+            };
+            processIncrement();
+        });
+    };
+
+    const metricsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                triggerNumericRoll();
+                metricsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
+
+    const targetSection = document.getElementById("metrics");
+    if (targetSection) metricsObserver.observe(targetSection);
+});
+
+</script>
+
+<!-- 🌟 TWO-LINE HIGH-CONVERTING CTA COMPONENT -->
+<section id="cta-action" class="cta-frame">
+    
+    <!-- Background Canvas Layer Mapping -->
+    <div class="cta-bg-layer">
+        <img src="./Assests/lite bg - cloud.webp" alt="Futuristic abstract network flow connection background" class="cta-mesh-img">
+        <div class="cta-ambient-glow indigo-glow"></div>
+    </div>
+
+    <div class="cta-container">
+        
+        <!-- Two-Line Impactful Content Frame -->
+        <div class="cta-content-wrapper">
+            <h2 class="cta-title">
+                Ready to Accelerate Your Deployments? <br>
+                <span>Launch Your Cloud Cluster in Seconds.</span>
+            </h2>
+            <p class="cta-subtitle">
+                Join thousands of fast-moving infrastructure teams shipping high-scale software daily. No credit card required. Cancel anytime.
+            </p>
+        </div>
+
+        <!-- Right Aligned Interactive Deployment Target Actions -->
+        <div class="cta-actions-hub">
+            <a href="404.html" class="btn-cta-glow">Initialize Infrastructure</a>
+            <a href="404.html" class="btn-cta-outline">Speak With Engineer</a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 TWO-LINE CTA SECTION CORE ENGINE */
+.cta-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #0b111e; /* Deep dark tech base canvas backing color */
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Background Canvas Graphics Logic */
+.cta-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cta-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.06; /* Highly subtle image layer footprint background texturing */
+    filter: saturate(1.5) contrast(1.2) hue-rotate(220deg);
+}
+
+.cta-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    width: 600px;
+    height: 350px;
+}
+
+.indigo-glow {
+    bottom: -20%;
+    left: 40%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, #3b82f6 0%, #6366f1 50%, transparent 70%);
+}
+
+/* Fluid Flex Row/Grid Core Presentation Setup */
+.cta-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Two-Line Title Formatting Text Layout Blocks */
+.cta-content-wrapper {
+    max-width: 850px;
+}
+
+.cta-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.75px;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+}
+
+.cta-title span {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(96, 165, 250, 0.25));
+}
+
+.cta-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: whitesmoke; /* Clean high-contrast readability */
+    margin: 0;
+}
+
+/* Action Button Panels Wrapper Track */
+.cta-actions-hub {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Glow-Injected Solid Primary Button */
+.btn-cta-glow {
+    display: inline-block;
+    padding: 0.95rem 2.2rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* High Contrast Modern Transparent Outline Button Variant */
+.btn-cta-outline {
+    display: inline-block;
+    padding: 0.95rem 1.8rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* 🌟 MODERN INTERACTIVE HOVER AND NEON GLOW ACTIONS */
+
+.btn-cta-glow:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+    box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5), 0 0 15px #60a5fa;
+}
+
+.btn-cta-outline:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: #60a5fa;
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.1);
+}
+
+/* Accent highlight triggers across full headline block wrapper on container targets */
+.cta-container:hover .cta-title {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .cta-title { font-size: 2rem; }
+    .cta-container { gap: 2.5rem; }
+}
+
+@media (max-width: 900px) {
+    .cta-container {
+        flex-direction: column; /* Collapses flex layout rows clean into unified column columns on narrow viewports */
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .cta-actions-hub {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-title { font-size: 1.65rem; }
+    .cta-actions-hub {
+        flex-direction: column; /* Forces absolute linear vertical stacks on tiny viewports */
+        gap: 1rem;
+    }
+    .btn-cta-glow, .btn-cta-outline {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Fade Entry Rig Integration for CTA Action Frame Layer
+    const ctaLayoutWrapper = document.querySelector(".cta-container");
+
+    if (ctaLayoutWrapper) {
+        // Apply initial hidden base values safely
+        ctaLayoutWrapper.style.opacity = "0";
+        ctaLayoutWrapper.style.transform = "translateY(20px)";
+        ctaLayoutWrapper.style.transition = "opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)";
+
+        const ctaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    ctaLayoutWrapper.style.opacity = "1";
+                    ctaLayoutWrapper.style.transform = "translateY(0)";
+                    ctaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        const ctaTargetSection = document.getElementById("cta-action");
+        if (ctaTargetSection) ctaObserver.observe(ctaTargetSection);
+    }
+});
+
+</script>
+
+<!-- 🌟 ADVANCED SECURITY COMPLIANCE COMPONENT -->
+<section id="security-node" class="security-frame">
+    
+    <!-- Background Canvas Layout Architecture -->
+    <div class="security-bg-layer">
+        <img src="./Assests/status analytics.webp" alt="Cyber security code sequence array background digital mesh" class="security-mesh-img">
+        <div class="security-ambient-glow emerald-glow"></div>
+    </div>
+
+    <div class="security-container">
+        
+        <!-- Left Side: Interactive Vector Interface Graphics Graphic Visuals -->
+        <div class="security-visual-block">
+            <div class="security-glowing-backdrop"></div>
+            <div class="security-panel-frame">
+                <img src="./Assests/server node.webp" alt="Encrypted security telemetry server nodes hardware array" class="security-main-img">
+                
+                <!-- Floating Real-Time Compliance Shield Overlay -->
+                <div class="security-compliance-overlay">
+                    <svg class="shield-check-vector" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 11l2 2 4-4"/>
+                    </svg>
+                    <div>
+                        <h4 class="overlay-title">ISO 27001</h4>
+                        <p class="overlay-desc">Continuous Audit Verified</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Tactical Content Summary Matrix -->
+        <div class="security-text-block">
+            <span class="security-tag-badge">Military-Grade Defense</span>
+            <h2 class="security-title">Zero-Trust Network <br><span>Perimeter Shielding</span></h2>
+            <p class="security-desc">
+                Isolate critical data pipelines dynamically behind continuously validated proxy walls. Our intelligent cryptography protocol monitors database transaction mutations automatically to shut down malicious structural payload vectors instantly.
+            </p>
+            
+            <!-- Features Micro Bullet Stack List -->
+            <ul class="security-bullet-stack">
+                <li class="bullet-node">
+                    <span class="bullet-check-icon">✓</span>
+                    <span class="bullet-text">Automated End-to-End TLS 1.3 Key Rotation Rows</span>
+                </li>
+                <li class="bullet-node">
+                    <span class="bullet-check-icon">✓</span>
+                    <span class="bullet-text">Decentralized Threat Isolation Processing Clusters</span>
+                </li>
+                <li class="bullet-node">
+                    <span class="bullet-check-icon">✓</span>
+                    <span class="bullet-text">Instant Quantum-Resistant State Cryptography Layers</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 SECURITY SECTION MATRIX LAYER CONFIGURATIONS */
+.security-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13; /* Alternating dark theme backdrop sequence depth matching */
+    overflow: hidden;
+}
+
+/* Background Canvas Assets Mapping */
+.security-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.security-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05; /* Maintains soft subtle layout texture footprint depth visibility */
+    filter: hue-rotate(90deg) brightness(0.8);
+}
+
+.security-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.12;
+    width: 500px;
+    height: 500px;
+}
+
+.emerald-glow {
+    bottom: -10%;
+    right: -5%;
+    background: radial-gradient(circle, #10b981 0%, transparent 70%);
+}
+
+/* Two-Column Responsive Layout Tracking Setup Grid */
+.security-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Side Visual Frame Components */
+.security-visual-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.security-glowing-backdrop {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.security-panel-frame {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.security-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    filter: saturate(0.8) contrast(1.1);
+    transition: filter 0.4s ease, border-color 0.4s ease;
+}
+
+/* Floating Real-Time Compliance Shield Overlay */
+.security-compliance-overlay {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    background-color: rgba(19, 26, 38, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 0.8rem 1.4rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.shield-check-vector {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4));
+}
+
+.overlay-title {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.overlay-desc {
+    margin: 2px 0 0 0;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* Right Side Descriptive Tactical Panel Text */
+.security-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.security-tag-badge {
+    display: inline-block;
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #34d399;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+}
+
+.security-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.75px;
+    color: var(--text-main);
+    margin: 0 0 1.25rem 0;
+}
+
+.security-title span {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.security-desc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 0 2rem 0;
+}
+
+/* Features Bullet Stack List Component */
+.security-bullet-stack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bullet-node {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.bullet-check-icon {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.1);
+}
+
+.bullet-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+/* 🌟 INTERACTIVE GLOW AND NEON HOVER OVERLAYS */
+.security-panel-frame:hover {
+    transform: translateY(-5px) rotate(-0.5deg);
+    box-shadow: 0 25px 45px rgba(16, 185, 129, 0.15);
+}
+
+.security-panel-frame:hover .security-main-img {
+    filter: saturate(1.1) contrast(1.1);
+    border-color: rgba(16, 185, 129, 0.4);
+}
+
+.security-panel-frame:hover .security-compliance-overlay {
+    transform: translateY(-3px) scale(1.02);
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.25);
+}
+
+.security-text-block:hover .bullet-text {
+    color: #a7f3d0;
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .security-title { font-size: 2.1rem; }
+    .security-container { gap: 3rem; }
+}
+
+@media (max-width: 900px) {
+    .security-container {
+        grid-template-columns: 1fr; /* Stacks structural rows vertically on mobile viewports */
+        text-align: center;
+        gap: 4rem;
+    }
+    /* Swaps position indexes order so visual graphic slides beautifully underneath text block headings on small panels */
+    .security-visual-block {
+        grid-row: 2;
+    }
+    .security-text-block { align-items: center; }
+    .security-bullet-stack { align-items: flex-start; text-align: left; }
+    .security-compliance-overlay { right: 10px; top: 10px; }
+}
+
+</style>
+
+<section id="about-strategy" class="strategy-frame">
+    
+    <!-- Background Architectural Canvas Components -->
+    <div class="strategy-bg-layer">
+        <img src="./Assests/cyptography shield.webp" alt="Autonomic neural tracking line schematic canvas mesh" class="strategy-mesh-img">
+        <div class="strategy-ambient-glow sapphire-blur"></div>
+    </div>
+
+    <div class="strategy-container">
+        
+        <!-- Left Side: Interactive Graphic Telemetry Deck with Background Image Assets -->
+        <div class="strategy-visual-block">
+            <div class="strategy-glowing-backdrop"></div>
+            <div class="graphic-hull-frame">
+                <!-- High-contrast main infrastructure illustration asset -->
+                <img src="./Assests/cloud framework.webp" alt="Distributed cloud processing array framework data stream illustration" class="strategy-main-img">
+                
+                <!-- Floating Glass HUD Card 01 (Top Left) -->
+                <div class="floating-hud-node hud-node-tl">
+                    <span class="hud-pulse-dot"></span>
+                    <div class="hud-text-row">
+                        <h5>Neural Compute</h5>
+                        <p>Sync: 99.98%</p>
+                    </div>
+                </div>
+
+                <!-- Floating Glass HUD Card 02 (Bottom Right) -->
+                <div class="floating-hud-node hud-node-br">
+                    <span class="hud-icon-slot">⚙️</span>
+                    <div class="hud-text-row">
+                        <h5>Pipeline Integrity</h5>
+                        <p>Secured via Layer-3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Tactical Content Summary Matrix Text Block -->
+        <div class="strategy-text-block">
+            <span class="strategy-tag-badge">Platform Overview</span>
+            <h2 class="strategy-title">Bridging Autonomic Workflows <br><span>With Corporate Efficiency</span></h2>
+            <p class="strategy-desc">
+                We re-engineer traditional corporate network limits by embedding autonomous neural models deep into decentralized workflow infrastructures. Eliminate standard logic bottlenecks and synchronize operations effortlessly.
+            </p>
+            
+            <!-- Structural Workflow Step Grid Row Modules -->
+            <div class="workflow-steps-track">
+                
+                <!-- Step Row 01 -->
+                <div class="step-card-row">
+                    <div class="step-numeric-badge">01</div>
+                    <div class="step-content-node">
+                        <h4>Orchestrated Modeling</h4>
+                        <p>Map structural neural layers cleanly onto runtime cloud dependencies with zero compilation latency.</p>
+                    </div>
+                </div>
+
+                <!-- Step Row 02 -->
+                <div class="step-card-row">
+                    <div class="step-numeric-badge">02</div>
+                    <div class="step-content-node">
+                        <h4>Continuous Optimization</h4>
+                        <p>Active telemetry modules shift microservice pipeline bounds dynamically to preserve computational energy.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<style>
+    /* 🌟 ABOUT & WORKFLOW STRATEGY MODULE CSS */
+.strategy-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #090d1a; /* Balanced background transition tracking matching your matrix theme */
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.strategy-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.strategy-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Soft background texture footprint depth visibility */
+    filter: saturate(1.6) contrast(1.1) hue-rotate(210deg);
+}
+
+.strategy-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.1;
+    width: 500px;
+    height: 500px;
+}
+
+.sapphire-blur {
+    top: -15%;
+    left: -5%;
+    background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+}
+
+/* Two-Column Responsive Presentation Grid Layout Setup */
+.strategy-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Side Visual Representation Column Box elements */
+.strategy-visual-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strategy-glowing-backdrop {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.graphic-hull-frame {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.strategy-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    filter: brightness(0.85) saturate(0.9) contrast(1.05);
+    transition: filter 0.4s ease, border-color 0.4s ease;
+}
+
+/* Floating Glassmorphic HUD overlay modules mapping */
+.floating-hud-node {
+    position: absolute;
+    background-color: rgba(19, 26, 38, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 1.25rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hud-node-tl { top: 12%; left: -25px; }
+.hud-node-br { bottom: 12%; right: -25px; }
+
+.hud-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #3b82f6;
+    animation: activePulse 1.4s infinite alternate;
+}
+
+.hud-icon-slot { font-size: 0.9rem; }
+
+.hud-text-row h5 { margin: 0; font-size: 0.8rem; color: #ffffff; }
+.hud-text-row p { margin: 1px 0 0 0; font-size: 0.7rem; color: var(--text-muted); }
+
+/* Right Side Descriptive Summary Matrix Text block */
+.strategy-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.strategy-tag-badge {
+    display: inline-block;
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #60a5fa;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+}
+
+.strategy-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.75px;
+    color: #ffffff;
+    margin: 0 0 1.25rem 0;
+}
+
+.strategy-title span {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(96, 165, 250, 0.25));
+}
+
+.strategy-desc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: whitesmoke; /* High contrast text block color requested override */
+    max-width: 600px;
+    margin: 0 0 2.5rem 0;
+}
+
+/* Linear Sequential Workflow Steps Track layout rows */
+.workflow-steps-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    width: 100%;
+}
+
+.step-card-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step-card-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.step-numeric-badge {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.step-content-node h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.step-content-node p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: whitesmoke; /* Whitesmoke color configuration layer replaces dark text-muted fields */
+    line-height: 1.5;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+
+.graphic-hull-frame:hover {
+    transform: translateY(-4px) rotate(0.5deg);
+}
+
+.graphic-hull-frame:hover .strategy-main-img {
+    filter: brightness(1) saturate(1.1) contrast(1.1);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 25px 45px rgba(59, 130, 246, 0.2);
+}
+
+/* High tech micro responses targeting floating cards on wrapper hovers */
+.graphic-hull-frame:hover .floating-hud-node {
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.15);
+    transform: scale(1.03);
+}
+
+.hud-node-tl:hover { border-color: #60a5fa !important; }
+.hud-node-br:hover { border-color: #a78bfa !important; }
+
+/* Content line active row shifts triggered when user cursors across step modules */
+.step-card-row:hover {
+    transform: translateX(4px);
+}
+
+.step-card-row:hover .step-numeric-badge {
+    background-color: #3b82f6;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+    border-color: #3b82f6;
+}
+
+.step-card-row:hover .step-content-node h4 {
+    color: #60a5fa;
+    text-shadow: 0 0 8px rgba(96, 165, 250, 0.2);
+}
+
+/* 🌀 KEYFRAME TRANSFORMATION TIMELINES */
+@keyframes activePulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.2); opacity: 1; filter: drop-shadow(0 0 4px #3b82f6); }
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .strategy-title { font-size: 2.1rem; }
+    .strategy-container { gap: 3rem; }
+}
+
+@media (max-width: 900px) {
+    .strategy-container {
+        grid-template-columns: 1fr; /* Stacks column sections vertically on handheld mobile interfaces */
+        text-align: center;
+        gap: 4.5rem;
+    }
+    .strategy-text-block { align-items: center; }
+    .workflow-steps-track { align-items: flex-start; text-align: left; }
+    .hud-node-tl { left: 10px; top: 10px; } /* Pulls overlay tags safely inside layout gutters on tiny panels */
+    .hud-node-br { right: 10px; bottom: 10px; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Fade Entry Rig Integration for About Strategy Section
+    const strategyVisualBlock = document.querySelector(".strategy-visual-block");
+    const strategyTextBlock = document.querySelector(".strategy-text-block");
+
+    if (strategyVisualBlock && strategyTextBlock) {
+        // Configure safe initialization hidden metrics parameters
+        strategyVisualBlock.style.opacity = "0";
+        strategyVisualBlock.style.transform = "translateX(-25px)";
+        strategyVisualBlock.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        strategyTextBlock.style.opacity = "0";
+        strategyTextBlock.style.transform = "translateX(25px)";
+        strategyTextBlock.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        const strategySectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    strategyVisualBlock.style.opacity = "1";
+                    strategyVisualBlock.style.transform = "translateX(0)";
+                    
+                    strategyTextBlock.style.opacity = "1";
+                    strategyTextBlock.style.transform = "translateX(0)";
+                    
+                    strategySectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        const strategySectionFrame = document.getElementById("about-strategy");
+        if (strategySectionFrame) strategySectionObserver.observe(strategySectionFrame);
+    }
+});
+
+</script>
+
+
+<!-- 🌟 INTERACTIVE NEON GLASS TESTIMONIAL SLIDER -->
+<section id="reviews-slider" class="reviews-frame">
+    
+    <!-- Background Canvas Layout Architecture -->
+    <div class="reviews-bg-layer">
+        <img src="./Assests/status analytics.webp" alt="Cyber network infrastructure technical layout space grid" class="reviews-mesh-img">
+        <div class="reviews-glow-orb purple-blur"></div>
+    </div>
+
+    <div class="reviews-container">
+        
+        <!-- Section Header Context Block -->
+        <div class="reviews-header-block">
+            <span class="reviews-mini-tag">Operator Telemetry</span>
+            <h2 class="reviews-title">Verified Deployment <br><span>Success Stories</span></h2>
+            <p class="reviews-desc">Discover how modern, global engineering organizations deploy and optimize microservice clusters without operational friction.</p>
+        </div>
+
+        <!-- 🌟 Dynamic Horizontally Constrained Carousel Viewport Window -->
+        <div class="reviews-carousel-viewport">
+            <div class="reviews-slider-track">
+                
+                <!-- Slide Node Card 01 -->
+                <div class="review-slide-card active-slide">
+                    <div class="slide-inner-hull">
+                        <div class="star-rating-row">★★★★★</div>
+                        <p class="slide-quote">"Transitioning our heavy decentralized database mutations over to this network architecture slashed edge query failures cleanly down to zero. The performance gains are completely undeniable."</p>
+                        <div class="operator-profile-flex">
+                            <div class="operator-avatar">
+                                <img src="./Assests/L3.webp" alt="Elena Rostova Core Engineer Profile Avatar" class="avatar-asset">
+                            </div>
+                            <div>
+                                <h4 class="operator-name">Elena Rostova</h4>
+                                <p class="operator-meta">Lead Infrastructure Architect, DataWave</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Node Card 02 -->
+                <div class="review-slide-card">
+                    <div class="slide-inner-hull">
+                        <div class="star-rating-row">★★★★★</div>
+                        <p class="slide-quote">"The identity-aware threat isolation mechanics operate with zero bottleneck delay. We ran cross-cluster scaling checks up to 12 million operations per second perfectly."</p>
+                        <div class="operator-profile-flex">
+                            <div class="operator-avatar">
+                                <img src="./Assests/L 1.webp" alt="Alexandre Dubois Principal Tech Lead Profile Avatar" class="avatar-asset">
+                            </div>
+                            <div>
+                                <h4 class="operator-name">Alexandre Dubois</h4>
+                                <p class="operator-meta">Principal Security Specialist, CloudGrid</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Node Card 03 -->
+                <div class="review-slide-card">
+                    <div class="slide-inner-hull">
+                        <div class="star-rating-row">★★★★★</div>
+                        <p class="slide-quote">"We slashed our monthly server provisioning budgets significantly within weeks of rolling out these microservice pipeline modules. The monitoring telemetry tracks are hyper-precise."</p>
+                        <div class="operator-profile-flex">
+                            <div class="operator-avatar">
+                                <img src="./Assests/L2.webp" alt="Nisha Patel Director of Systems Operations Avatar" class="avatar-asset">
+                            </div>
+                            <div>
+                                <h4 class="operator-name">Kishan Patel</h4>
+                                <p class="operator-meta">Director of Cloud Operations, SysPulse</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Carousel Pagination Control Nodes Navigation dots -->
+        <div class="reviews-pagination-dots">
+            <button class="dot-selector active-dot" aria-label="Navigate to testimonial slide 1" data-slide="0"></button>
+            <button class="dot-selector" aria-label="Navigate to testimonial slide 2" data-slide="1"></button>
+            <button class="dot-selector" aria-label="Navigate to testimonial slide 3" data-slide="2"></button>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 INTERACTIVE REVIEWS CAROUSEL MODULE SYSTEM */
+.reviews-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13; /* Alternating sequence layout backing depth matching */
+    overflow: hidden;
+}
+
+/* Background Graphical Layer Tracks mapping */
+.reviews-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.reviews-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.04; /* Soft background texture footprint depth visibility */
+    filter: saturate(1.5) contrast(1.1);
+}
+
+.reviews-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.1;
+    width: 500px;
+    height: 500px;
+}
+
+.purple-blur {
+    bottom: -10%;
+    left: -5%;
+    background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
+}
+
+/* Presentation Grid Layout Setup */
+.reviews-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Header Component Configuration Details */
+.reviews-header-block {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.reviews-mini-tag {
+    display: inline-block;
+    background-color: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #a78bfa;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.reviews-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.reviews-title span {
+    background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(167, 139, 250, 0.3));
+}
+
+.reviews-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 🌟 Masked Viewport Window Slider Assembly */
+.reviews-carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem 0;
+}
+
+.reviews-slider-track {
+    display: flex;
+    width: 100%;
+    gap: 2.5rem;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* High-Tech Grid Slider Card Node Box */
+.review-slide-card {
+    flex: 0 0 calc(100% / 2 - 1.25rem); /* Default desktop 2-column view */
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(19, 26, 38, 0.3);
+    opacity: 0.4;
+    transform: scale(0.97);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-slide-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+/* Highlight variables for active slide cards focus */
+.review-slide-card.active-slide {
+    opacity: 1;
+    transform: scale(1);
+    background-color: rgba(19, 26, 38, 0.6);
+}
+
+.review-slide-card.active-slide::before {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.4) 0%, rgba(192, 132, 252, 0.1) 100%);
+}
+
+.slide-inner-hull {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.star-rating-row {
+    color: #f59e0b;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+}
+
+.slide-quote {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: whitesmoke; /* Clean text contrast override */
+    font-style: italic;
+    margin: 0;
+}
+
+/* User Identity Flex Block Components */
+.operator-profile-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+}
+
+.operator-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: border-color 0.4s ease;
+}
+
+.avatar-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.operator-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.operator-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 2px 0 0 0;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.review-slide-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 25px rgba(139, 92, 246, 0.08);
+}
+
+.review-slide-card.active-slide:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(139, 92, 246, 0.15);
+}
+
+.review-slide-card:hover::before {
+    background: linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%);
+}
+
+.review-slide-card:hover .operator-avatar {
+    border-color: #8b5cf6;
+}
+
+/* Navigation Pagination Dots Row */
+.reviews-pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+}
+
+.dot-selector {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot-selector.active-dot {
+    background-color: #8b5cf6;
+    width: 28px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px #8b5cf6;
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 900px) {
+    .review-slide-card {
+        flex: 0 0 100%; /* Transitions cleanly into single columns on small handheld viewports */
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-title { font-size: 2rem; }
+    .slide-inner-hull { padding: 1.75rem; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Interactive Testimonial Slider Mechanics Rig
+    const track = document.querySelector(".reviews-slider-track");
+    const slides = document.querySelectorAll(".review-slide-card");
+    const dots = document.querySelectorAll(".dot-selector");
+
+    if (track && slides.length > 0 && dots.length > 0) {
+        dots.forEach(dot => {
+            dot.addEventListener("click", (e) => {
+                const targetIdx = parseInt(e.target.getAttribute("data-slide"), 10);
+                
+                // 1. Calculate active translation distance shift based on screen size layout rules
+                const isMobile = window.innerWidth <= 900;
+                const shiftWidth = slides[0].getBoundingClientRect().width;
+                const trackGap = parseFloat(window.getComputedStyle(track).gap || 0);
+                
+                let translationValue = 0;
+                if (isMobile) {
+                    translationValue = targetIdx * (shiftWidth + trackGap);
+                } else {
+                    // Desktop calculations offset paths cleanly to center target card cards
+                    translationValue = targetIdx * (shiftWidth + trackGap) * 0.85; 
+                }
+
+                track.style.transform = `translateX(-${translationValue}px)`;
+
+                // 2. Refresh Pagination Indicator Classes
+                document.querySelector(".dot-selector.active-dot")?.classList.remove("active-dot");
+                dot.classList.add("active-dot");
+
+                // 3. Cycle Target Slide Focus State weights
+                document.querySelectorAll(".review-slide-card.active-slide").forEach(s => s.classList.remove("active-slide"));
+                slides[targetIdx]?.classList.add("active-slide");
+                if (!isMobile && slides[targetIdx + 1]) {
+                    slides[targetIdx + 1].classList.add("active-slide"); // Desktop dual highlight focus
+                }
+            });
+        });
+    }
+});
+
+</script>
+<!-- 🌟 HIGH-TECH ACCORDION FAQ SYSTEM -->
+<section id="faq-node" class="faq-frame">
+    
+    <!-- Background Canvas Layer Architecture -->
+    <div class="faq-bg-layer">
+        <img src="./Assests/server node.webp" alt="Cyber telemetry space grid backdrop graphic" class="faq-mesh-img">
+        <div class="faq-ambient-glow sky-glow-blur"></div>
+    </div>
+
+    <div class="faq-container">
+        
+        <!-- Section Title & Meta Header Box -->
+        <div class="faq-header-block">
+            <span class="faq-badge">System Ledger</span>
+            <h2 class="faq-main-title">Frequently Asked <br><span>Technical Questions</span></h2>
+            <p class="faq-subtitle-desc">Find quick resolutions regarding global edge multi-routing architectures, continuous dynamic audits, and computational operational thresholds.</p>
+        </div>
+
+        <!-- Central Accordion Wrapper Stack -->
+        <div class="faq-accordion-stack">
+            
+            <!-- Accordion Item 01 -->
+            <div class="faq-accordion-item">
+                <button class="accordion-trigger-row" aria-expanded="false">
+                    <span class="accordion-title-text">How does the decentralized edge mesh calculate request routing?</span>
+                    <span class="accordion-toggle-cross"></span>
+                </button>
+                <div class="accordion-content-viewport">
+                    <div class="accordion-content-inner">
+                        <p class="faq-answer-text">
+                            Our edge grid continuously tracks server telemetry footprints worldwide. Requests are parsed through low-latency network tracks that route computational traffic away from active pipeline blocks to the closest verified microservice node within sub-1.5ms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 02 -->
+            <div class="faq-accordion-item">
+                <button class="accordion-trigger-row" aria-expanded="false">
+                    <span class="accordion-title-text">What isolation security metrics protect database tables during mutations?</span>
+                    <span class="accordion-toggle-cross"></span>
+                </button>
+                <div class="accordion-content-viewport">
+                    <div class="accordion-content-inner">
+                        <p class="faq-answer-text">
+                            We deploy identity-aware proxy perimeters that enforce strict zero-trust parameters on all data transactions. Any unusual payload mutation or unauthorized structural call triggers automated cryptographical token isolation to safeguard data blocks immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 03 -->
+            <div class="faq-accordion-item">
+                <button class="accordion-trigger-row" aria-expanded="false">
+                    <span class="accordion-title-text">Can I scale execution pipelines from Monthly to Annual plans instantly?</span>
+                    <span class="accordion-toggle-cross"></span>
+                </button>
+                <div class="accordion-content-viewport">
+                    <div class="accordion-content-inner">
+                        <p class="faq-answer-text">
+                            Yes, structural plan changes scale instantly through your unified engineering command terminal dashboard. Existing operational data matrices and infrastructure credentials stay untouched, while billing calculations adjust automatically with a 20% discount applied to your cycle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 04 -->
+            <div class="faq-accordion-item">
+                <button class="accordion-trigger-row" aria-expanded="false">
+                    <span class="accordion-title-text">Are the cloud computation perimeters fully compliant with global standards?</span>
+                    <span class="accordion-toggle-cross"></span>
+                </button>
+                <div class="accordion-content-viewport">
+                    <div class="accordion-content-inner">
+                        <p class="faq-answer-text">
+                            Our decentralized networks are continuously monitored through automated verification nodes. Every cluster region maintains continuous audit validation layers aligned with strict ISO 27001 and quantum-resistant security encryption protocols.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 HIGH-TECH ACCORDION FAQ SYSTEM STYLES */
+.faq-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #0b0f19; /* Seamless background integration layer matching your tech theme */
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.faq-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.faq-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Subdued architectural texture footprint depth visibility */
+    filter: saturate(1.5) contrast(1.1) hue-rotate(200deg);
+}
+
+.faq-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.08;
+    width: 500px;
+    height: 500px;
+}
+
+.sky-glow-blur {
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, #0284c7 0%, transparent 70%);
+}
+
+/* Core Content Presentation Container Setup */
+.faq-container {
+    max-width: 900px; /* Constrained column width for clean reading layout scannability */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Header Component Configuration Details */
+.faq-header-block {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.faq-badge {
+    display: inline-block;
+    background-color: rgba(2, 132, 199, 0.1);
+    border: 1px solid rgba(2, 132, 199, 0.3);
+    color: #38bdf8;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.faq-header-block h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.faq-header-block h2 span {
+    background: linear-gradient(135deg, #38bdf8 0%, #0369a1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.25));
+}
+
+.faq-subtitle-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Central Stack Core Structure Layout */
+.faq-accordion-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+/* Individual Accordion Housing Row Item */
+.faq-accordion-item {
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(19, 26, 38, 0.4);
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Outer Border Glow Track Emulation */
+.faq-accordion-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+/* Clickable Interactive Row Handle */
+.accordion-trigger-row {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    position: relative;
+    z-index: 3;
+}
+
+.accordion-title-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Interactive Cross / Plus Shape Morphing Toggle Component Symbol */
+.accordion-toggle-cross {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.accordion-toggle-cross::before, .accordion-toggle-cross::after {
+    content: '';
+    position: absolute;
+    background-color: whitesmoke;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+/* Horizontal line component */
+.accordion-toggle-cross::before {
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+/* Vertical line component */
+.accordion-toggle-cross::after {
+    top: 0;
+    left: 7px;
+    width: 2px;
+    height: 100%;
+}
+
+/* Max Height Dynamic Content Viewport Mask */
+.accordion-content-viewport {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.accordion-content-inner {
+    padding: 0 2rem 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.faq-answer-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: whitesmoke; /* Optimal high-contrast readability */
+    margin: 1rem 0 0 0;
+}
+
+/* 🌟 DYNAMIC GLOW AND ACTIVE TOGGLE INDICATORS */
+
+.faq-accordion-item:hover {
+    background-color: rgba(19, 26, 38, 0.6);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 20px rgba(56, 189, 248, 0.04);
+}
+
+.faq-accordion-item:hover::before {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.3) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.accordion-trigger-row:hover .accordion-title-text {
+    color: #38bdf8;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
+}
+
+.accordion-trigger-row:hover .accordion-toggle-cross::before,
+.accordion-trigger-row:hover .accordion-toggle-cross::after {
+    background-color: #38bdf8;
+}
+
+/* Active State Row Modifiers triggered via JavaScript classes */
+.faq-accordion-item.item-active {
+    background-color: rgba(19, 26, 38, 0.75);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 25px rgba(56, 189, 248, 0.08);
+}
+
+.faq-accordion-item.item-active::before {
+    background: linear-gradient(135deg, #38bdf8 0%, #0369a1 100%);
+}
+
+.faq-accordion-item.item-active .accordion-title-text {
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+/* Morph structural cross vertical bars into clean flat single dashes (-) */
+.faq-accordion-item.item-active .accordion-toggle-cross::after {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+.faq-accordion-item.item-active .accordion-toggle-cross::before {
+    background-color: #38bdf8;
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 768px) {
+    .faq-header-block h2 { font-size: 2rem; }
+    .accordion-trigger-row { padding: 1.25rem 1.5rem; }
+    .accordion-content-inner { padding: 0 1.5rem 1.25rem 1.5rem; }
+    .accordion-title-text { font-size: 1rem; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. Smooth Accordion Toggle State Mechanic
+    const accordionTriggers = document.querySelectorAll(".accordion-trigger-row");
+
+    accordionTriggers.forEach(trigger => {
+        trigger.addEventListener("click", () => {
+            const accordionItem = trigger.parentElement;
+            const contentViewport = trigger.nextElementSibling;
+            const isCurrentlyExpanded = trigger.getAttribute("aria-expanded") === "true";
+
+            // Close alternative active accordion channels to maintain tight content space bounds
+            document.querySelectorAll(".faq-accordion-item.item-active").forEach(activeItem => {
+                if (activeItem !== accordionItem) {
+                    activeItem.classList.remove("item-active");
+                    activeItem.querySelector(".accordion-trigger-row").setAttribute("aria-expanded", "false");
+                    activeItem.querySelector(".accordion-content-viewport").style.maxHeight = "0";
+                }
+            });
+
+            // Toggle active classes on selected item row
+            accordionItem.classList.toggle("item-active", !isCurrentlyExpanded);
+            trigger.setAttribute("aria-expanded", !isCurrentlyExpanded);
+
+            // Dynamically calculate native inner container scroll heights for fluid CSS translation expansion
+            if (!isCurrentlyExpanded) {
+                contentViewport.style.maxHeight = contentViewport.scrollHeight + "px";
+            } else {
+                contentViewport.style.maxHeight = "0";
+            }
+        });
+    });
+
+    // 2. Scroll Entrance Reveal Architecture for Accordion Items
+    const faqItems = document.querySelectorAll(".faq-accordion-item");
+    
+    faqItems.forEach((item, index) => {
+        item.style.opacity = "0";
+        item.style.transform = "translateY(15px)";
+        item.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease";
+        item.style.transitionDelay = `${index * 80}ms`; // Cascading staggered reveal entries
+    });
+
+    const faqObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                faqObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -20px 0px"
+    });
+
+    faqItems.forEach(item => faqObserver.observe(item));
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH ABOUT & WORKFLOW STRATEGY NODE -->
+
+<!-- 🌟 ONE-LINE HIGH-CONVERTING CTA COMPONENT -->
+<section id="fast-cta" class="one-line-cta-frame">
+    
+    <!-- Background Canvas Layer Mapping -->
+    <div class="one-line-cta-bg">
+        <img src="./Assests/lite bg - cloud.webp" alt="Futuristic digital neon vector track network stream" class="one-line-mesh-img">
+        <div class="one-line-ambient-glow sky-glow-patch"></div>
+    </div>
+
+    <div class="one-line-cta-container">
+        
+        <!-- Compact Single-Line Layout Core Row Track -->
+        <div class="one-line-flex-row">
+            <h2 class="one-line-title">
+                Ready to accelerate your operations? <span>Launch your cluster engine instantly.</span>
+            </h2>
+            
+            <div class="one-line-actions">
+                <a href="#deploy" class="btn-one-line-glow">Provision Node</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 ONE-LINE CTA SECTION CORE SYSTEM */
+.one-line-cta-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #090d1a; /* Dark tech base canvas backing color sequence matching */
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Background Canvas Graphics Logic */
+.one-line-cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.one-line-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05; /* Highly subtle image layer footprint background texturing */
+    filter: saturate(1.8) contrast(1.1) hue-rotate(190deg);
+}
+
+.one-line-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.12;
+    width: 450px;
+    height: 250px;
+}
+
+.sky-glow-patch {
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, #38bdf8 0%, #3b82f6 60%, transparent 70%);
+}
+
+/* Fluid Flex Row/Grid Core Presentation Setup */
+.one-line-cta-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Horizontal Line Row Alignment Parameters */
+.one-line-flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.one-line-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.one-line-title span {
+    background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.25));
+}
+
+/* Action Button Panels Wrapper Track */
+.one-line-actions {
+    flex-shrink: 0;
+}
+
+/* Glow-Injected Solid Primary Button */
+.btn-one-line-glow {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+/* 🌟 MODERN INTERACTIVE HOVER AND NEON GLOW ACTIONS */
+
+.btn-one-line-glow:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+    box-shadow: 0 6px 22px rgba(59, 130, 246, 0.45), 0 0 15px #38bdf8;
+}
+
+/* Accent highlight triggers across full headline block wrapper on container targets */
+.one-line-cta-container:hover .one-line-title {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 950px) {
+    .one-line-title {
+        font-size: 1.45rem;
+    }
+    .one-line-flex-row {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Collapses structural horizontal row clean into single column tracks on smartphone viewports */
+    .one-line-flex-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.75rem;
+    }
+    
+    .one-line-actions {
+        width: 100%;
+    }
+    
+    .btn-one-line-glow {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem 0;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Fade Entry Rig Integration for One-Line CTA Frame Layer
+    const fastCtaContainer = document.querySelector(".one-line-cta-container");
+
+    if (fastCtaContainer) {
+        // Apply initial hidden base values safely
+        fastCtaContainer.style.opacity = "0";
+        fastCtaContainer.style.transform = "translateY(15px)";
+        fastCtaContainer.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+
+        const fastCtaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    fastCtaContainer.style.opacity = "1";
+                    fastCtaContainer.style.transform = "translateY(0)";
+                    fastCtaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const fastCtaSection = document.getElementById("fast-cta");
+        if (fastCtaSection) fastCtaObserver.observe(fastCtaSection);
+    }
+});
+
+</script>
+<!-- 🌟 HIGH-TECH COMPRESSED HORIZONTAL FOOTER -->
+<footer class="tech-footer-root">
+    <div class="footer-grid-container">
+        
+        <!-- Column 1: Core Corporate Branding Box -->
+        <div class="footer-summary-block">
+            <a href="javascript:void(0);" class="footer-brand-anchor" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Scroll back to top fold">
+                <svg class="footer-brand-vector" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                </svg>
+                <span class="footer-brand-text">Stackly<span>Nexus</span></span>
+            </a>
+            
+            <p class="footer-corporate-desc">
+                Engineering premium autonomic workflow orchestrations designed to bridge decentralized neural network models with corporate efficiency metrics.
+            </p>
+            
+            <div class="footer-location-line">
+                <span class="location-pin-icon">📍</span>
+                <p class="location-string-text">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+            </div>
+            
+            <div class="footer-social-row">
+                <a href="#facebook" class="social-circle-node" aria-label="Facebook Operator Track">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="#instagram" class="social-circle-node" aria-label="Instagram Telemetry Channel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="#telegram" class="social-circle-node" aria-label="Telegram Signal Relay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="m22 2-7 20-4-9-9-4Z"/>
+                        <path d="M22 2 11 13"/>
+                    </svg>
+                </a>
+                <a href="#youtube" class="social-circle-node" aria-label="YouTube Visual Streaming Panel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Column 2: Navigation Links Block A -->
+        <div class="footer-links-column">
+            <h4 class="column-title-heading">Quick Links</h4>
+            <ul class="footer-links-stack">
+                <li><a href="#workflows">Workflows</a></li>
+                <li><a href="#ai-agents">AI Agents</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Navigation Links Block B -->
+        <div class="footer-links-column">
+            <h4 class="column-title-heading">Support Hub</h4>
+            <ul class="footer-links-stack">
+                <li><a href="#sla">SLA & Warranties</a></li>
+                <li><a href="#model-swap">Model Swap Portals</a></li>
+                <li><a href="#faq">Help & FAQ Center</a></li>
+                <li><a href="#patch-logs">Kernel Patch Logs</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter Subscription Panel -->
+        <div class="footer-dispatch-column">
+            <h4 class="column-title-heading">The Playground Dispatch</h4>
+            <p class="dispatch-instructions-text">Subscribe to unlock premium custom blueprint designs and private product launches.</p>
+            
+            <form id="footer-dispatch-form" class="dispatch-input-row" novalidate>
+                <div class="dispatch-input-hull">
+                    <input type="email" id="dispatch-email-field" placeholder="Enter your email..." class="dispatch-text-input">
+                    <button type="submit" class="btn-dispatch-arrow" aria-label="Submit Email Dispatch Payload">
+                        <svg class="dispatch-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <span class="dispatch-error-alert" id="dispatch-error-msg"></span>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Bottom Compliance Section -->
+    <div class="footer-base-compliance-row">
+        <div class="compliance-inner-flex">
+            <p class="footer-copyright-statement">&copy; 2026 Stackly Industries. All rights reserved.</p>
+            <div class="compliance-links-track">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#cookies">Cookie Management</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🌟 FLOATING CORNER BACK-TO-TOP TRIGGER ARROW BOX -->
+    <button class="floating-back-top-trigger" id="back-to-top-anchor" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Return to top fold">
+        <svg class="back-top-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+</footer>
+
+<style>
+/* 🌟 CORE TECHNICAL FOOTER ENGINE */
+.tech-footer-root {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+/* 🌟 Tighter Column Grid Track Definition */
+.footer-grid-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.4fr; 
+    gap: 2rem; /* Tightened horizontal space gaps */
+}
+
+.footer-summary-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand-anchor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: filter 0.3s ease;
+}
+
+.footer-brand-vector {
+    width: 32px;
+    height: 32px;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 5px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 6px;
+}
+
+.footer-brand-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.footer-brand-text span { color: #3b82f6; }
+
+.footer-corporate-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem 0;
+}
+
+.footer-location-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.location-pin-icon {
+    font-size: 1rem;
+    filter: drop-shadow(0 0 4px #3b82f6);
+}
+
+.location-string-text {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: whitesmoke;
+}
+
+.footer-social-row {
+    display: flex;
+    gap: 0.85rem;
+}
+
+.social-circle-node {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-svg-path {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* 🌟 Center Column Compression Logic Hooks */
+.footer-links-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: center; /* Pulls central column tracks tightly inward */
+    min-width: 150px;
+}
+
+.column-title-heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.column-title-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #3b82f6;
+    box-shadow: 0 0 8px #3b82f6;
+    border-radius: 10px;
+}
+
+.footer-links-stack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links-stack a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* 🌟 Far-Right Column Compression Hook */
+.footer-dispatch-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: end; /* Locks subscribe row to the far-right container margin edge */
+    width: 100%;
+    max-width: 360px;
+}
+
+.dispatch-instructions-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem 0;
+}
+
+.dispatch-input-row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dispatch-input-hull {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dispatch-text-input {
+    width: 100%;
+    background-color: rgba(11, 15, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    padding: 0.75rem 3.5rem 0.75rem 1.25rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.btn-dispatch-arrow {
+    position: absolute;
+    right: 4px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    border: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dispatch-arrow-vector { width: 14px; height: 14px; }
+
+.dispatch-error-alert {
+    font-size: 0.75rem;
+    color: #ef4444;
+    font-weight: 600;
+    min-height: 16px;
+    padding-left: 1rem;
+    display: block;
+    opacity: 0;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.dispatch-error-alert.alert-visible { opacity: 1; transform: translateY(0); }
+
+.footer-base-compliance-row {
+    max-width: 1400px;
+    margin: 3.5rem auto 0 auto;
+    padding: 1.5rem 2rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.compliance-inner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-copyright-statement { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+.compliance-links-track { display: flex; gap: 1.5rem; }
+.compliance-links-track a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s ease; }
+
+/* 🌟 INTERACTIVE GLOW EFFECTS */
+.footer-brand-anchor:hover { filter: drop-shadow(0 0 8px #3b82f6); }
+
+.social-circle-node:hover {
+    color: #ffffff;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+.social-circle-node:hover .social-svg-path { transform: scale(1.05) rotate(4deg); }
+.footer-links-stack a:hover { color: #3b82f6; text-shadow: 0 0 8px rgba(96, 165, 250, 0.4); padding-left: 3px; }
+.dispatch-text-input:focus { border-color: #3b82f6; box-shadow: 0 0 12px rgba(59, 130, 246, 0.15); }
+.dispatch-text-input.input-error-state { border-color: #ef4444; box-shadow: 0 0 12px rgba(239, 68, 68, 0.15); }
+.btn-dispatch-arrow:hover { background-color: #2563eb; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5), 0 0 8px #60a5fa; }
+.compliance-links-track a:hover { color: #ffffff; }
+
+/* 🌟 FLOATING CORNER BACK-TO-TOP TRIGGER ARROW BOX */
+.floating-back-top-trigger {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: rgba(19, 26, 38, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 9999;
+}
+
+.back-top-arrow-icon { width: 18px; height: 18px; }
+.floating-back-top-trigger.trigger-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.floating-back-top-trigger:hover { color: #ffffff; border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.15); box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); transform: translateY(-3px); }
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 900px) {
+    .footer-grid-container { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .footer-summary-block, .footer-dispatch-column { grid-column: span 2; max-width: 100%; justify-self: start; }
+    .footer-links-column { justify-self: start; }
+}
+
+@media (max-width: 480px) {
+    .footer-grid-container { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+    .footer-summary-block, .footer-links-column, .footer-dispatch-column { align-items: center; grid-column: span 1; justify-self: center; }
+    .column-title-heading::after { left: 50%; transform: translateX(-50%); }
+    .footer-location-line, .footer-social-row { justify-content: center; }
+    .compliance-inner-flex { flex-direction: column; text-align: center; }
+    .compliance-links-track { justify-content: center; }
+    .floating-back-top-trigger { bottom: 1.5rem; right: 1.5rem; }
+}
+
+
+</style>
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. Floating Back-to-Top Toggle Visual State Trigger Mechanics
+    const backToTopAnchor = document.getElementById("back-to-top-anchor");
+
+    const assessScrollElevation = () => {
+        if (window.scrollY > 400) {
+            backToTopAnchor.classList.add("trigger-visible");
+        } else {
+            backToTopAnchor.classList.remove("trigger-visible");
+        }
+    };
+
+    window.addEventListener("scroll", assessScrollElevation);
+
+    // 2. Newsletter Subscription Validation and 404 Route Forward Pipeline
+    const dispatchForm = document.getElementById("footer-dispatch-form");
+    const dispatchEmailInput = document.getElementById("dispatch-email-field");
+    const errorAlertSpan = document.getElementById("dispatch-error-msg");
+
+    if (dispatchForm) {
+        dispatchForm.addEventListener("submit", (event) => {
+            event.preventDefault(); 
+
+            const innerStringValue = dispatchEmailInput.value.trim();
+
+            if (innerStringValue === "") {
+                triggerFieldError("Please fill out this field.");
+                return;
+            }
+
+            const secureEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!secureEmailRegex.test(innerStringValue)) {
+                triggerFieldError("Please provide a valid routing address.");
+                return;
+            }
+
+            clearFieldError();
+            window.location.href = "404.html";
+        });
+
+        dispatchEmailInput.addEventListener("input", () => {
+            if (dispatchEmailInput.classList.contains("input-error-state")) {
+                clearFieldError();
+            }
+        });
+    }
+
+    function triggerFieldError(alertMessageString) {
+        errorAlertSpan.innerText = alertMessageString;
+        errorAlertSpan.classList.add("alert-visible");
+        dispatchEmailInput.classList.add("input-error-state");
+        
+        dispatchEmailInput.style.transform = "translateX(-4px)";
+        setTimeout(() => dispatchEmailInput.style.transform = "translateX(4px)", 80);
+        setTimeout(() => dispatchEmailInput.style.transform = "", 160);
+    }
+
+    function clearFieldError() {
+        errorAlertSpan.innerText = "";
+        errorAlertSpan.classList.remove("alert-visible");
+        dispatchEmailInput.classList.remove("input-error-state");
+    }
+});
+
+</script>
+</body>
+</html>
