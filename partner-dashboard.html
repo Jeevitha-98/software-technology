@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StacklyNexus // Partner Swarm Console</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-panel-root">
+
+    <!-- Ambient Grid Canvas Backdrop Underlay -->
+    <div class="dash-canvas-layer">
+        <div class="dash-glow-patch"></div>
+    </div>
+
+    <!-- DYNAMIC CONSOLE NAVIGATION DRAWER SIDEBAR PANEL -->
+   <!-- 🌟 OPTIMIZED RESPONSIVE SIDEBAR COMPONENT -->
+<aside class="dash-sidebar-node" id="console-sidebar">
+    <div class="sidebar-brand-hull">
+        <a href="javascript:void(0);" onclick="window.location.reload();" class="sidebar-logo">
+            <img src="https://unsplash.com" alt="StacklyNexus Node Logo" class="sidebar-logo-img">
+            <span class="sidebar-logo-text">Stackly<span>Nexus</span></span>
+        </a>
+    </div>
+
+    <nav class="sidebar-menu-track">
+        <ul class="sidebar-menu-list">
+            <li>
+                <a href="javascript:void(0);" class="menu-item-anchor item-active" data-section="swarm-overview">
+                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Swarm Overview</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="menu-item-anchor" data-section="node-clustering">
+                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 7 12 12 2 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span>Node Clustering</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="menu-item-anchor" data-section="quantum-proxy">
+                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    <span>Quantum Proxy</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="menu-item-anchor" data-section="telemetry-logs">
+                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    <span>Telemetry Logs</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="menu-item-anchor" data-section="billing-metrics">
+                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="12" x2="12" y2="12.01"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><polyline points="16 16 12 12 8 16"/></svg>
+                    <span>Billing Metrics</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sidebar-footer-actions">
+        <a href="javascript:void(0);" id="console-logout-trigger" class="btn-sidebar-logout">
+            <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1-2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            <span>Terminate Session</span>
+        </a>
+    </div>
+</aside>
+
+
+    <!-- MAIN VIEWPORT CONTENT FRAMES ENGINE WRAPPER -->
+    <div class="dash-viewport-main">
+        <!-- GLOBAL CONSOLE CONTEXT FIXED TOP HEADER -->
+<header class="dash-top-header">
+
+    <!-- Left Header: Welcome Message -->
+    <div class="header-left-cluster">
+
+        <button class="dash-hamburger-trigger"
+                id="dash-menu-toggle"
+                aria-label="Toggle Side Console Panel Menu"
+                aria-expanded="false">
+
+            <div class="dash-burger-bar"></div>
+            <div class="dash-burger-bar"></div>
+            <div class="dash-burger-bar"></div>
+
+        </button>
+
+        <div class="header-welcome-greeting">
+            <h3>
+                Welcome back,
+                <span class="operator-identity-string">Operator</span>
+            </h3>
+        </div>
+
+    </div>
+
+    <!-- Right Header -->
+    <div class="header-right-cluster">
+
+        <!-- Notification -->
+        <button class="btn-header-bell-relay"
+                aria-label="Open network notifications panel tray">
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="bell-vector-icon">
+
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+
+            </svg>
+
+            <span class="bell-active-alert-dot"></span>
+
+        </button>
+
+        <!-- User Profile -->
+        <div class="header-profile-text-hull">
+
+            <span class="profile-active-signal"></span>
+
+            <span class="operator-identity-string">User</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+        <!-- DYNAMIC CONTENT BODY CANVAS DISPLAY AREA -->
+        <!-- 🌟 STREAMLINED SEMANTIC WORKSPACE CANVAS SYSTEM -->
+<main class="dash-content-body-canvas">
+    
+ 
+
+    <!-- ==========================================================================
+         🌟 OPERATIONAL SIDEBAR MENU SECTION 01: SWARM OVERVIEW 
+         ========================================================================== -->
+    <section id="sec-swarm-overview" class="dash-module-viewport active-module-layer">
+        <div class="dashboard-visual-hull-panel">
+            <h4>Autonomic Swarm Management Center</h4>
+            <p>This section displays real-time vitals and diagnostic request telemetry streamed from edge route points across our decentralized multi-tenant infrastructure network tracks.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         🌟 OPERATIONAL SIDEBAR MENU SECTION 02: NODE CLUSTERING
+         ========================================================================== -->
+    <section id="sec-node-clustering" class="dash-module-viewport hidden-module-layer">
+        <div class="dashboard-visual-hull-panel">
+            <h4>Edge Cluster Topography Grid</h4>
+            <p>This section allows system operators to trace active cluster mapping, manage branch dependencies, and review connection handshake metrics across server hubs globally.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         🌟 OPERATIONAL SIDEBAR MENU SECTION 03: QUANTUM PROXY
+         ========================================================================== -->
+    <section id="sec-quantum-proxy" class="dash-module-viewport hidden-module-layer">
+        <div class="dashboard-visual-hull-panel">
+            <h4>Cryptographic Cipher Scrambling Shield</h4>
+            <p>This section orchestrates identity protection proxies, configuring automated TLS 1.3 token rotation rules and quantum-resistant encryption parameters to isolate data mutations.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         🌟 OPERATIONAL SIDEBAR MENU SECTION 04: TELEMETRY LOGS
+         ========================================================================== -->
+    <section id="sec-telemetry-logs" class="dash-module-viewport hidden-module-layer">
+        <div class="dashboard-visual-hull-panel">
+            <h4>Autonomic Simulation Stream Console</h4>
+            <p>This section houses terminal readouts and error logs from isolated staging sandboxes to pre-emptively trace logic stalls and check memory spill configurations.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         🌟 OPERATIONAL SIDEBAR MENU SECTION 05: BILLING METRICS
+         ========================================================================== -->
+    <section id="sec-billing-metrics" class="dash-module-viewport hidden-module-layer">
+        <div class="dashboard-visual-hull-panel">
+            <h4>Resource Usage Ledger Analytics</h4>
+            <p>This section tracks computational balance statements, mapping exact billing cycle costs against query transformations volumes and allocated staging perimeter limits.</p>
+        </div>
+    </section>
+
+</main>
+
+
+    </div>
+
+  
+ 
+
+    <style>
+   /* 🌟 PREMIUM CONSOLE ARCHITECTURE ROOT SYSTEM STYLES */
+:root {
+    --bg-main: #070a13;
+    --bg-surface: #0b0f19;
+    --bg-card: #111726;
+    --text-main: #ffffff;
+    --text-muted: #cbd5e1;
+    --primary: #06b6d4;      /* Icy Cyan Glow Focus */
+    --accent: #3b82f6;       /* Sapphire Blue */
+    --success: #10b981;      /* Crisp Emerald */
+    --border: rgba(255, 255, 255, 0.05);
+    --sidebar-width: 260px;
+    --header-height: 70px;
+}
+
+/* Hard reset prevents early window edge margin overlaps gaps */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.dash-panel-root {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    position: relative;
+}
+
+.dash-canvas-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.dash-glow-patch { position: absolute; bottom: -10%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%); filter: blur(120px); }
+
+/* SIDEBAR CONSOLE PANEL DRAG TRACK */
+.dash-sidebar-node {
+    width: var(--sidebar-width);
+    height: 100%;
+    background-color: var(--bg-surface);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar-brand-hull {
+    height: var(--header-height);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.sidebar-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; outline: none; }
+.sidebar-logo-img { width: 26px; height: 26px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1); }
+.sidebar-logo-text { font-size: 1.15rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }
+.sidebar-logo-text span { color: var(--primary); }
+
+.sidebar-menu-track { flex-grow: 1; padding: 1.5rem 0.75rem; overflow-y: auto; }
+.sidebar-menu-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+
+.menu-item-anchor {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.menu-svg-icon { width: 16px; height: 16px; color: inherit; flex-shrink: 0; }
+.menu-item-anchor:hover { color: #ffffff; background-color: rgba(255, 255, 255, 0.02); }
+
+.menu-item-anchor.item-active {
+    background-color: rgba(6, 182, 212, 0.03);
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.05);
+}
+
+.sidebar-footer-actions { padding: 1.25rem 0.75rem; border-top: 1px solid rgba(255, 255, 255, 0.02); }
+.btn-sidebar-logout { display: flex; align-items: center; gap: 0.85rem; padding: 0.75rem 1rem; color: #ef4444; text-decoration: none; font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: all 0.3s ease; }
+.btn-sidebar-logout:hover { background-color: rgba(239, 68, 68, 0.08); }
+
+/* MAIN DISPLAY VIEWPORT CONTAINER WRAPPER FIXED BLOCK FLOWS */
+.dash-viewport-main {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.dash-top-header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-left-cluster, .header-right-cluster { display: flex; align-items: center; gap: 1.25rem; }
+.header-welcome-greeting h3 { font-size: 1.1rem; font-weight: 700; color: #ffffff; letter-spacing: -0.25px; }
+
+/* Dynamic Username Color Transitions */
+.text-caps-shimmer {
+    color: var(--primary);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.25);
+    text-transform: capitalize;
+}
+
+.btn-header-bell-relay {
+    background: none; border: none; color: var(--text-muted); cursor: pointer; position: relative; padding: 6px; display: flex; align-items: center; outline: none;
+}
+.bell-vector-icon { width: 18px; height: 18px; transition: color 0.2s ease; }
+.btn-header-bell-relay:hover .bell-vector-icon { color: #ffffff; }
+.bell-active-alert-dot { position: absolute; top: 5px; right: 5px; width: 6px; height: 6px; background-color: var(--success); border-radius: 50%; box-shadow: 0 0 6px var(--success); }
+
+/* 🌟 UPDATED: GLASSMORPHIC TEXT PROFILE BADGE WRAPPER */
+.header-profile-text-hull {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.45rem 1.15rem;
+    background-color: rgba(17, 23, 38, 0.4);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-active-signal {
+    width: 6px;
+    height: 6px;
+    background-color: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--success);
+}
+
+.profile-name-txt {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: 0.25px;
+}
+
+.header-profile-text-hull:hover {
+    border-color: rgba(6, 182, 212, 0.3);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.08);
+}
+
+/* Mobile Toggle Hamburger icon elements */
+.dash-hamburger-trigger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; outline: none; padding: 4px; }
+.dash-burger-bar { width: 18px; height: 2px; background-color: #ffffff; transition: transform 0.3s ease, opacity 0.3s ease; }
+
+/* DYNAMIC CONTENT BODY CANVAS DESIGN CORES */
+.dash-content-body-canvas {
+    flex-grow: 1;
+    /* Strict layout formatting padding requested: 50px Top, 30px Bottom */
+    padding: 50px 2rem 30px 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.module-title-banner-box h1 { font-size: 1.75rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 0.35rem; }
+.module-title-banner-box p { font-size: 0.9rem; color: var(--text-muted); }
+
+.module-testing-stage-perimeter {
+    flex-grow: 1;
+    width: 100%;
+    min-height: 300px;
+    background-color: rgba(17, 23, 38, 0.15);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stage-placeholder-inner { text-align: center; max-width: 340px; padding: 0 1rem; }
+.stage-vector-hull { width: 40px; height: 40px; margin: 0 auto 1.25rem auto; color: rgba(6, 182, 212, 0.2); display: flex; justify-content: center; align-items: center; }
+.stage-icon-spinner { width: 100%; height: 100%; }
+.stage-placeholder-inner h3 { font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem; }
+.stage-placeholder-inner p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+.stage-placeholder-inner p strong { color: var(--primary); font-family: monospace; font-size: 0.95rem; }
+
+/* 📱 ADAPTIVE MOBILE BREAKPOINTS RESPONSIVE DRAWER MATRIX SLIDER OVERRIDES */
+@media (max-width: 900px) {
+    /* Displays responsive toggle keys */
+    .dash-hamburger-trigger { 
+        display: flex !important; 
+    }
+    
+    .dash-top-header { 
+        padding: 0 1.25rem; 
+    }
+    
+    .dash-content-body-canvas { 
+        padding: 40px 1.25rem 30px 1.25rem; 
+    }
+    
+    /* 🌟 FIX: Absolute translation placement forces sidebar container to retain full 260px boundaries offscreen */
+    .dash-sidebar-node {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 100vh !important;
+        width: var(--sidebar-width) !important; /* Locks width parameters to stop early text clipping/hiding */
+        z-index: 2000 !important;
+        transform: translateX(-100%); /* Hides complete container panel cleanly left of viewport */
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        box-shadow: 25px 0 50px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* 🌟 FIX: Translates block matrix outward evenly instead of expanding container width values */
+    .dash-sidebar-node.drawer-active {
+        transform: translateX(0) !important;
+    }
+    
+    .menu-item-anchor {
+        white-space: nowrap !important; /* Prevents text from dropping or splitting awkwardly on two lines */
+    }
+    
+    /* Hamburger cross lines transformation animations triggers toggle */
+    .dash-hamburger-trigger.toggle-triggered .dash-burger-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); background-color: var(--primary); }
+    .dash-hamburger-trigger.toggle-triggered .dash-burger-bar:nth-child(2) { opacity: 0; }
+    .dash-hamburger-trigger.toggle-triggered .dash-burger-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); background-color: var(--primary); }
+}
+
+
+    </style>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // 🌟 GLOBAL RENDER SELECTORS INITIALIZATION TRACKS
+    const identityStringFields = document.querySelectorAll(".operator-identity-string");
+    const menuItemAnchors = document.querySelectorAll(".menu-item-anchor");
+    const dynamicModuleTitleHeading = document.getElementById("active-module-title-string");
+    const dynamicTokenIdBadge = document.getElementById("active-module-token-id");
+
+    // 🌟 MOBILE NAVIGATION ELEMENTS
+    const mobileMenuToggleBtn = document.getElementById("dash-menu-toggle");
+    const consoleSidebarNode = document.getElementById("console-sidebar");
+
+    // 🌟 1. DISPLAY LOGGED-IN USER NAME
+    const parseOperatorIdentityToken = () => {
+
+        let operatorName = localStorage.getItem("activeOperatorName");
+        let operatorEmail = localStorage.getItem("activeOperatorEmail");
+
+        // Fallback for testing
+        if (!operatorName && !operatorEmail) {
+            operatorEmail = "jeevi@gmail.com";
+        }
+
+        // If name is not stored, derive it from email
+        if (!operatorName && operatorEmail) {
+            operatorName = operatorEmail
+                .split("@")[0]
+                .replace(/[._-]/g, " ")
+                .replace(/\b\w/g, char => char.toUpperCase());
+        }
+
+        // Final fallback
+        if (!operatorName) {
+            operatorName = "Guest";
+        }
+
+        identityStringFields.forEach(field => {
+            if (field) {
+                field.textContent = operatorName;
+            }
+        });
+    };
+
+    parseOperatorIdentityToken();
+
+    // 🌟 2. SIDEBAR MENU NAVIGATION
+    menuItemAnchors.forEach(anchor => {
+        anchor.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            menuItemAnchors.forEach(item => item.classList.remove("item-active"));
+            anchor.classList.add("item-active");
+
+            const sectionTargetToken = anchor.getAttribute("data-section");
+
+            if (dynamicModuleTitleHeading) {
+                dynamicModuleTitleHeading.textContent = anchor.querySelector("span").textContent;
+            }
+
+            if (dynamicTokenIdBadge) {
+                dynamicTokenIdBadge.textContent = sectionTargetToken;
+            }
+
+            if (mobileMenuToggleBtn && mobileMenuToggleBtn.classList.contains("toggle-triggered")) {
+                closeResponsiveSidebarPanel();
+            }
+        });
+    });
+
+    // 🌟 3. MOBILE SIDEBAR
+    function closeResponsiveSidebarPanel() {
+        if (mobileMenuToggleBtn && consoleSidebarNode) {
+            mobileMenuToggleBtn.classList.remove("toggle-triggered");
+            consoleSidebarNode.classList.remove("drawer-active");
+            mobileMenuToggleBtn.setAttribute("aria-expanded", "false");
+        }
+    }
+
+    if (mobileMenuToggleBtn && consoleSidebarNode) {
+
+        mobileMenuToggleBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            const isOpen = mobileMenuToggleBtn.classList.toggle("toggle-triggered");
+
+            consoleSidebarNode.classList.toggle("drawer-active", isOpen);
+            mobileMenuToggleBtn.setAttribute("aria-expanded", isOpen);
+        });
+
+        document.addEventListener("click", (event) => {
+            if (
+                !consoleSidebarNode.contains(event.target) &&
+                !mobileMenuToggleBtn.contains(event.target)
+            ) {
+                if (consoleSidebarNode.classList.contains("drawer-active")) {
+                    closeResponsiveSidebarPanel();
+                }
+            }
+        });
+    }
+
+    // 🌟 4. LOGOUT
+    const sessionLogoutBtn = document.getElementById("console-logout-trigger");
+
+    if (sessionLogoutBtn) {
+        sessionLogoutBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            localStorage.removeItem("activeOperatorName");
+            localStorage.removeItem("activeOperatorEmail");
+
+            window.location.href = "login.html";
+        });
+    }
+
+});
+
+</script>
+
+</body>
+</html>

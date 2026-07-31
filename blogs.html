@@ -1,0 +1,3283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly // Next-Gen Software Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🌟 MODERN PRELOADER OVERLAY -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <!-- Animated Vector Logo Matrix -->
+            <div class="vector-logo-container">
+                <svg class="glow-vector" viewBox="0 0 100 100" xmlns="http://w3.org">
+                    <!-- Outer Ring Path -->
+                    <circle class="ring-track" cx="50" cy="50" r="40" />
+                    <circle class="ring-pulse" cx="50" cy="50" r="40" />
+                    <!-- Inner Core Tech Node Vector -->
+                    <polygon class="core-node" points="50,28 69,39 69,61 50,72 31,61 31,39" />
+                </svg>
+            </div>
+            
+            <!-- Branding Text Matrix -->
+            <div class="loading-text-group">
+                <h2 class="loading-brand">Stackly<span>Nexus</span></h2>
+                <p class="loading-status">Initializing Core Modules...</p>
+            </div>
+
+            <!-- Sleek Linear Progress Track -->
+            <div class="progress-bar-container">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    const preloader = document.getElementById("preloader");
+    const progressFill = document.querySelector(".progress-fill");
+    const appContent = document.getElementById("app-content");
+    const statusText = document.querySelector(".loading-status");
+
+    // Dynamic loading text states array
+    const trackingPhrases = [
+        "Initializing core modules...",
+        "Establishing secure connection layers...",
+        "Optimizing cloud pipeline paths...",
+        "Rendering visualization grids..."
+    ];
+
+    let currentProgress = 0;
+    let phraseIndex = 0;
+
+    // 1. Loading Sequence Pipeline Simulation
+    const preloaderInterval = setInterval(() => {
+        // Increment loading metrics non-linearly for real-world simulation feel
+        currentProgress += Math.floor(Math.random() * 12) + 4;
+        
+        if (currentProgress >= 100) {
+            currentProgress = 100;
+            clearInterval(preloaderInterval);
+            terminatePreloader();
+        }
+
+        // Apply progressive width to CSS element
+        progressFill.style.width = `${currentProgress}%`;
+
+        // Cycle through dynamic feedback states contextually
+        if (currentProgress > (phraseIndex + 1) * 25 && phraseIndex < trackingPhrases.length - 1) {
+            phraseIndex++;
+            statusText.innerText = trackingPhrases[phraseIndex];
+        }
+    }, 500);
+
+    // 2. Clear preloader overlay smoothly out of user focus
+    function terminatePreloader() {
+        statusText.innerText = "Ready.";
+        
+        setTimeout(() => {
+            // Apply layout exit shifts
+            preloader.classList.add("preloader-hidden");
+            
+            // Bring primary layout container cleanly into vision
+            if(appContent) {
+                appContent.classList.remove("content-hidden");
+                appContent.classList.add("content-visible");
+            }
+        }, 1000);
+    }
+});
+
+   </script>
+
+  <!-- 🌟 FIXED, CENTER-ALIGNED HEADER MODULE -->
+<header class="navbar-fixed">
+    <div class="nav-container">
+        
+        <!-- Brand Logo Unit (Clicking refreshes the active viewport window) -->
+      <a href="javascript:void(0);" class="brand-logo" onclick="window.location.reload();" aria-label="StacklyNexus Home">
+    <img src="./Assests/software icon.webp"
+         alt="StacklyNexus Logo"
+         class="logo-img">
+
+  
+</a>
+
+        <!-- Responsive Mobile Drawer Toggle -->
+        <button class="hamburger-trigger" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </button>
+
+        <!-- Desktop and Mobile Menu Control Hub -->
+        <nav class="nav-menu-wrapper">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-item ">Home</a></li>
+                <li><a href="about.html" class="nav-item ">About Us</a></li>
+                <li><a href="services.html" class="nav-item ">Services</a></li>
+                <li><a href="blogs.html" class="nav-item active">Blogs</a></li>
+                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Right Aligned Authentication Container -->
+        <div class="nav-auth-panel">
+            <a href="login.html" class="btn-auth">Login</a>
+        </div>
+
+    </div>
+</header>
+
+
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburgerTrigger = document.querySelector(".hamburger-trigger");
+    const navMenuWrapper = document.querySelector(".nav-menu-wrapper");
+    const navLinks = document.querySelectorAll(".nav-item");
+    const authPanel = document.querySelector(".nav-auth-panel");
+
+    // 1. Mobile Drawer Toggle Control Mechanics
+    const toggleMobileMenu = () => {
+        const isOpen = navMenuWrapper.classList.toggle("drawer-open");
+        hamburgerTrigger.classList.toggle("hamburger-active");
+        hamburgerTrigger.setAttribute("aria-expanded", isOpen);
+        
+        if (isOpen) {
+            // Append auth logic internally inside layout drawer on tiny viewports
+            navMenuWrapper.appendChild(authPanel);
+            document.body.style.overflow = "hidden"; // Freeze underlying scroll tracks
+        } else {
+            // Restore auth node cleanly back onto core grid setup track line
+            document.querySelector(".nav-container").appendChild(authPanel);
+            document.body.style.overflow = "";
+        }
+    };
+
+    hamburgerTrigger.addEventListener("click", toggleMobileMenu);
+
+    // 2. Click Navigation and Class State Refinement
+    navLinks.forEach(item => {
+        item.addEventListener("click", function() {
+            // Clear prior active classes
+            document.querySelector(".nav-item.active")?.classList.remove("active");
+            
+            // Apply fresh current active rule assignments
+            this.classList.add("active");
+
+            // Fast close drawer if screen size triggers a click action inside responsive layout viewports
+            if (navMenuWrapper.classList.contains("drawer-open")) {
+                toggleMobileMenu();
+            }
+        });
+    });
+});
+
+</script>
+
+<!-- 🌟 CYBERPUNK ICE & SAPPHIRE THEME HERO MODULE -->
+<section id="blog-hero" class="bl-hero-frame">
+    
+    <!-- Deep Ambient Glow Layer Mapping -->
+    <div class="bl-hero-bg-layer">
+        <svg class="bl-hero-vector-grid" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://w3.org">
+            <defs>
+                <pattern id="bl-matrix" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.015)" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#bl-matrix)" />
+        </svg>
+        <div class="bl-hero-glow-orb tone-cyan"></div>
+        <div class="bl-hero-glow-orb tone-sapphire"></div>
+    </div>
+
+    <div class="bl-hero-container">
+        
+        <!-- Left Side Column Text: Technical Journal Introduction -->
+        <div class="bl-hero-text-block">
+            <div class="bl-hero-badge">
+                <span class="bl-pulse-dot"></span>
+                <span>Active Research Stream</span>
+            </div>
+            
+            <h1 class="bl-hero-main-title">
+                The Engineering Logs <br>
+                <span>& Telemetry Insights</span>
+            </h1>
+            
+            <p class="bl-hero-subtitle-desc">
+                Deep architectural updates, cryptographical post-mortems, and performance orchestration logs curated straight from our hardware core operations desk. Written by engineers, for engineers.
+            </p>
+            
+            <!-- Interactive Category Tag Selector Track -->
+            <div class="bl-category-chips">
+                <a href="#all" class="chip-node active-chip">All Logs</a>
+                <a href="#architecture" class="chip-node">Architecture</a>
+                <a href="#security" class="chip-node">Security</a>
+                <a href="#telemetry" class="chip-node">Telemetry</a>
+            </div>
+        </div>
+
+        <!-- Right Side Column: Glassmorphic Trending Feature Board Box -->
+        <div class="bl-hero-showcase-block">
+            <div class="bl-showcase-backdrop-glow"></div>
+            <div class="featured-card-wrapper">
+                
+                <!-- Main Article Background Image Frame -->
+                <div class="featured-card-image">
+                    <img src="./Assests/status analytics.webp" alt="High speed cloud routing telemetry dashboard preview chart" class="featured-main-img">
+                    <span class="trending-badge">Hot Fix Log</span>
+                </div>
+
+                <!-- Floating Glass Metadata Overlays -->
+                <div class="featured-glass-hud">
+                    <div class="hud-meta-date">Featured Log • July 2026</div>
+                    <h3 class="hud-post-title">Mitigating Core Multi-Tenant Thread Locks</h3>
+                    <p class="hud-post-desc">An urgent post-mortem analysis detail mapping how we resolved Layer-3 execution memory leak stalls.</p>
+                    <a href="#featured-log" class="hud-read-anchor">
+                        <span>Read Post-Mortem</span>
+                        <svg class="hud-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+   /* 🌟 CYBERPUNK PALETTE VARIABLE ENGINE SETUP */
+:root {
+    --bg-main: #070a13;
+    --bg-surface: #111726;
+    --text-main: #ffffff;
+    --text-muted: #cbd5e1;
+    --primary: #06b6d4;      /* Icy Cyan Glow Focus */
+    --accent: #3b82f6;       /* Sapphire Blue */
+    --success: #10b981;      /* Crisp Emerald */
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+.bl-hero-frame {
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic */
+.bl-hero-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bl-hero-vector-grid {
+    width: 100%;
+    height: 100%;
+}
+
+/* Ambient Radial Blur Patches Layer mapping */
+.bl-hero-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.15;
+    mix-blend-mode: screen;
+}
+
+.tone-cyan {
+    top: -15%;
+    right: 15%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+}
+
+.tone-sapphire {
+    bottom: -10%;
+    left: 5%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+}
+
+/* 2-Column Responsive Layout Tracking Setup Grid */
+.bl-hero-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Side Column Elements Styling */
+.bl-hero-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bl-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+}
+
+.bl-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--primary);
+    animation: blBeaconPulse 1.5s infinite alternate;
+}
+
+.bl-hero-main-title {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.25px;
+    color: var(--text-main);
+    margin: 0 0 1.5rem 0;
+}
+
+/* Icy Cyan to Sapphire Gradient Text Block */
+.bl-hero-main-title span {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.2));
+}
+
+.bl-hero-subtitle-desc {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 0 2.5rem 0;
+}
+
+/* Horizontal Chip Tracks */
+.bl-category-chips {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.chip-node {
+    display: inline-block;
+    padding: 0.5rem 1.35rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+.chip-node.active-chip {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--bg-main);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
+}
+
+/* Right Side Column Featured Previews Hull */
+.bl-hero-showcase-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bl-showcase-backdrop-glow {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.featured-card-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+    background-color: var(--bg-surface);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    animation: blFloatingOscillation 6s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Emulates high contrast modern layout lines */
+.featured-card-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.featured-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    position: relative;
+    overflow: hidden;
+    background-color: #0b0f19;
+}
+
+.featured-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+/* Crisp Emerald Hot Fix Tag */
+.trending-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: linear-gradient(90deg, #10b981, #059669);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.85rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
+/* Glass Content Panel Box Overlay */
+.featured-glass-hud {
+    padding: 2rem;
+    background: linear-gradient(180deg, rgba(17, 23, 38, 0.9) 0%, rgba(7, 10, 19, 0.7) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border);
+}
+
+.hud-meta-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.hud-post-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.35;
+    margin: 0 0 0.75rem 0;
+    transition: color 0.3s ease;
+}
+
+.hud-post-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0 0 1.5rem 0;
+}
+
+.hud-read-anchor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.hud-arrow-vector {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER ACTIONS OVERLAYS */
+.chip-node:not(.active-chip):hover {
+    color: #ffffff;
+    border-color: rgba(6, 182, 212, 0.4);
+    background-color: rgba(6, 182, 212, 0.04);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.1);
+}
+
+.featured-card-wrapper:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 35px rgba(6, 182, 212, 0.15);
+}
+
+.featured-card-wrapper:hover::before {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+}
+
+.featured-card-wrapper:hover .featured-main-img {
+    transform: scale(1.03);
+    filter: brightness(0.85) contrast(1.15);
+}
+
+.featured-card-wrapper:hover .hud-post-title {
+    color: var(--primary);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.2);
+}
+
+.featured-card-wrapper:hover .hud-read-anchor {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.featured-card-wrapper:hover .hud-arrow-vector {
+    transform: translateX(4px);
+}
+
+/* 🌀 KEYFRAME TRANSFORMATION LOOP BEACONS */
+@keyframes blBeaconPulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.25); opacity: 1; filter: drop-shadow(0 0 6px var(--primary)); }
+}
+
+@keyframes blFloatingOscillation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .bl-hero-main-title { font-size: 3rem; }
+    .bl-hero-container { gap: 2.5rem; }
+}
+
+@media (max-width: 900px) {
+    .bl-hero-container {
+        grid-template-columns: 1fr; /* Stacks column profiles vertically on single rows */
+        text-align: center;
+        gap: 4rem;
+    }
+    .bl-hero-text-block { align-items: center; }
+    .bl-category-chips { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .bl-hero-main-title { font-size: 2.25rem; }
+    .featured-glass-hud { padding: 1.5rem; }
+    .hud-post-title { font-size: 1.2rem; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Entrance Alpha Fade Integration for Blog Hero Section Elements
+    const blHeroTextHub = document.querySelector(".bl-hero-text-block");
+    const blHeroCardHub = document.querySelector(".bl-hero-showcase-block");
+
+    if (blHeroTextHub && blHeroCardHub) {
+        // Set up safe initialization parameters
+        blHeroTextHub.style.opacity = "0";
+        blHeroTextHub.style.transform = "translateY(15px)";
+        blHeroTextHub.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        blHeroCardHub.style.opacity = "0";
+        blHeroCardHub.style.transform = "translateY(20px)";
+        blHeroCardHub.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+
+        // Trigger animations quickly on loading updates
+        setTimeout(() => {
+            blHeroTextHub.style.opacity = "1";
+            blHeroTextHub.style.transform = "translateY(0)";
+            
+            blHeroCardHub.style.opacity = "1";
+            blHeroCardHub.style.transform = "translateY(0)";
+        }, 200);
+    }
+});
+
+</script>
+
+<!-- 🌟 CYBERPUNK ICE & SAPPHIRE BLOG GRID COMPONENT -->
+<section id="blog-grid" class="bl-grid-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="bl-grid-bg-layer">
+        <svg class="bl-grid-vector-mesh" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://w3.org">
+            <defs>
+                <pattern id="grid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(6, 182, 212, 0.015)" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#grid-pattern)" />
+        </svg>
+        <div class="bl-grid-glow-orb sapphire-blur-orb"></div>
+    </div>
+
+    <div class="bl-grid-container">
+        
+        <!-- 🌟 ADDED SECTION HEADER TITLE BLOCK -->
+        <div class="bl-section-header">
+            <span class="bl-section-badge">Archived Logs</span>
+            <h2 class="bl-section-title">All Technical <span>Publications</span></h2>
+            <p class="bl-section-desc">Explore our full terminal matrix archive covering hardware benchmarks, edge telemetry, and deep protocol reviews.</p>
+        </div>
+
+        <!-- 3-Column Responsive Grid System for Article Nodes -->
+        <div class="bl-article-track">
+            
+            <!-- Article Card 01: Core Architecture -->
+            <article class="bl-matrix-card">
+                <div class="bl-card-image">
+                    <img src="./Assests/micro service.webp" alt="Distributed cloud processing data infrastructure illustration" class="bl-main-img">
+                    <span class="bl-category-tag">Architecture</span>
+                </div>
+                <div class="bl-card-content">
+                    <div class="bl-meta-row">July 28, 2026 • 5 min read</div>
+                    <h3 class="bl-post-title">Optimizing Global Edge Micro-Routing Arrays</h3>
+                    <p class="bl-post-desc">An in-depth breakdown of how we achieved sub-1.5ms request routing by decoupling state verification layers from core node processors.</p>
+                    <a href="#article-1" class="bl-read-link">
+                        <span>Read Technical Log</span>
+                        <svg class="bl-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article Card 02: Zero-Trust Security -->
+            <article class="bl-matrix-card">
+                <div class="bl-card-image">
+                    <img src="./Assests/cyptography shield.webp" alt="Zero-trust proxy cryptography verification hub graph" class="bl-main-img">
+                    <span class="bl-category-tag">Security</span>
+                </div>
+                <div class="bl-card-content">
+                    <div class="bl-meta-row">July 20, 2026 • 8 min read</div>
+                    <h3 class="bl-post-title">Securing Data Mutations with Zero-Trust Proxies</h3>
+                    <p class="bl-post-desc">How continuous dynamic identity validation isolates compromised infrastructure components before runtime threats reach storage blocks.</p>
+                    <a href="#article-2" class="bl-read-link">
+                        <span>Read Technical Log</span>
+                        <svg class="bl-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article Card 03: Telemetry Orchestration -->
+            <article class="bl-matrix-card">
+                <div class="bl-card-image">
+                    <img src="./Assests/AI engine.webp" alt="AI engine prediction telemetry tracking console grid" class="bl-main-img">
+                    <span class="bl-category-tag">Telemetry</span>
+                </div>
+                <div class="bl-card-content">
+                    <div class="bl-meta-row">July 15, 2026 • 6 min read</div>
+                    <h3 class="bl-post-title">Preventing Memory Cascades using AI Pipelines</h3>
+                    <p class="bl-post-desc">Deploying predictive telemetry patterns onto staging environments to isolate and patch microservice memory leaks prior to production releases.</p>
+                    <a href="#article-3" class="bl-read-link">
+                        <span>Read Technical Log</span>
+                        <svg class="bl-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<style>
+  /* 🌟 CYBERPUNK ICE BLOG GRID TRACK STYLES */
+.bl-grid-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+.bl-grid-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bl-grid-vector-mesh {
+    width: 100%;
+    height: 100%;
+}
+
+.bl-grid-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.12;
+    width: 550px;
+    height: 550px;
+}
+
+.sapphire-blur-orb {
+    bottom: -15%;
+    right: -10%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+}
+
+.bl-grid-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* 🌟 CENTERED SECTION HEADER BLOCK TYPOGRAPHY */
+.bl-section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.bl-section-badge {
+    display: inline-block;
+    background-color: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    color: var(--primary);
+    padding: 0.4rem 1.1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.bl-section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.bl-section-title span {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25));
+}
+
+.bl-section-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.bl-article-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* High-Tech Article Node Container Box */
+.bl-matrix-card {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(17, 23, 38, 0.4);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.bl-matrix-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.bl-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    position: relative;
+    overflow: hidden;
+    background-color: #0b0f19;
+}
+
+.bl-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(25%) brightness(0.7) contrast(1.05);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.bl-category-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(7, 10, 19, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: var(--primary);
+    padding: 0.3rem 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bl-card-content {
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: linear-gradient(180deg, rgba(17, 23, 38, 0.4) 0%, rgba(7, 10, 19, 0.2) 100%);
+}
+
+.bl-meta-row {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.25px;
+}
+
+.bl-post-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 0 0 0.85rem 0;
+    transition: color 0.3s ease;
+}
+
+.bl-post-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0 0 1.75rem 0;
+    flex-grow: 1;
+}
+
+.bl-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.bl-arrow-vector {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 🌟 DYNAMIC HOVER GLOW INTERACTION ACTIONS */
+.bl-matrix-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(17, 23, 38, 0.75);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(6, 182, 212, 0.1);
+}
+
+.bl-matrix-card:hover::before { border: none; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); }
+.bl-matrix-card:hover .bl-main-img { transform: scale(1.04); filter: grayscale(0%) brightness(0.9) contrast(1.1); }
+.bl-matrix-card:hover .bl-post-title { color: var(--primary); text-shadow: 0 0 10px rgba(6, 182, 212, 0.2); }
+.bl-matrix-card:hover .bl-read-link { color: #ffffff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.2); }
+.bl-matrix-card:hover .bl-arrow-vector { transform: translateX(5px); }
+
+/* 📱 ADAPTIVE RESPONSIVE MEDIA BREAKPOINTS */
+@media (max-width: 768px) {
+    .bl-section-title { font-size: 2rem; }
+    .bl-article-track { grid-template-columns: 1fr; }
+    .bl-card-content { padding: 1.75rem 1.5rem; }
+}
+
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Animation Logic for Blog Cards
+    const timelineBlogCards = document.querySelectorAll(".bl-matrix-card");
+    
+    timelineBlogCards.forEach((card, pos) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease";
+        card.style.transitionDelay = `${pos * 100}ms`; // Incremental reveal timing delays
+    });
+
+    const blogGridObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                blogGridObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -20px 0px"
+    });
+
+    timelineBlogCards.forEach(card => blogGridObserver.observe(card));
+});
+
+</script>
+
+
+<!-- 🌟 HIGH-TECH AUDIO BRIEFINGS & PODCAST HUB -->
+<section id="blog-podcasts" class="bl-audio-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="bl-audio-bg-layer">
+        <img src="./Assests/cloud framework.webp" alt="Cyber network routing topography canvas mesh" class="bl-audio-mesh-img">
+        <div class="bl-audio-ambient-glow sapphire-glow-orb"></div>
+    </div>
+
+    <div class="bl-audio-container">
+        
+        <!-- Section Title & Meta Header Box -->
+        <div class="bl-audio-header">
+            <span class="bl-audio-badge">Audio Relays</span>
+            <h2 class="bl-audio-title">Architectural <span>Briefings</span></h2>
+            <p class="bl-audio-desc">Stream live telemetry explanations and deployment strategy analyses recorded directly from our system ops developers.</p>
+        </div>
+
+        <!-- 2-Column Responsive Layout Grid for Audio Cards -->
+        <div class="bl-audio-grid">
+            
+            <!-- Audio Briefing Node 01 -->
+            <div class="audio-player-card">
+                <div class="audio-card-inner">
+                    <!-- High-contrast thumbnail graphic with overlay controls -->
+                    <div class="audio-thumbnail-box">
+                        <img src="./Assests/network visualization.webp" alt="Studio microphone recording array infrastructure panel illustration" class="audio-thumb-img">
+                        
+                        <!-- Interactive Play Trigger Button -->
+                        <button class="btn-audio-play" aria-label="Play Log Briefing 204">
+                            <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Audio Metadata Context Details -->
+                    <div class="audio-meta-details">
+                        <div class="audio-tag-line">Log Briefing #204 • 12 min</div>
+                        <h3 class="audio-node-title">Decoupling Edge Mesh Processing Layers</h3>
+                        <p class="audio-node-desc">A vocal run-through detailing how we isolated route state mutations safely across international clusters.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio Briefing Node 02 -->
+            <div class="audio-player-card">
+                <div class="audio-card-inner">
+                    <div class="audio-thumbnail-box">
+                        <img src="./Assests/status analytics.webp" alt="Server core node telemetry signals visual illustration" class="audio-thumb-img">
+                        
+                        <button class="btn-audio-play" aria-label="Play Log Briefing 203">
+                            <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="audio-meta-details">
+                        <div class="audio-tag-line">Log Briefing #203 • 18 min</div>
+                        <h3 class="audio-node-title">Quantum-Safe Encryption Migration Strategies</h3>
+                        <p class="audio-node-desc">An absolute breakdown covering the implementation parameters of active TLS 1.3 token scrambling layers.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 AUDIO BRIEFINGS COMPONENT SYSTEM ENGINE */
+.bl-audio-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.bl-audio-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bl-audio-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Soft background texture footprint depth visibility */
+    filter: saturate(1.5) contrast(1.1) hue-rotate(180deg);
+}
+
+.bl-audio-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.12;
+    width: 500px;
+    height: 500px;
+}
+
+.sapphire-glow-orb {
+    top: -10%;
+    right: -5%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+}
+
+.bl-audio-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Centered Section Header Block Layout */
+.bl-audio-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.bl-audio-badge {
+    display: inline-block;
+    background-color: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    color: var(--primary);
+    padding: 0.4rem 1.1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.bl-audio-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.bl-audio-title span {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25));
+}
+
+.bl-audio-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 2-Column Responsive Layout Tracking Setup Grid */
+.bl-audio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* High-Tech Grid Audio Player Card Box */
+.audio-player-card {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(17, 23, 38, 0.4);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+.audio-player-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.audio-card-inner {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Thumbnail Visual Framing Container Box */
+.audio-thumbnail-box {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0b0f19;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.1) grayscale(30%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* 🔄 Interactive Circular Audio Play Trigger Button */
+.btn-audio-play {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background: rgba(7, 10, 19, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    outline: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.audio-play-vector {
+    width: 12px;
+    height: 12px;
+    transform: translateX(1px); /* Corrects visual optical unbalance */
+    transition: color 0.3s ease;
+}
+
+/* Metadata Profile Details Groupings text blocks */
+.audio-meta-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.audio-tag-line {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.audio-node-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.35;
+    margin: 0 0 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.audio-node-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.audio-player-card:hover {
+    transform: translateY(-4px);
+    background-color: rgba(17, 23, 38, 0.75);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(6, 182, 212, 0.08);
+}
+
+.audio-player-card:hover::before {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.audio-player-card:hover .audio-thumb-img {
+    transform: scale(1.05);
+    filter: brightness(0.6) contrast(1.15) grayscale(0%);
+}
+
+.audio-player-card:hover .btn-audio-play {
+    transform: scale(1.1);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--bg-main);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.audio-player-card:hover .audio-node-title {
+    color: var(--primary);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.2);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 950px) {
+    .bl-audio-grid {
+        grid-template-columns: 1fr; /* Stacks response audio boxes vertically on standard screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .bl-audio-title { font-size: 2rem; }
+    .audio-card-inner { flex-direction: column; text-align: center; gap: 1.5rem; padding: 1.75rem 1.5rem; }
+    .audio-meta-details { align-items: center; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Animation Logic for Audio Briefing Cards
+    const automatedAudioCards = document.querySelectorAll(".audio-player-card");
+    
+    automatedAudioCards.forEach((card, pos) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease";
+        card.style.transitionDelay = `${pos * 120}ms`; // Cascading staggered reveal entries
+    });
+
+    const audioBriefingsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                audioBriefingsObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -20px 0px"
+    });
+
+    automatedAudioCards.forEach(card => audioBriefingsObserver.observe(card));
+});
+
+</script>
+
+
+<!-- 🌟 HIGH-TECH DEV DISPATCH SUBSCRIPTION BANNER -->
+<section id="blog-subscribe" class="bl-sub-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="bl-sub-bg-layer">
+        <img src="./Assests/encryption.webp" alt="Cyber tech matrix binary network backdrop vector mesh" class="bl-sub-mesh-img">
+        <div class="bl-sub-glow-orb emerald-blur-orb"></div>
+    </div>
+
+    <div class="bl-sub-container">
+        
+        <!-- Glassmorphic Integrated Form Board Assembly -->
+        <div class="bl-sub-card-hull">
+            <div class="bl-sub-neon-perimeter"></div>
+            
+            <div class="bl-sub-split-layout">
+                
+                <!-- Left Column Text Parameters Context -->
+                <div class="bl-sub-info-side">
+                    <span class="bl-sub-badge">Signal Relay</span>
+                    <h2 class="bl-sub-title">Subscribe to the <br><span>Telemetry Dispatch</span></h2>
+                    <p class="bl-sub-desc">Get critical hotfix post-mortems, kernel optimization logs, and private architecture blueprints routed directly to your endpoint.</p>
+                </div>
+
+                <!-- Right Column: Validating Input Form Module Bay -->
+                <div class="bl-sub-form-side">
+                    <form id="blog-dispatch-form" class="bl-dispatch-form" novalidate>
+                        <div class="bl-input-wrapper-node">
+                            <input type="email" id="blog-dispatch-email" placeholder="operator@enterprise.com" class="bl-dispatch-input">
+                            <span class="bl-field-focus-halo"></span>
+                            
+                            <!-- Submit Button Anchor Trigger -->
+                            <button type="submit" class="btn-bl-dispatch-submit" aria-label="Dispatch Subscription Payload Token">
+                                <span>Join Relay</span>
+                                <svg class="bl-send-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <!-- Inline Real-Time Local Validation Feedback Alert Box Field -->
+                        <span class="bl-dispatch-error-alert" id="blog-dispatch-error-msg"></span>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 DEV DISPATCH SUBSCRIPTION BANNER CORE STYLES */
+.bl-sub-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.bl-sub-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bl-sub-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Soft subtle layout network lines footprint depth visibility */
+    filter: saturate(1.5) contrast(1.1) hue-rotate(185deg);
+}
+
+.bl-sub-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.1;
+    width: 500px;
+    height: 500px;
+}
+
+.emerald-blur-orb {
+    bottom: -15%;
+    left: 30%;
+    background: radial-gradient(circle, var(--success) 0%, transparent 70%);
+}
+
+.bl-sub-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Glassmorphic Central Processing Hull Card Box */
+.bl-sub-card-hull {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(17, 23, 38, 0.6) 0%, rgba(7, 10, 19, 0.4) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bl-sub-card-hull::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+/* Responsive Asymmetrical Column Tracking Split */
+.bl-sub-split-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    padding: 3.5rem 3rem;
+    align-items: center;
+}
+
+.bl-sub-info-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bl-sub-badge {
+    display: inline-block;
+    background-color: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    color: var(--primary);
+    padding: 0.4rem 1.1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.bl-sub-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text-main);
+    margin: 0 0 0.85rem 0;
+    letter-spacing: -0.5px;
+}
+
+.bl-sub-title span {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25));
+}
+
+.bl-sub-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Input Form Module Bay Elements */
+.bl-sub-form-side {
+    width: 100%;
+}
+
+.bl-dispatch-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bl-input-wrapper-node {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.bl-dispatch-input {
+    width: 100%;
+    background-color: rgba(7, 10, 19, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.9rem 8.5rem 0.9rem 1.5rem; /* Wide footprint right padding leaves structural space for absolute button anchors */
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Solid Dashboard Primary Submission Action Button */
+.btn-bl-dispatch-submit {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 100px;
+    color: var(--bg-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 10px rgba(6, 182, 212, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.bl-send-vector {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Real-Time Local Error Inline Warning Typography */
+.bl-dispatch-error-alert {
+    font-size: 0.75rem;
+    color: #ef4444;
+    font-weight: 600;
+    min-height: 16px;
+    padding-left: 1.5rem;
+    display: block;
+    opacity: 0;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.bl-dispatch-error-alert.alert-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.bl-sub-card-hull:hover::before {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.bl-sub-card-hull:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 35px rgba(6, 182, 212, 0.08);
+}
+
+.bl-dispatch-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
+}
+
+/* Input validation error visual cue transformation rules mapping */
+.bl-dispatch-input.input-error-state {
+    border-color: #ef4444;
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.15);
+}
+
+.btn-bl-dispatch-submit:hover {
+    background-color: #ffffff;
+    color: var(--bg-main);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4), 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+.btn-bl-dispatch-submit:hover .bl-send-vector {
+    transform: translate(2px, -2px) scale(1.05);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 1024px) {
+    .bl-sub-title { font-size: 1.85rem; }
+    .bl-sub-split-layout { gap: 2.5rem; padding: 3rem 2rem; }
+}
+
+@media (max-width: 900px) {
+    .bl-sub-split-layout {
+        grid-template-columns: 1fr; /* Stacks response layout rows lineally on smaller tablet and smartphone devices */
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .bl-sub-info-side { align-items: center; }
+    .bl-dispatch-error-alert { padding-left: 0; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .bl-sub-title { font-size: 1.55rem; }
+    .bl-sub-split-layout { padding: 2.25rem 1.5rem; }
+    .bl-dispatch-input { padding: 0.9rem 1.25rem 4.5rem 1.25rem; text-align: center; border-radius: 14px; } /* Forces input text-box transformation adjustments for pocket devices buttons wrapping */
+    .btn-bl-dispatch-submit { left: 5px; right: 5px; bottom: 5px; top: auto; height: 42px; justify-content: center; border-radius: 10px; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Newsletter Subscription Verification and 404 Route Forward Pipeline
+    const blogDispatchForm = document.getElementById("blog-dispatch-form");
+    const blogDispatchInput = document.getElementById("blog-dispatch-email");
+    const blogErrorAlertSpan = document.getElementById("blog-dispatch-error-msg");
+
+    if (blogDispatchForm) {
+        blogDispatchForm.addEventListener("submit", (event) => {
+            event.preventDefault(); // Stop standard default browser page reload sequences
+
+            const targetStringValue = blogDispatchInput.value.trim();
+
+            // Check A: Verify if field is blank
+            if (targetStringValue === "") {
+                triggerFieldError("Please fill out this field.");
+                return;
+            }
+
+            // Check B: Verify standard email construction format parameters via regex criteria mapping
+            const secureEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!secureEmailRegex.test(targetStringValue)) {
+                triggerFieldError("Please provide a valid routing address.");
+                return;
+            }
+
+            // Clear errors and complete navigation forwarding route tracking loop instruction request
+            clearFieldError();
+            window.location.href = "404.html";
+        });
+
+        // Clear warning states programmatically as soon as a user interacts or types inside input boxes
+        blogDispatchInput.addEventListener("input", () => {
+            if (blogDispatchInput.classList.contains("input-error-state")) {
+                clearFieldError();
+            }
+        });
+    }
+
+    function triggerFieldError(alertMessageString) {
+        blogErrorAlertSpan.innerText = alertMessageString;
+        blogErrorAlertSpan.classList.add("alert-visible");
+        blogDispatchInput.classList.add("input-error-state");
+        
+        // High-performance hardware accelerated feedback shakes rows
+        blogDispatchInput.style.transform = "translateX(-4px)";
+        setTimeout(() => blogDispatchInput.style.transform = "translateX(4px)", 80);
+        setTimeout(() => blogDispatchInput.style.transform = "", 160);
+    }
+
+    function clearFieldError() {
+        blogErrorAlertSpan.innerText = "";
+        blogErrorAlertSpan.classList.remove("alert-visible");
+        blogDispatchInput.classList.remove("input-error-state");
+    }
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH VIDEO LOGS & CORE TERMINAL WALKTHROUGHS -->
+<section id="blog-vlogs" class="bl-vlog-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="bl-vlog-bg-layer">
+        <img src="./Assests/cloud eco.webp" alt="Icy data telemetry streams matrix network grid layout canvas background" class="bl-vlog-mesh-img">
+        <div class="bl-vlog-ambient-glow sapphire-glow-patch"></div>
+    </div>
+
+    <div class="bl-vlog-container">
+        
+        <!-- Section Title & Centered Header Box -->
+        <div class="bl-vlog-header">
+            <span class="bl-vlog-badge">Visual Telemetry</span>
+            <h2 class="bl-vlog-title">Console & Video <span>Walkthroughs</span></h2>
+            <p class="bl-vlog-desc">Watch real-time setup videos, diagnostic code reviews, and architecture breakdowns stream directly from our hardware testing nodes.</p>
+        </div>
+
+        <!-- 2-Column Responsive Layout Tracking Setup Grid -->
+        <div class="bl-vlog-grid">
+            
+            <!-- Video Vlog Card 01 -->
+            <div class="vlog-player-card">
+                <div class="vlog-card-inner">
+                    <!-- High-contrast display poster frame asset -->
+                    <div class="vlog-thumbnail-box">
+                        <img src="./Assests/network visualization.webp" alt="Active system monitoring grid telemetry screen asset poster layout" class="vlog-thumb-img">
+                        
+                        <!-- Interactive Play Trigger Button -->
+                        <button class="btn-vlog-play" aria-label="Initialize Video Terminal Breakdown 09">
+                            <span class="vlog-pulse-ring"></span>
+                            <div class="vlog-play-vector-box">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Video Information Details -->
+                    <div class="vlog-meta-details">
+                        <div class="vlog-tag-line">Video Log #09 • 15 min</div>
+                        <h3 class="vlog-node-title">Building Multi-Tenant Simulation Sandboxes</h3>
+                        <p class="vlog-node-desc">A deep visual walkthrough on spinning up isolated virtualization environments under 400ms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Vlog Card 02 -->
+            <div class="vlog-player-card">
+                <div class="vlog-card-inner">
+                    <div class="vlog-thumbnail-box">
+                        <img src="./Assests/status analytics.webp" alt="Integrated deployment log tracks and terminal compilation telemetry grid poster layout" class="vlog-thumb-img">
+                        
+                        <button class="btn-vlog-play" aria-label="Initialize Video Terminal Breakdown 08">
+                            <span class="vlog-pulse-ring"></span>
+                            <div class="vlog-play-vector-box">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="vlog-meta-details">
+                        <div class="vlog-tag-line">Video Log #08 • 22 min</div>
+                        <h3 class="vlog-node-title">Continuous Verification Routing Implementations</h3>
+                        <p class="vlog-node-desc">Live coding session mapping proxy perimeters and automated token rotation tracks inside TLS 1.3 pipelines.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 VIDEO VLOGS COMPONENT CORE ENGINE */
+.bl-vlog-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.bl-vlog-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bl-vlog-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Soft background texture footprint depth visibility */
+    filter: saturate(1.5) contrast(1.1) hue-rotate(180deg);
+}
+
+.bl-vlog-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.12;
+    width: 500px;
+    height: 500px;
+}
+
+.sapphire-glow-patch {
+    bottom: -10%;
+    left: -5%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+}
+
+.bl-vlog-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Centered Section Header Block Layout */
+.bl-vlog-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.bl-vlog-badge {
+    display: inline-block;
+    background-color: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    color: var(--primary);
+    padding: 0.4rem 1.1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.bl-vlog-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.bl-vlog-title span {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25));
+}
+
+.bl-vlog-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 2-Column Responsive Layout Tracking Setup Grid */
+.bl-vlog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* High-Tech Grid Video Card Node Box */
+.vlog-player-card {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(17, 23, 38, 0.4);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+.vlog-player-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.vlog-card-inner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Thumbnail Visual Framing Container Box */
+.vlog-thumbnail-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0b0f19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vlog-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55) contrast(1.05) grayscale(20%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+/* 🔄 Interactive Circular Video Play Trigger Button & Pulse */
+.btn-vlog-play {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(7, 10, 19, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    outline: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.vlog-play-vector-box {
+    width: 14px;
+    height: 14px;
+    transform: translateX(1px); /* Corrects visual optical imbalance skew */
+}
+
+/* Concentric Neon Radar Pulse Wave */
+.vlog-pulse-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    pointer-events: none;
+    z-index: -1;
+    animation: vlogPulseTrack 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+/* Metadata Block Details */
+.vlog-meta-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.vlog-tag-line {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.vlog-node-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.vlog-node-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.vlog-player-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(17, 23, 38, 0.75);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.45), 0 0 30px rgba(6, 182, 212, 0.08);
+}
+
+.vlog-player-card:hover::before {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.vlog-player-card:hover .vlog-thumb-img {
+    transform: scale(1.02);
+    filter: brightness(0.65) contrast(1.1) grayscale(0%);
+}
+
+.vlog-player-card:hover .btn-vlog-play {
+    transform: scale(1.1);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--bg-main);
+    box-shadow: 0 0 18px var(--primary);
+}
+
+.vlog-player-card:hover .vlog-node-title {
+    color: var(--primary);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.2);
+}
+
+/* 🌀 KEYFRAME TRANSFORMATION LOOP BEACONS */
+@keyframes vlogPulseTrack {
+    0% { transform: scale(1); opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 950px) {
+    .bl-vlog-grid {
+        grid-template-columns: 1fr; /* Stacks response video grids vertically on smaller viewports */
+    }
+}
+
+@media (max-width: 480px) {
+    .bl-vlog-title { font-size: 2rem; }
+    .vlog-card-inner { padding: 1.5rem; gap: 1.25rem; }
+    .btn-vlog-play { width: 50px; height: 50px; }
+    .vlog-play-vector-box { width: 12px; height: 12px; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Animation Logic for Video Vlog Cards
+    const automatedVlogCards = document.querySelectorAll(".vlog-player-card");
+    
+    automatedVlogCards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease";
+        card.style.transitionDelay = `${index * 120}ms`; // Cascading staggered reveal entries
+    });
+
+    const videoVlogsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                videoVlogsObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -25px 0px"
+    });
+
+    automatedVlogCards.forEach(card => videoVlogsObserver.observe(card));
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH EDITORIAL CONTRIBUTORS BOARD -->
+<section id="editorial-board" class="bl-authors-frame">
+    
+    <!-- Background Canvas Texture Layer Mapping -->
+    <div class="bl-authors-bg-layer">
+        <img src="https://unsplash.com" alt="Icy tech circuit digital topography canvas matrix background" class="bl-authors-mesh-img">
+        <div class="bl-authors-ambient-glow neon-sapphire-blur"></div>
+    </div>
+
+    <div class="bl-authors-container">
+        
+        <!-- Section Title & Centered Header Box -->
+        <div class="bl-authors-header">
+            <span class="bl-authors-badge">Editorial Core</span>
+            <h2 class="bl-authors-title">Behind the <span>Research Desk</span></h2>
+            <p class="bl-authors-desc">Meet our senior systems architects and infrastructure handlers publishing real-time patch calculations and post-mortems.</p>
+        </div>
+
+        <!-- 3-Column Responsive Grid System for Author Spotlights -->
+        <div class="bl-authors-grid-track">
+            
+            <!-- Author Card 01 -->
+            <div class="author-node-card">
+                <div class="author-card-inner">
+                    <!-- High-contrast profile frame matrix layout -->
+                    <div class="author-profile-hull">
+                        <img src="https://unsplash.com" alt="Dr. Evelyn Vance Senior Systems Architect Profile Picture" class="author-profile-img">
+                        <div class="author-active-badge">
+                            <span class="author-pulse-dot"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Information Group Details -->
+                    <div class="author-meta-content">
+                        <h3 class="author-name">Dr. Evelyn Vance</h3>
+                        <p class="author-role">Principal Core Architect</p>
+                        <p class="author-bio">Writes on decentralized request routing benchmarks, sub-1.5ms network tracks, and async sharding optimization rules.</p>
+                        
+                        <!-- Mini Inline Action Statistics Tag -->
+                        <div class="author-metric-tag">Logs Published: <strong>42 Tracked</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Author Card 02 -->
+            <div class="author-node-card active-author-node">
+                <div class="author-featured-tag">Lead Editor</div>
+                <div class="author-card-inner">
+                    <div class="author-profile-hull">
+                        <img src="https://unsplash.com" alt="Arjun Raghav Lead Cryptographer Profile Picture" class="author-profile-img">
+                        <div class="author-active-badge">
+                            <span class="author-pulse-dot"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="author-meta-content">
+                        <h3 class="author-name">Arjun Raghav</h3>
+                        <p class="author-role">VP of Infrastructure Security</p>
+                        <p class="author-bio">Publishes deep-dives on zero-trust proxy perimeters, dynamic identity mutations, and quantum-safe encryption loops.</p>
+                        
+                        <div class="author-metric-tag">Logs Published: <strong>59 Tracked</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Author Card 03 -->
+            <div class="author-node-card">
+                <div class="author-card-inner">
+                    <div class="author-profile-hull">
+                        <img src="https://unsplash.com" alt="Liam Sterling Director of Telemetry Pipelines Profile Picture" class="author-profile-img">
+                        <div class="author-active-badge">
+                            <span class="author-pulse-dot"></span>
+                            <span>Offline</span>
+                        </div>
+                    </div>
+                    
+                    <div class="author-meta-content">
+                        <h3 class="author-name">Liam Sterling</h3>
+                        <p class="author-role">Director of Diagnostics Core</p>
+                        <p class="author-bio">Curates analytical reviews regarding memory cascades isolation, stage pattern tracking, and predictive threat analytics.</p>
+                        
+                        <div class="author-metric-tag">Logs Published: <strong>31 Tracked</strong></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 HIGH-TECH AUTHORS CORE COMPONENT ENGINE */
+.bl-authors-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: var(--bg-main); /* Continuous depth layer alignment across blog paths */
+    overflow: hidden;
+}
+
+/* Background Canvas Graphics Logic mapping */
+.bl-authors-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bl-authors-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.03; /* Subdued architectural texture background texturing */
+    filter: saturate(1.4) contrast(1.1) hue-rotate(185deg);
+}
+
+.bl-authors-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.12;
+    width: 550px;
+    height: 550px;
+}
+
+.neon-sapphire-blur {
+    bottom: -15%;
+    right: 20%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+}
+
+/* Core Presentation Container Setup */
+.bl-authors-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Centered Header Section Parameters Details */
+.bl-authors-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.bl-authors-badge {
+    display: inline-block;
+    background-color: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    color: var(--primary);
+    padding: 0.4rem 1.1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.bl-authors-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-main);
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.5px;
+}
+
+.bl-authors-title span {
+    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25));
+}
+
+.bl-authors-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 3-Column Adaptable Responsive Grid System Track */
+.bl-authors-grid-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+/* Glassmorphic Grid Card Node Box */
+.author-node-card {
+    position: relative;
+    border-radius: 16px;
+    background-color: rgba(17, 23, 38, 0.4);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+.author-node-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.author-card-inner {
+    padding: 2.75rem 2.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Featured Node Highlighting Details */
+.active-author-node {
+    background-color: rgba(6, 182, 212, 0.02);
+}
+
+.active-author-node::before {
+    background: linear-gradient(180deg, rgba(6, 182, 212, 0.25) 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.author-featured-tag {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    color: var(--bg-main);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.25);
+}
+
+/* Image Containment Mask Setup */
+.author-profile-hull {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 1.5rem;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.author-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(35%) contrast(1.05) brightness(0.9);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* Interactive Absolute Presence HUD Tag */
+.author-active-badge {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(7, 10, 19, 0.9);
+    border: 1px solid var(--border);
+    padding: 0.15rem 0.65rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.author-active-badge span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.25px;
+}
+
+.author-pulse-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--success);
+}
+
+.author-node-card:nth-child(3) .author-pulse-dot {
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: none; /* Offline handler styling changes */
+}
+
+/* Metadata Profile Details Content */
+.author-meta-content {
+    width: 100%;
+}
+
+.author-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.author-role {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.author-bio {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem 0;
+    min-height: 65px; /* Safely balances vertical card alignment profiles */
+}
+
+/* Micro Action Data Metrics Tag */
+.author-metric-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.4rem 0.95rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.author-metric-tag strong { color: var(--text-main); }
+
+/* 🌟 DYNAMIC GLOW AND INTERACTIVE HOVER OVERLAYS */
+.author-node-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(17, 23, 38, 0.75);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(6, 182, 212, 0.1);
+}
+
+.author-node-card:hover::before {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.author-node-card:hover .author-profile-hull {
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.35);
+}
+
+.author-node-card:hover .author-profile-img {
+    filter: grayscale(0%) contrast(1.1) brightness(1);
+    transform: scale(1.02);
+}
+
+.author-node-card:hover .author-name {
+    color: var(--primary);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.2);
+}
+
+.author-node-card:hover .author-metric-tag {
+    background-color: rgba(6, 182, 212, 0.08);
+    border-color: rgba(6, 182, 212, 0.3);
+    color: var(--text-main);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 768px) {
+    .bl-authors-header h2 { font-size: 2rem; }
+    .bl-authors-grid-track { grid-template-columns: 1fr; } /* Stacks profiles vertically on pocket device screen monitors */
+    .author-card-inner { padding: 2.25rem 1.75rem; }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Entrance Animation Logic for Author Profile Node Cards
+    const tacticalAuthorCards = document.querySelectorAll(".author-node-card");
+    
+    tacticalAuthorCards.forEach((card, position) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, box-shadow 0.4s ease";
+        card.style.transitionDelay = `${position * 100}ms`; // Cascading staggered reveal entries
+    });
+
+    const editorialTeamObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                editorialTeamObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -30px 0px"
+    });
+
+    tacticalAuthorCards.forEach(card => editorialTeamObserver.observe(card));
+});
+
+</script>
+
+<!-- 🌟 HIGH-TECH ABOUT & WORKFLOW STRATEGY NODE -->
+
+<!-- 🌟 ONE-LINE HIGH-CONVERTING CTA COMPONENT -->
+<section id="fast-cta" class="one-line-cta-frame">
+    
+    <!-- Background Canvas Layer Mapping -->
+    <div class="one-line-cta-bg">
+        <img src="./Assests/lite bg - cloud.webp" alt="Futuristic digital neon vector track network stream" class="one-line-mesh-img">
+        <div class="one-line-ambient-glow sky-glow-patch"></div>
+    </div>
+
+    <div class="one-line-cta-container">
+        
+        <!-- Compact Single-Line Layout Core Row Track -->
+        <div class="one-line-flex-row">
+            <h2 class="one-line-title">
+                Ready to accelerate your operations? <span>Launch your cluster engine instantly.</span>
+            </h2>
+            
+            <div class="one-line-actions">
+                <a href="#deploy" class="btn-one-line-glow">Provision Node</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* 🌟 ONE-LINE CTA SECTION CORE SYSTEM */
+.one-line-cta-frame {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #090d1a; /* Dark tech base canvas backing color sequence matching */
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Background Canvas Graphics Logic */
+.one-line-cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.one-line-mesh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05; /* Highly subtle image layer footprint background texturing */
+    filter: saturate(1.8) contrast(1.1) hue-rotate(190deg);
+}
+
+.one-line-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.12;
+    width: 450px;
+    height: 250px;
+}
+
+.sky-glow-patch {
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, #38bdf8 0%, #3b82f6 60%, transparent 70%);
+}
+
+/* Fluid Flex Row/Grid Core Presentation Setup */
+.one-line-cta-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* Horizontal Line Row Alignment Parameters */
+.one-line-flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.one-line-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.one-line-title span {
+    background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.25));
+}
+
+/* Action Button Panels Wrapper Track */
+.one-line-actions {
+    flex-shrink: 0;
+}
+
+/* Glow-Injected Solid Primary Button */
+.btn-one-line-glow {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+/* 🌟 MODERN INTERACTIVE HOVER AND NEON GLOW ACTIONS */
+
+.btn-one-line-glow:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+    box-shadow: 0 6px 22px rgba(59, 130, 246, 0.45), 0 0 15px #38bdf8;
+}
+
+/* Accent highlight triggers across full headline block wrapper on container targets */
+.one-line-cta-container:hover .one-line-title {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 950px) {
+    .one-line-title {
+        font-size: 1.45rem;
+    }
+    .one-line-flex-row {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Collapses structural horizontal row clean into single column tracks on smartphone viewports */
+    .one-line-flex-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.75rem;
+    }
+    
+    .one-line-actions {
+        width: 100%;
+    }
+    
+    .btn-one-line-glow {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem 0;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+    // 🌟 Scroll Fade Entry Rig Integration for One-Line CTA Frame Layer
+    const fastCtaContainer = document.querySelector(".one-line-cta-container");
+
+    if (fastCtaContainer) {
+        // Apply initial hidden base values safely
+        fastCtaContainer.style.opacity = "0";
+        fastCtaContainer.style.transform = "translateY(15px)";
+        fastCtaContainer.style.transition = "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+
+        const fastCtaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    fastCtaContainer.style.opacity = "1";
+                    fastCtaContainer.style.transform = "translateY(0)";
+                    fastCtaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const fastCtaSection = document.getElementById("fast-cta");
+        if (fastCtaSection) fastCtaObserver.observe(fastCtaSection);
+    }
+});
+
+</script>
+<!-- 🌟 HIGH-TECH COMPRESSED HORIZONTAL FOOTER -->
+<footer class="tech-footer-root">
+    <div class="footer-grid-container">
+        
+        <!-- Column 1: Core Corporate Branding Box -->
+        <div class="footer-summary-block">
+                    <a href="javascript:void(0);" class="footer-brand-anchor"
+   onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+   aria-label="Scroll back to top fold">
+
+    <img src="./Assests/software icon.webp"
+         alt="StacklyNexus Logo"
+         class="footer-brand-logo">
+
+</a>
+            
+            <p class="footer-corporate-desc">
+                Engineering premium autonomic workflow orchestrations designed to bridge decentralized neural network models with corporate efficiency metrics.
+            </p>
+            
+            <div class="footer-location-line">
+                <span class="location-pin-icon">📍</span>
+                <p class="location-string-text">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+            </div>
+            
+            <div class="footer-social-row">
+                <a href="#facebook" class="social-circle-node" aria-label="Facebook Operator Track">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="#instagram" class="social-circle-node" aria-label="Instagram Telemetry Channel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="#telegram" class="social-circle-node" aria-label="Telegram Signal Relay">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="m22 2-7 20-4-9-9-4Z"/>
+                        <path d="M22 2 11 13"/>
+                    </svg>
+                </a>
+                <a href="#youtube" class="social-circle-node" aria-label="YouTube Visual Streaming Panel">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Column 2: Navigation Links Block A -->
+        <div class="footer-links-column">
+            <h4 class="column-title-heading">Quick Links</h4>
+            <ul class="footer-links-stack">
+                <li><a href="#workflows">Workflows</a></li>
+                <li><a href="#ai-agents">AI Agents</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Navigation Links Block B -->
+        <div class="footer-links-column">
+            <h4 class="column-title-heading">Support Hub</h4>
+            <ul class="footer-links-stack">
+                <li><a href="#sla">SLA & Warranties</a></li>
+                <li><a href="#model-swap">Model Swap Portals</a></li>
+                <li><a href="#faq">Help & FAQ Center</a></li>
+                <li><a href="#patch-logs">Kernel Patch Logs</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter Subscription Panel -->
+        <div class="footer-dispatch-column">
+            <h4 class="column-title-heading">The Playground Dispatch</h4>
+            <p class="dispatch-instructions-text">Subscribe to unlock premium custom blueprint designs and private product launches.</p>
+            
+            <form id="footer-dispatch-form" class="dispatch-input-row" novalidate>
+                <div class="dispatch-input-hull">
+                    <input type="email" id="dispatch-email-field" placeholder="Enter your email..." class="dispatch-text-input">
+                    <button type="submit" class="btn-dispatch-arrow" aria-label="Submit Email Dispatch Payload">
+                        <svg class="dispatch-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <span class="dispatch-error-alert" id="dispatch-error-msg"></span>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Bottom Compliance Section -->
+    <div class="footer-base-compliance-row">
+        <div class="compliance-inner-flex">
+            <p class="footer-copyright-statement">&copy; 2026 Stackly Industries. All rights reserved.</p>
+            <div class="compliance-links-track">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#cookies">Cookie Management</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🌟 FLOATING CORNER BACK-TO-TOP TRIGGER ARROW BOX -->
+    <button class="floating-back-top-trigger" id="back-to-top-anchor" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Return to top fold">
+        <svg class="back-top-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+</footer>
+
+<style>
+/* 🌟 CORE TECHNICAL FOOTER ENGINE */
+.tech-footer-root {
+    position: relative;
+    width: 100%;
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom */
+    padding: 50px 0 30px 0;
+    background-color: #070a13;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+/* 🌟 Tighter Column Grid Track Definition */
+.footer-grid-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.4fr; 
+    gap: 2rem; /* Tightened horizontal space gaps */
+}
+
+.footer-summary-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.footer-brand-anchor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.footer-brand-logo {
+    width: 120px;          /* Adjust as needed */
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-brand-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.footer-brand-text span {
+    color: #3b82f6;
+}
+
+.footer-corporate-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem 0;
+}
+
+.footer-location-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.location-pin-icon {
+    font-size: 1rem;
+    filter: drop-shadow(0 0 4px #3b82f6);
+}
+
+.location-string-text {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: whitesmoke;
+}
+
+.footer-social-row {
+    display: flex;
+    gap: 0.85rem;
+}
+
+.social-circle-node {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-svg-path {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* 🌟 Center Column Compression Logic Hooks */
+.footer-links-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: center; /* Pulls central column tracks tightly inward */
+    min-width: 150px;
+}
+
+.column-title-heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.column-title-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #3b82f6;
+    box-shadow: 0 0 8px #3b82f6;
+    border-radius: 10px;
+}
+
+.footer-links-stack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links-stack a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* 🌟 Far-Right Column Compression Hook */
+.footer-dispatch-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: end; /* Locks subscribe row to the far-right container margin edge */
+    width: 100%;
+    max-width: 360px;
+}
+
+.dispatch-instructions-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem 0;
+}
+
+.dispatch-input-row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dispatch-input-hull {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dispatch-text-input {
+    width: 100%;
+    background-color: rgba(11, 15, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    padding: 0.75rem 3.5rem 0.75rem 1.25rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.btn-dispatch-arrow {
+    position: absolute;
+    right: 4px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    border: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dispatch-arrow-vector { width: 14px; height: 14px; }
+
+.dispatch-error-alert {
+    font-size: 0.75rem;
+    color: #ef4444;
+    font-weight: 600;
+    min-height: 16px;
+    padding-left: 1rem;
+    display: block;
+    opacity: 0;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+.dispatch-error-alert.alert-visible { opacity: 1; transform: translateY(0); }
+
+.footer-base-compliance-row {
+    max-width: 1400px;
+    margin: 3.5rem auto 0 auto;
+    padding: 1.5rem 2rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.compliance-inner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-copyright-statement { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+.compliance-links-track { display: flex; gap: 1.5rem; }
+.compliance-links-track a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s ease; }
+
+/* 🌟 INTERACTIVE GLOW EFFECTS */
+.footer-brand-anchor:hover { filter: drop-shadow(0 0 8px #3b82f6); }
+
+.social-circle-node:hover {
+    color: #ffffff;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+.social-circle-node:hover .social-svg-path { transform: scale(1.05) rotate(4deg); }
+.footer-links-stack a:hover { color: #3b82f6; text-shadow: 0 0 8px rgba(96, 165, 250, 0.4); padding-left: 3px; }
+.dispatch-text-input:focus { border-color: #3b82f6; box-shadow: 0 0 12px rgba(59, 130, 246, 0.15); }
+.dispatch-text-input.input-error-state { border-color: #ef4444; box-shadow: 0 0 12px rgba(239, 68, 68, 0.15); }
+.btn-dispatch-arrow:hover { background-color: #2563eb; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5), 0 0 8px #60a5fa; }
+.compliance-links-track a:hover { color: #ffffff; }
+
+/* 🌟 FLOATING CORNER BACK-TO-TOP TRIGGER ARROW BOX */
+.floating-back-top-trigger {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: rgba(19, 26, 38, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 9999;
+}
+
+.back-top-arrow-icon { width: 18px; height: 18px; }
+.floating-back-top-trigger.trigger-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.floating-back-top-trigger:hover { color: #ffffff; border-color: #3b82f6; background-color: rgba(59, 130, 246, 0.15); box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); transform: translateY(-3px); }
+
+/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
+@media (max-width: 900px) {
+    .footer-grid-container { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .footer-summary-block, .footer-dispatch-column { grid-column: span 2; max-width: 100%; justify-self: start; }
+    .footer-links-column { justify-self: start; }
+}
+
+@media (max-width: 480px) {
+    .footer-grid-container { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+    .footer-summary-block, .footer-links-column, .footer-dispatch-column { align-items: center; grid-column: span 1; justify-self: center; }
+    .column-title-heading::after { left: 50%; transform: translateX(-50%); }
+    .footer-location-line, .footer-social-row { justify-content: center; }
+    .compliance-inner-flex { flex-direction: column; text-align: center; }
+    .compliance-links-track { justify-content: center; }
+    .floating-back-top-trigger { bottom: 1.5rem; right: 1.5rem; }
+}
+
+
+</style>
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. Floating Back-to-Top Toggle Visual State Trigger Mechanics
+    const backToTopAnchor = document.getElementById("back-to-top-anchor");
+
+    const assessScrollElevation = () => {
+        if (window.scrollY > 400) {
+            backToTopAnchor.classList.add("trigger-visible");
+        } else {
+            backToTopAnchor.classList.remove("trigger-visible");
+        }
+    };
+
+    window.addEventListener("scroll", assessScrollElevation);
+
+    // 2. Newsletter Subscription Validation and 404 Route Forward Pipeline
+    const dispatchForm = document.getElementById("footer-dispatch-form");
+    const dispatchEmailInput = document.getElementById("dispatch-email-field");
+    const errorAlertSpan = document.getElementById("dispatch-error-msg");
+
+    if (dispatchForm) {
+        dispatchForm.addEventListener("submit", (event) => {
+            event.preventDefault(); 
+
+            const innerStringValue = dispatchEmailInput.value.trim();
+
+            if (innerStringValue === "") {
+                triggerFieldError("Please fill out this field.");
+                return;
+            }
+
+            const secureEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!secureEmailRegex.test(innerStringValue)) {
+                triggerFieldError("Please provide a valid routing address.");
+                return;
+            }
+
+            clearFieldError();
+            window.location.href = "404.html";
+        });
+
+        dispatchEmailInput.addEventListener("input", () => {
+            if (dispatchEmailInput.classList.contains("input-error-state")) {
+                clearFieldError();
+            }
+        });
+    }
+
+    function triggerFieldError(alertMessageString) {
+        errorAlertSpan.innerText = alertMessageString;
+        errorAlertSpan.classList.add("alert-visible");
+        dispatchEmailInput.classList.add("input-error-state");
+        
+        dispatchEmailInput.style.transform = "translateX(-4px)";
+        setTimeout(() => dispatchEmailInput.style.transform = "translateX(4px)", 80);
+        setTimeout(() => dispatchEmailInput.style.transform = "", 160);
+    }
+
+    function clearFieldError() {
+        errorAlertSpan.innerText = "";
+        errorAlertSpan.classList.remove("alert-visible");
+        dispatchEmailInput.classList.remove("input-error-state");
+    }
+});
+
+</script>
+</body>
+</html>

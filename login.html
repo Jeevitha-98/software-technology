@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StacklyNexus // Secure Terminal Authentication Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page-root">
+
+    <!-- Deep Ambient Glow Layer Mapping -->
+    <div class="auth-bg-layer">
+        <svg class="auth-vector-grid" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://w3.org">
+            <defs>
+                <pattern id="auth-matrix" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(6, 182, 212, 0.015)" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#auth-matrix)" />
+        </svg>
+        <div class="auth-glow-orb tone-ice"></div>
+        <div class="auth-glow-orb tone-sapphire"></div>
+    </div>
+
+    <!-- Central Authentication Frame Container -->
+    <main class="auth-frame-container">
+        <div class="auth-card-hull">
+            <div class="auth-card-neon-perimeter"></div>
+            
+            <div class="auth-card-inner">
+                
+                <!-- 🌟 INTEGRATED INTERNAL HEADER CONTROLS BAR -->
+                <div class="auth-card-header-actions">
+                    <a href="index.html" class="btn-card-home-trigger" aria-label="Return to landing fold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span>HOME</span>
+                    </a>
+                </div>
+
+                <!-- Section Header Context Box -->
+                <header class="auth-header-block">
+                    <h1 class="auth-main-title">Welcome <span>Back.</span></h1>
+                    <p class="auth-subtitle-desc">Select your operational profile access level tokens to unlock your specialized autonomous workflow matrices or telemetry graphs database dashboards.</p>
+                </header>
+
+                <form id="secure-gateway-form" class="auth-payload-form" novalidate>
+                    
+                    <!-- Role Selector Tracks Grid -->
+                    <div class="auth-role-grid">
+                        <div class="role-selector-card selected-role" data-role="partner" tabindex="0">
+                            <div class="role-vector-box color-cyan">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 7 12 12 2 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            </div>
+                            <div class="role-meta-rows">
+                                <h3>Partner Operator</h3>
+                                <p>SWARM DASHBOARD</p>
+                            </div>
+                        </div>
+
+                        <div class="role-selector-card" data-role="client" tabindex="0">
+                            <div class="role-vector-box color-sapphire">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"/></svg>
+                            </div>
+                            <div class="role-meta-rows">
+                                <h3>Client Node</h3>
+                                <p>REGISTRY CANVAS</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inputs Node Stack -->
+                    <div class="auth-field-node">
+                        <label for="gateway-email" class="auth-field-label">Routing Endpoint Email Address</label>
+                        <input type="email" id="gateway-email" placeholder="name@example.com" class="auth-raw-input">
+                    </div>
+
+                    <div class="auth-field-node">
+                        <label for="gateway-password" class="auth-field-label">Security Cryptography Password Key</label>
+                        <div class="auth-password-wrapper">
+                            <input type="password" id="gateway-password" placeholder="••••••••" class="auth-raw-input">
+                            <button type="button" class="btn-toggle-password-visibility" id="password-visibility-trigger" aria-label="Toggle password visibility">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="auth-options-flex-row">
+                        <label class="auth-checkbox-container">
+                            <input type="checkbox" id="gateway-remember" class="auth-raw-checkbox">
+                            <span class="custom-checkbox-box"></span>
+                            <span class="checkbox-label-text">Remember gateway identity</span>
+                        </label>
+                        <a href="404.html" class="auth-forgot-link">Forgot Password Key?</a>
+                    </div>
+
+                    <span class="auth-gateway-alert" id="gateway-validation-msg"></span>
+
+                    <button type="submit" class="btn-auth-handshake-submit">
+                        <span>Authorize Secure Handshake →</span>
+                    </button>
+
+                </form>
+
+                <div class="auth-divider-bar">
+                    <span>OR SIGN IN INTERNALLY WITH</span>
+                </div>
+
+                <div class="auth-social-row">
+                    <a href="404.html" class="btn-social-node">
+                        <svg class="social-icon-vector google-colored" viewBox="0 0 24 24"><path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114A5.72 5.72 0 0 1 8.2 12.8a5.72 5.72 0 0 1 5.79-5.714c1.556 0 2.978.583 4.07 1.543l3.226-3.226A10.15 10.15 0 0 0 13.99 2c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.77 0 9.57-4.057 9.57-9.743 0-.66-.06-1.29-.17-1.972H12.24Z" fill="currentColor"/></svg>
+                        <span>Google Core</span>
+                    </a>
+                    <a href="404.html" class="btn-social-node">
+                        <svg class="social-icon-vector fb-colored" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+                        <span>Facebook Core</span>
+                    </a>
+                </div>
+
+                <footer class="auth-card-footer">
+                    <p>Don't have an infrastructure cluster account? <a href="signup.html" class="auth-redirect-link">Create Account Node</a></p>
+                </footer>
+
+            </div>
+        </div>
+    </main>
+
+
+    <style>
+        /* 🌟 CARD INTERNAL HEADER ACTION LAYOUT TRACKS */
+.auth-card-header-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.btn-card-home-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(7, 10, 19, 0.4);
+    border: 1px solid var(--border);
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-card-home-trigger svg {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* 🌟 INTERACTIVE NEON GLOW ACTIONS */
+.btn-card-home-trigger:hover {
+    color: #ffffff;
+    border-color: var(--primary);
+    background-color: rgba(6, 182, 212, 0.08);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.25);
+}
+
+.btn-card-home-trigger:hover svg {
+    transform: scale(1.05);
+    color: var(--primary);
+}
+
+/* 📱 RESPONSIVE LAYOUT ADJUSTMENT OVERRIDES */
+@media (max-width: 480px) {
+    .auth-card-header-actions {
+        justify-content: center; /* Centers the button inside card viewports on tight mobile grids */
+        margin-bottom: 1rem;
+    }
+}
+
+        /* 🌟 PREMIUM SYSTEM INDEPENDENT AUTH LAYOUT ENGINE STYLES */
+.auth-page-root {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Graphical Layer Tracks mapping */
+.auth-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.auth-vector-grid { width: 100%; height: 100%; }
+
+.auth-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.15;
+    mix-blend-mode: screen;
+}
+
+.tone-ice { top: -10%; right: 15%; width: 550px; height: 550px; background: radial-gradient(circle, var(--primary) 0%, transparent 70%); }
+.tone-sapphire { bottom: -10%; left: 10%; width: 450px; height: 450px; background: radial-gradient(circle, var(--accent) 0%, transparent 70%); }
+
+/* Navigation Back Header Node */
+.auth-top-navbar {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    z-index: 100;
+}
+
+.btn-return-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(17, 23, 38, 0.4);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-return-home svg { width: 12px; height: 12px; transition: transform 0.2s ease; }
+.btn-return-home:hover { color: #ffffff; border-color: var(--primary); box-shadow: 0 0 10px rgba(6, 182, 212, 0.2); }
+.btn-return-home:hover svg { transform: translateX(-2px); }
+
+/* Central Glassmorphic Portal Architecture Hull Box */
+.auth-frame-container {
+    position: relative;
+    width: 92%;
+    max-width: 520px;
+    margin: 5rem 0 3rem 0;
+    z-index: 5;
+}
+
+.auth-card-hull {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(17, 23, 38, 0.75) 0%, rgba(7, 10, 19, 0.5) 100%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 16px;
+}
+
+.auth-card-hull::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.auth-card-inner { padding: 3rem 2.75rem; }
+
+.auth-header-block { margin-bottom: 2rem; }
+
+.auth-main-title { font-size: 2.25rem; font-weight: 800; color: #ffffff; letter-spacing: -0.75px; margin: 0 0 0.75rem 0; }
+.auth-main-title span { background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.25)); }
+.auth-subtitle-desc { font-size: 0.9rem; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+.auth-payload-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+/* 🔄 Role Selection Grid Boxes */
+.auth-role-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.role-selector-card {
+    position: relative;
+    border: 1px solid var(--border);
+    background-color: rgba(7, 10, 19, 0.3);
+    border-radius: 10px;
+    padding: 1.25rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.role-vector-box {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.role-vector-box svg { width: 16px; height: 16px; }
+.role-meta-rows h3 { margin: 0 0 2px 0; font-size: 0.85rem; font-weight: 700; color: #ffffff; }
+.role-meta-rows p { margin: 0; font-size: 0.65rem; font-weight: 700; color: var(--text-muted); letter-spacing: 0.25px; }
+
+/* Selection state class updates toggled dynamically via Javascript */
+.role-selector-card:hover, .role-selector-card:focus {
+    border-color: rgba(6, 182, 212, 0.3);
+    background-color: rgba(17, 23, 38, 0.4);
+}
+
+.role-selector-card.selected-role {
+    background-color: rgba(6, 182, 212, 0.03);
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+}
+
+.role-selector-card.selected-role .role-vector-box.color-cyan { background-color: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.2); color: var(--primary); filter: drop-shadow(0 0 4px rgba(6, 182, 212, 0.3)); }
+.role-selector-card.selected-role .role-vector-box.color-sapphire { background-color: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.2); color: #60a5fa; filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.3)); }
+.role-selector-card.selected-role .role-meta-rows p { color: var(--primary); }
+.role-selector-card:nth-child(2).selected-role .role-meta-rows p { color: #60a5fa; }
+
+/* General Form Elements */
+.auth-field-node { display: flex; flex-direction: column; gap: 0.5rem; }
+.auth-field-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff; }
+
+.auth-raw-input {
+    width: 100%;
+    background-color: rgba(7, 10, 19, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1.25rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.auth-raw-input:focus { border-color: var(--primary); background-color: rgba(17, 23, 38, 0.8); box-shadow: 0 0 15px rgba(6, 182, 212, 0.15); }
+.auth-raw-input.input-error-state { border-color: #ef4444 !important; box-shadow: 0 0 12px rgba(239, 68, 68, 0.2) !important; }
+
+/* Inline password button wrap */
+.auth-password-wrapper { position: relative; width: 100%; }
+.auth-password-wrapper .auth-raw-input { padding-right: 3rem; }
+
+.btn-toggle-password-visibility {
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.btn-toggle-password-visibility svg { width: 16px; height: 16px; transition: color 0.2s ease; }
+.btn-toggle-password-visibility:hover svg { color: #ffffff; }
+
+/* Options Row Track Layout */
+.auth-options-flex-row { display: flex; justify-content: space-between; align-items: center; margin-top: 0.25rem; }
+
+.auth-checkbox-container { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; position: relative; user-select: none; }
+.auth-raw-checkbox { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
+
+.custom-checkbox-box {
+    width: 16px;
+    height: 16px;
+    background-color: rgba(7, 10, 19, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.auth-checkbox-container:hover .custom-checkbox-box { border-color: rgba(6, 182, 212, 0.4); }
+.auth-raw-checkbox:checked ~ .custom-checkbox-box { background-color: var(--primary); border-color: var(--primary); box-shadow: 0 0 8px rgba(6, 182, 212, 0.4); }
+.custom-checkbox-box::after { content: ''; position: absolute; display: none; left: 5px; top: 2px; width: 4px; height: 8px; border: solid var(--bg-main); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.auth-raw-checkbox:checked ~ .custom-checkbox-box::after { display: block; }
+.checkbox-label-text { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+
+.auth-forgot-link, .auth-redirect-link { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-decoration: none; transition: color 0.2s ease, text-shadow 0.2s ease; }
+.auth-forgot-link:hover, .auth-redirect-link:hover { color: #60a5fa; text-shadow: 0 0 8px rgba(96, 165, 250, 0.3); }
+
+/* Gateway Global Warning Alert Field Box */
+.auth-gateway-alert { font-size: 0.8rem; color: #ef4444; font-weight: 600; min-height: 18px; display: block; opacity: 0; transform: translateY(-3px); transition: all 0.3s ease; text-align: center; }
+.auth-gateway-alert.alert-visible { opacity: 1; transform: translateY(0); }
+
+/* Primary Consultation Authorization Handshake Button Anchor */
+.btn-auth-handshake-submit {
+    width: 100%;
+    padding: 0.95rem 0;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    color: var(--bg-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-auth-handshake-submit:hover { background-color: #ffffff; box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3), 0 0 12px var(--primary); transform: translateY(-1px); }
+
+/* Separator Row Lines */
+.auth-divider-bar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2.25rem 0 1.5rem 0;
+}
+
+.auth-divider-bar::before, .auth-divider-bar::after { content: ''; flex: 1; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.auth-divider-bar span { padding: 0 1rem; font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.25); letter-spacing: 1px; }
+
+/* Social Anchor Buttons Panel */
+.auth-social-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+
+.btn-social-node {
+    display: inline-flex;
+    align-items: center;
+justify-content: center;gap: 0.65rem;background-color: rgba(17, 23, 38, 0.3);border: 1px solid var(--border);padding: 0.8rem 0;border-radius: 8px;color: #ffffff;font-size: 0.85rem;font-weight: 600;text-decoration: none;transition: all 0.3s ease;}.btn-social-node:hover { background-color: rgba(17, 23, 38, 0.6); border-color: rgba(255, 255, 255, 0.15); transform: translateY(-1px); }.social-icon-vector { width: 14px; height: 14px; }.btn-social-node:hover .google-colored { color: #ef4444; filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.4)); }.btn-social-node:hover .fb-colored { color: #3b82f6; filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); }.auth-card-footer { text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 1.5rem; }.auth-card-footer p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }.auth-card-footer .auth-redirect-link { color: var(--primary); margin-left: 2px; }.auth-card-footer .auth-redirect-link:hover { color: #22d3ee; }/* 📱 ADAPTIVE MOBILE BREAKPOINTS OVERRIDES */@media (max-width: 580px) {.auth-top-navbar { top: 1.5rem; right: 1.5rem; }.auth-card-inner { padding: 2.25rem 1.5rem; }.auth-role-grid { grid-template-columns: 1fr; gap: 1rem; }.auth-options-flex-row { flex-direction: column; gap: 1rem; align-items: flex-start; }.auth-social-row { grid-template-columns: 1fr; gap: 1rem; }}
+
+
+    </style>
+
+    <script>
+   document.addEventListener("DOMContentLoaded", () => {
+
+    // 🌟 SECURE AUTHENTICATION GATEWAY CENTRAL ENGINE CONFIGURATION
+    const authGatewayForm = document.getElementById("secure-gateway-form");
+    const roleSelectorCards = document.querySelectorAll(".role-selector-card");
+    const emailFieldNode = document.getElementById("gateway-email");
+    const passwordFieldNode = document.getElementById("gateway-password");
+    const alertMessageSpan = document.getElementById("gateway-validation-msg");
+    const visibilityTriggerBtn = document.getElementById("password-visibility-trigger");
+
+    let currentSelectedRoleToken = "partner";
+
+    // 🌟 1. ROLE CARD SELECTION
+    roleSelectorCards.forEach(card => {
+
+        const toggleActiveSelection = () => {
+            roleSelectorCards.forEach(c => c.classList.remove("selected-role"));
+            card.classList.add("selected-role");
+
+            currentSelectedRoleToken = card.getAttribute("data-role");
+
+            clearActiveErrorStates();
+        };
+
+        card.addEventListener("click", toggleActiveSelection);
+
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                toggleActiveSelection();
+            }
+        });
+
+    });
+
+    // 🌟 2. PASSWORD SHOW / HIDE
+    if (visibilityTriggerBtn && passwordFieldNode) {
+
+        visibilityTriggerBtn.addEventListener("click", () => {
+
+            const isHidden = passwordFieldNode.type === "password";
+
+            passwordFieldNode.type = isHidden ? "text" : "password";
+
+            visibilityTriggerBtn.style.color = isHidden
+                ? "var(--primary)"
+                : "var(--text-muted)";
+
+        });
+
+    }
+
+    // 🌟 3. LOGIN SUBMIT
+    if (authGatewayForm) {
+
+        authGatewayForm.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            const targetEmailValue = emailFieldNode.value.trim();
+            const targetPasswordValue = passwordFieldNode.value.trim();
+
+            // Empty validation
+            if (!targetEmailValue || !targetPasswordValue) {
+                triggerGatewayFailure("Please fill out all fields.");
+                highlightBlankInputs();
+                return;
+            }
+
+            // Email validation
+            const standardEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!standardEmailRegex.test(targetEmailValue)) {
+                triggerGatewayFailure("Please provide a valid routing email address.");
+                emailFieldNode.classList.add("input-error-state");
+                return;
+            }
+
+            clearActiveErrorStates();
+
+            // ============================
+            // SAVE USER SESSION
+            // ============================
+
+            // Save email
+            localStorage.setItem("activeOperatorEmail", targetEmailValue);
+
+            // Generate display name from email
+            const operatorName = targetEmailValue
+                .split("@")[0]
+                .replace(/[._-]/g, " ")
+                .replace(/\b\w/g, char => char.toUpperCase());
+
+            // Save name
+            localStorage.setItem("activeOperatorName", operatorName);
+
+            // Save role
+            localStorage.setItem("activeOperatorRole", currentSelectedRoleToken);
+
+            // Redirect
+            if (currentSelectedRoleToken === "partner") {
+                window.location.href = "partner-dashboard.html";
+            }
+            else if (currentSelectedRoleToken === "client") {
+                window.location.href = "client-dashboard.html";
+            }
+
+        });
+
+        // Remove errors while typing
+        [emailFieldNode, passwordFieldNode].forEach(field => {
+
+            field.addEventListener("input", () => {
+
+                if (field.classList.contains("input-error-state")) {
+                    clearActiveErrorStates();
+                }
+
+            });
+
+        });
+
+    }
+
+    // ============================
+    // ERROR FUNCTIONS
+    // ============================
+
+    function triggerGatewayFailure(messageString) {
+
+        if (alertMessageSpan) {
+
+            alertMessageSpan.textContent = messageString;
+            alertMessageSpan.classList.add("alert-visible");
+
+        }
+
+    }
+
+    function highlightBlankInputs() {
+
+        if (emailFieldNode.value.trim() === "") {
+            emailFieldNode.classList.add("input-error-state");
+        }
+
+        if (passwordFieldNode.value.trim() === "") {
+            passwordFieldNode.classList.add("input-error-state");
+        }
+
+        const activeFormCardBox = document.querySelector(".auth-card-hull");
+
+        if (activeFormCardBox) {
+
+            activeFormCardBox.style.transform = "translateX(-4px)";
+
+            setTimeout(() => {
+                activeFormCardBox.style.transform = "translateX(4px)";
+            }, 80);
+
+            setTimeout(() => {
+                activeFormCardBox.style.transform = "";
+            }, 160);
+
+        }
+
+    }
+
+    function clearActiveErrorStates() {
+
+        if (alertMessageSpan) {
+            alertMessageSpan.textContent = "";
+            alertMessageSpan.classList.remove("alert-visible");
+        }
+
+        emailFieldNode.classList.remove("input-error-state");
+        passwordFieldNode.classList.remove("input-error-state");
+
+    }
+
+});
+    </script>
+</body>
+</html>
