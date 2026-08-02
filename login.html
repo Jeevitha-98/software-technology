@@ -550,13 +550,9 @@ justify-content: center;gap: 0.65rem;background-color: rgba(17, 23, 38, 0.3);bor
             // Save email
             localStorage.setItem("activeOperatorEmail", targetEmailValue);
 
-            // Generate display name from email
-            const operatorName = targetEmailValue
-                .split("@")[0]
-                .replace(/[._-]/g, " ")
-                .replace(/\b\w/g, char => char.toUpperCase());
+            // Save username (before @)
+            const operatorName = targetEmailValue.split("@")[0];
 
-            // Save name
             localStorage.setItem("activeOperatorName", operatorName);
 
             // Save role
@@ -565,8 +561,7 @@ justify-content: center;gap: 0.65rem;background-color: rgba(17, 23, 38, 0.3);bor
             // Redirect
             if (currentSelectedRoleToken === "partner") {
                 window.location.href = "partner-dashboard.html";
-            }
-            else if (currentSelectedRoleToken === "client") {
+            } else if (currentSelectedRoleToken === "client") {
                 window.location.href = "client-dashboard.html";
             }
 
@@ -594,10 +589,8 @@ justify-content: center;gap: 0.65rem;background-color: rgba(17, 23, 38, 0.3);bor
     function triggerGatewayFailure(messageString) {
 
         if (alertMessageSpan) {
-
             alertMessageSpan.textContent = messageString;
             alertMessageSpan.classList.add("alert-visible");
-
         }
 
     }

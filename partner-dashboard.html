@@ -1,225 +1,1637 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StacklyNexus // Partner Swarm Console</title>
-    <link rel="stylesheet" href="style.css">
+    <title>StacklyNexus - Partner Swarm Locus</title>
+    <link rel="stylesheet" href="partner-dashboard.css">
 </head>
-<body class="dash-panel-root">
+<body class="partner-panel-body">
 
-    <!-- Ambient Grid Canvas Backdrop Underlay -->
-    <div class="dash-canvas-layer">
-        <div class="dash-glow-patch"></div>
+    <!-- 📱 MOBILE TOP HEADER CONTROLS VIEWPORTPORT -->
+   <header class="mobile-navigation-header">
+
+    <button class="hamburger-menu-trigger" id="mobile-drawer-toggle" aria-label="Toggle system infrastructure drawer panel">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+    </button>
+
+    <div class="mobile-logo-wrap action-brand-reload">
+        <!-- Logo -->
     </div>
 
-    <!-- DYNAMIC CONSOLE NAVIGATION DRAWER SIDEBAR PANEL -->
-   <!-- 🌟 OPTIMIZED RESPONSIVE SIDEBAR COMPONENT -->
-<aside class="dash-sidebar-node" id="console-sidebar">
-    <div class="sidebar-brand-hull">
-        <a href="javascript:void(0);" onclick="window.location.reload();" class="sidebar-logo">
-            <img src="https://unsplash.com" alt="StacklyNexus Node Logo" class="sidebar-logo-img">
-            <span class="sidebar-logo-text">Stackly<span>Nexus</span></span>
-        </a>
-    </div>
-
-    <nav class="sidebar-menu-track">
-        <ul class="sidebar-menu-list">
-            <li>
-                <a href="javascript:void(0);" class="menu-item-anchor item-active" data-section="swarm-overview">
-                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                    <span>Swarm Overview</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="menu-item-anchor" data-section="node-clustering">
-                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 7 12 12 2 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    <span>Node Clustering</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="menu-item-anchor" data-section="quantum-proxy">
-                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                    <span>Quantum Proxy</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="menu-item-anchor" data-section="telemetry-logs">
-                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                    <span>Telemetry Logs</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="menu-item-anchor" data-section="billing-metrics">
-                    <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="12" x2="12" y2="12.01"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><polyline points="16 16 12 12 8 16"/></svg>
-                    <span>Billing Metrics</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="sidebar-footer-actions">
-        <a href="javascript:void(0);" id="console-logout-trigger" class="btn-sidebar-logout">
-            <svg class="menu-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1-2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-            <span>Terminate Session</span>
-        </a>
-    </div>
-</aside>
-
-
-    <!-- MAIN VIEWPORT CONTENT FRAMES ENGINE WRAPPER -->
-    <div class="dash-viewport-main">
-        <!-- GLOBAL CONSOLE CONTEXT FIXED TOP HEADER -->
-<header class="dash-top-header">
-
-    <!-- Left Header: Welcome Message -->
-    <div class="header-left-cluster">
-
-        <button class="dash-hamburger-trigger"
-                id="dash-menu-toggle"
-                aria-label="Toggle Side Console Panel Menu"
-                aria-expanded="false">
-
-            <div class="dash-burger-bar"></div>
-            <div class="dash-burger-bar"></div>
-            <div class="dash-burger-bar"></div>
-
-        </button>
-
-        <div class="header-welcome-greeting">
-            <h3>
-                Welcome back,
-                <span class="operator-identity-string">Operator</span>
-            </h3>
-        </div>
-
-    </div>
-
-    <!-- Right Header -->
-    <div class="header-right-cluster">
-
-        <!-- Notification -->
-        <button class="btn-header-bell-relay"
-                aria-label="Open network notifications panel tray">
-
-            <svg viewBox="0 0 24 24"
-                 fill="none"
-                 stroke="currentColor"
-                 stroke-width="2"
-                 stroke-linecap="round"
-                 stroke-linejoin="round"
-                 class="bell-vector-icon">
-
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-
-            </svg>
-
-            <span class="bell-active-alert-dot"></span>
-
-        </button>
-
-        <!-- User Profile -->
-        <div class="header-profile-text-hull">
-
-            <span class="profile-active-signal"></span>
-
-            <span class="operator-identity-string">User</span>
-
-        </div>
-
+    <div class="mobile-avatar-badge">
+        <span class="operator-identity-string">User</span>
     </div>
 
 </header>
 
-        <!-- DYNAMIC CONTENT BODY CANVAS DISPLAY AREA -->
-        <!-- 🌟 STREAMLINED SEMANTIC WORKSPACE CANVAS SYSTEM -->
-<main class="dash-content-body-canvas">
+    <!-- Background dimming curtain layer when sidebar is sliding open on phones -->
+    <div class="sidebar-curtain-overlay" id="drawer-dismiss-backdrop"></div>
+
+    <!-- 💻 LEFT COLUMN: NAVIGATION CORE SIDEBAR PANEL DRAWER -->
+    <aside class="console-sidebar-panel" id="primary-console-sidebar">
+        <div class="sidebar-branding-block action-brand-reload" title="Click to refresh swarm baseline workspace">
+            
+            <span class="brand-text-string">Stackly<span>Nexus</span></span>
+        </div>
+
+        <nav class="sidebar-menu-navigation">
+            <ul class="nav-menu-list-stack">
+                
+                <li class="nav-menu-item active-nav-tab" data-target-section="swarm-overview">
+                    <div class="menu-icon-vector">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <span class="menu-label-text">Swarm Overview</span>
+                </li>
+
+                <li class="nav-menu-item" data-target-section="node-clustering">
+                    <div class="menu-icon-vector">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 22 7 12 12 2 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <span class="menu-label-text">Node Clustering</span>
+                </li>
+
+                <li class="nav-menu-item" data-target-section="quantum-proxy">
+                    <div class="menu-icon-vector">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <span class="menu-label-text">Quantum Proxy</span>
+                </li>
+
+                <li class="nav-menu-item" data-target-section="telemetry-logs">
+                    <div class="menu-icon-vector">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <span class="menu-label-text">Telemetry Logs</span>
+                </li>
+
+                <li class="nav-menu-item" data-target-section="billing-metrics">
+                    <div class="menu-icon-vector">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <span class="menu-label-text">Billing Metrics</span>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer-action-block">
+            <button class="btn-sidebar-logout-trigger" id="btn-session-logout" title="Disconnect access route lines cleanly">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                <span class="logout-label-text">Terminate Session</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- 🖥️ RIGHT COLUMN: DESKTOP HEADER HUD BAR & CANVAS VIEWPORT CONTENT FRAME -->
+    <div class="dashboard-main-canvas-wrapper">
+        
+        <header class="desktop-top-navbar">
+            <div class="navbar-left-breadcrumbs">
+                <span class="breadcrumb-root">Partner Console</span>
+                <span class="breadcrumb-separator">&rarr;</span>
+                <span class="breadcrumb-active" id="active-breadcrumb-label">Swarm Overview</span>
+            </div>
+
+            <div class="navbar-right-action-controls">
+                <!-- Alarm Notification Utility Indicator -->
+                <button class="btn-navbar-notification-bell" aria-label="Open notifications overlay tray">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    <span class="notification-indicator-flare"></span>
+                </button>
+
+                
+             <!-- 🌟 FIXED DATA IDENTIFICATION PROFILE BADGE -->
+<div class="navbar-profile-badge">
+    <div class="profile-avatar-active-dot"></div>
+    <span class="operator-identity-string">User</span>
+</div>
+
+            </div>
+        </header>
+
+        <!-- Dynamic Multi-Section Display Workspace Content Canvas (Strict Spacing Enforced) -->
+        <main class="dashboard-content-viewport" id="master-dashboard-viewport">
+            
+       <!-- 🌟 ENHANCED AUTONOMIC SWARM COMMAND INTERFACE -->
+<section class="viewport-content-section display-active" id="section-swarm-overview">
     
- 
-
-    <!-- ==========================================================================
-         🌟 OPERATIONAL SIDEBAR MENU SECTION 01: SWARM OVERVIEW 
-         ========================================================================== -->
-    <section id="sec-swarm-overview" class="dash-module-viewport active-module-layer">
-        <div class="dashboard-visual-hull-panel">
-            <h4>Autonomic Swarm Management Center</h4>
-            <p>This section displays real-time vitals and diagnostic request telemetry streamed from edge route points across our decentralized multi-tenant infrastructure network tracks.</p>
+    <!-- ROW TRACK ALPHA: 4-CELL TAXONOMY TELEMETRY METRICS GRID -->
+    <div class="dash-stats-grid-track">
+        
+        <!-- Metric Card 01: Core Vitality -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>System Health Core</p>
+                <div class="metric-vector-icon text-cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+            </div>
+            <h3>99.98%</h3>
+            <span class="trend-indicator up-trend">✓ Optimal Velocity</span>
         </div>
-    </section>
 
-    <!-- ==========================================================================
-         🌟 OPERATIONAL SIDEBAR MENU SECTION 02: NODE CLUSTERING
-         ========================================================================== -->
-    <section id="sec-node-clustering" class="dash-module-viewport hidden-module-layer">
-        <div class="dashboard-visual-hull-panel">
-            <h4>Edge Cluster Topography Grid</h4>
-            <p>This section allows system operators to trace active cluster mapping, manage branch dependencies, and review connection handshake metrics across server hubs globally.</p>
+        <!-- Metric Card 02: Payload Velocity -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Active System Streams</p>
+                <div class="metric-vector-icon text-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 11 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                </div>
+            </div>
+            <h3>1,424 <span class="unit-txt">/s</span></h3>
+            <span class="trend-indicator up-trend">↑ Spiking Load</span>
         </div>
-    </section>
 
-    <!-- ==========================================================================
-         🌟 OPERATIONAL SIDEBAR MENU SECTION 03: QUANTUM PROXY
-         ========================================================================== -->
-    <section id="sec-quantum-proxy" class="dash-module-viewport hidden-module-layer">
-        <div class="dashboard-visual-hull-panel">
-            <h4>Cryptographic Cipher Scrambling Shield</h4>
-            <p>This section orchestrates identity protection proxies, configuring automated TLS 1.3 token rotation rules and quantum-resistant encryption parameters to isolate data mutations.</p>
+        <!-- Metric Card 03: Infrastructure Matrix -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Active Edge Routers</p>
+                <div class="metric-vector-icon text-emerald">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 7 12 12 2 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+            </div>
+            <h3>42 <span class="unit-txt">Nodes</span></h3>
+            <span class="trend-indicator stable-trend">• Fully Synced</span>
         </div>
-    </section>
 
-    <!-- ==========================================================================
-         🌟 OPERATIONAL SIDEBAR MENU SECTION 04: TELEMETRY LOGS
-         ========================================================================== -->
-    <section id="sec-telemetry-logs" class="dash-module-viewport hidden-module-layer">
-        <div class="dashboard-visual-hull-panel">
-            <h4>Autonomic Simulation Stream Console</h4>
-            <p>This section houses terminal readouts and error logs from isolated staging sandboxes to pre-emptively trace logic stalls and check memory spill configurations.</p>
+        <!-- Metric Card 04: Hardware Persistence Tracker -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Memory Bound Limit</p>
+                <div class="metric-vector-icon text-violet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <h3>3.2 <span class="unit-txt">TB / 8TB</span></h3>
+            <div class="linear-progress-bar-hull">
+                <div class="progress-bar-fill" style="width: 40%"></div>
+            </div>
         </div>
-    </section>
-
-    <!-- ==========================================================================
-         🌟 OPERATIONAL SIDEBAR MENU SECTION 05: BILLING METRICS
-         ========================================================================== -->
-    <section id="sec-billing-metrics" class="dash-module-viewport hidden-module-layer">
-        <div class="dashboard-visual-hull-panel">
-            <h4>Resource Usage Ledger Analytics</h4>
-            <p>This section tracks computational balance statements, mapping exact billing cycle costs against query transformations volumes and allocated staging perimeter limits.</p>
-        </div>
-    </section>
-
-</main>
-
 
     </div>
 
-  
- 
+    <!-- ROW TRACK BETA: ASYMMETRICAL COMMAND DOUBLE-COLUMN SPLIT STRUCTURE -->
+    <div class="dash-asymmetric-split-row">
+        
+        <!-- Left Sub-Column Layout: Global Traffic Telemetry Charts Panel -->
+        <div class="dashboard-visual-hull-panel">
+            <div class="panel-section-header">
+                <div class="panel-meta-titles">
+                    <h4>Global Matrix Activity</h4>
+                    <p>Monitoring active pipeline resource allocations across server hubs.</p>
+                </div>
+                <div class="chart-legend-row">
+                    <span class="legend-dot dot-cyan"></span>
+                    <span class="legend-txt">Edge Traffic</span>
+                </div>
+            </div>
+            
+            <div class="mock-telemetry-chart-mesh">
+                <div class="chart-y-axis-labels">
+                    <span>100%</span><span>50%</span><span>0%</span>
+                </div>
+                <div class="chart-columns-hull-track">
+                    <div class="chart-column-track" style="height: 40%"><span class="tooltip">40% Load</span></div>
+                    <div class="chart-column-track" style="height: 65%"><span class="tooltip">65% Load</span></div>
+                    <div class="chart-column-track" style="height: 85%"><span class="tooltip">85% Load</span></div>
+                    <div class="chart-column-track" style="height: 50%"><span class="tooltip">50% Load</span></div>
+                    <div class="chart-column-track" style="height: 95%"><span class="tooltip">95% Load</span></div>
+                    <div class="chart-column-track" style="height: 70%"><span class="tooltip">70% Load</span></div>
+                    <div class="chart-column-track" style="height: 60%"><span class="tooltip">60% Load</span></div>
+                    <div class="chart-column-track" style="height: 80%"><span class="tooltip">80% Load</span></div>
+                </div>
+            </div>
+        </div>
 
-    <style>
-   /* 🌟 PREMIUM CONSOLE ARCHITECTURE ROOT SYSTEM STYLES */
+        <!-- Right Sub-Column Layout: Real-Time Security Incident Stream Tracker Feed -->
+        <div class="dashboard-visual-hull-panel panel-short-width">
+            <div class="panel-section-header">
+                <div class="panel-meta-titles">
+                    <h4>Real-time Security Signals</h4>
+                    <p>Live gateway tokens validation monitoring logs stream feed.</p>
+                </div>
+            </div>
+            
+            <div class="mini-live-event-stream-track">
+                
+                <div class="stream-event-item">
+                    <span class="event-dot status-success"></span>
+                    <div class="event-meta">
+                        <span class="event-timestamp">17:02:11</span>
+                        <p>Cluster encryption rotated securely</p>
+                    </div>
+                </div>
+
+                <div class="stream-event-item">
+                    <span class="event-dot status-success"></span>
+                    <div class="event-meta">
+                        <span class="event-timestamp">16:59:45</span>
+                        <p>Token verification match [200 OK]</p>
+                    </div>
+                </div>
+
+                <div class="stream-event-item">
+                    <span class="event-dot status-warning"></span>
+                    <div class="event-meta">
+                        <span class="event-timestamp">16:54:12</span>
+                        <p>Sub-node proxy failover reset</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   🌟 ENHANCED AUTONOMIC SWARM COMMAND INTERFACE THEME STYLES
+   ========================================================================== */
+
+/* 4-Column Responsive Telemetry Grid Track Frame */
+.dash-stats-grid-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.telemetry-micro-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.telemetry-micro-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(6, 182, 212, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(6, 182, 212, 0.05);
+}
+
+.card-metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.telemetry-micro-card p {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.metric-vector-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.metric-vector-icon svg { width: 14px; height: 14px; }
+.text-cyan { color: var(--primary); background-color: rgba(6, 182, 212, 0.05); border-color: rgba(6, 182, 212, 0.15); }
+.text-blue { color: var(--accent); background-color: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.15); }
+.text-emerald { color: var(--success); background-color: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.15); }
+.text-violet { color: #a855f7; background-color: rgba(168, 85, 247, 0.05); border-color: rgba(168, 85, 247, 0.15); }
+
+.telemetry-micro-card h3 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.telemetry-micro-card h3 .unit-txt {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.trend-indicator {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.up-trend { background-color: rgba(16, 185, 129, 0.08); color: var(--success); }
+.stable-trend { background-color: rgba(255, 255, 255, 0.03); color: var(--text-muted); }
+
+/* Memory Bound Progress Bar Containers */
+.linear-progress-bar-hull {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a855f7, #c084fc);
+    border-radius: 100px;
+    box-shadow: 0 0 8px #a855f7;
+}
+
+/* 🌟 ASYMMETRICAL MULTI-COLUMN RESPONSIVE LAYOUT FRAME SPLIT */
+.dash-asymmetric-split-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.panel-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.panel-meta-titles h4 { font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 2px; }
+.panel-meta-titles p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+.chart-legend-row { display: flex; align-items: center; gap: 0.5rem; }
+.legend-dot { width: 6px; height: 6px; border-radius: 50%; }
+.dot-cyan { background-color: var(--primary); box-shadow: 0 0 6px var(--primary); }
+.legend-txt { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+
+/* Enhanced Columns Graph Data Plating */
+.mock-telemetry-chart-mesh {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    position: relative;
+    padding-left: 3rem; /* Spacing makes room for baseline text axis data labels */
+}
+
+.chart-y-axis-labels {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    font-family: monospace;
+    padding-bottom: 4px;
+}
+
+.chart-columns-hull-track {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 4px;
+}
+
+.chart-column-track {
+    flex-grow: 1;
+    background: linear-gradient(180deg, var(--primary) 0%, rgba(6, 182, 212, 0.02) 100%);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    cursor: pointer;
+    transition: filter 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chart-column-track:hover {
+    filter: brightness(1.25) drop-shadow(0 0 10px var(--primary));
+    transform: scaleY(1.02);
+}
+
+/* Interactive float context tooltip indicators */
+.chart-column-track .tooltip {
+    position: absolute;
+    top: -30px; left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background-color: #05070f;
+    border: 1px solid var(--primary);
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    font-family: monospace;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chart-column-track:hover .tooltip { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Right Column Side: Live Event Feed Logger Module List */
+.mini-live-event-stream-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    width: 100%;
+}
+
+.stream-event-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.stream-event-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.event-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+.status-success { background-color: var(--success); box-shadow: 0 0 6px var(--success); }
+.status-warning { background-color: #f59e0b; box-shadow: 0 0 6px #f59e0b; }
+
+.event-meta { display: flex; flex-direction: column; gap: 2px; }
+.event-timestamp { font-family: monospace; font-size: 0.7rem; font-weight: 700; color: rgba(255, 255, 255, 0.2); }
+.event-meta p { margin: 0; font-size: 0.85rem; color: whitesmoke; font-weight: 500; line-height: 1.4; }
+
+/* Desktop Screen Hook: Splints columns out into landscape slots automatically when room permits */
+@media (min-width: 1200px) {
+    .dash-asymmetric-split-row {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .dashboard-visual-hull-panel { padding: 1.25rem; gap: 1.5rem; }
+    .mock-telemetry-chart-mesh { padding-left: 2.5rem; height: 160px; }
+    .chart-columns-hull-track { gap: 0.45rem; }
+    .chart-column-track .tooltip { display: none; } /* Drop overlay components to ensure smooth touch clicks on smartphones */
+}
+
+</style>
+
+            <!-- 🌟 SECTION 02: NODE CLUSTERING -->
+          <!-- 🌟 ENHANCED INFRASTRUCTURE NODE CLUSTERING LAYER -->
+<section class="viewport-content-section" id="section-node-clustering">
+    
+    <!-- Row Track Alpha: High-Density Node Status Grid Matrices -->
+    <div class="dash-stats-grid-track">
+        
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Total Provisioned Nodes</p>
+                <div class="metric-vector-icon text-cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                </div>
+            </div>
+            <h3>148 <span class="unit-txt">Active</span></h3>
+            <span class="trend-indicator up-trend">✓ Core Operational</span>
+        </div>
+
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Handshake Latency Avg</p>
+                <div class="metric-vector-icon text-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+            </div>
+            <h3>0.82 <span class="unit-txt">ms</span></h3>
+            <span class="trend-indicator up-trend">↑ High Velocity</span>
+        </div>
+
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Degraded Perimeter Nodes</p>
+                <div class="metric-vector-icon text-violet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+            </div>
+            <h3>01 <span class="unit-txt">Threat</span></h3>
+            <span class="trend-indicator stable-trend">• Isolated Path</span>
+        </div>
+
+    </div>
+
+    <!-- Row Track Beta: Real-Time Cluster Network Topology Mapping Tracker Rows -->
+    <div class="dashboard-visual-hull-panel">
+        <div class="panel-section-header">
+            <div class="panel-meta-titles">
+                <h4>Edge Cluster Topography Grid</h4>
+                <p>Tracing active hardware mappings, branch dependencies, and proxy pipeline continuity paths.</p>
+            </div>
+        </div>
+
+        <!-- Vertically Stacked Cluster Node Control Cards Matrix Grid -->
+        <div class="cluster-nodes-hull-row">
+            
+            <!-- Node Row Item A: Online -->
+            <div class="node-status-row-card">
+                <div class="node-beacon-avatar">
+                    <span class="node-beacon-dot active-beacon"></span>
+                </div>
+                <div class="node-meta-box">
+                    <h4>Cluster_Node_Alpha // eu-west-04</h4>
+                    <p>IP Routing Endpoint: <span>192.168.42.11</span> • Handshake Load Sync: <strong>Optimal</strong></p>
+                </div>
+                <div class="node-badge-action-footer">
+                    <span class="node-architecture-badge">Primary Locus</span>
+                </div>
+            </div>
+
+            <!-- Node Row Item B: Online -->
+            <div class="node-status-row-card">
+                <div class="node-beacon-avatar">
+                    <span class="node-beacon-dot active-beacon"></span>
+                </div>
+                <div class="node-meta-box">
+                    <h4>Cluster_Node_Beta // us-east-02</h4>
+                    <p>IP Routing Endpoint: <span>192.168.42.12</span> • Handshake Load Sync: <strong>Optimal</strong></p>
+                </div>
+                <div class="node-badge-action-footer">
+                    <span class="node-architecture-badge">Active Sub-Node</span>
+                </div>
+            </div>
+
+            <!-- Node Row Item C: Alert / Congested State -->
+            <div class="node-status-row-card node-warning-state">
+                <div class="node-beacon-avatar">
+                    <span class="node-beacon-dot alert-beacon"></span>
+                </div>
+                <div class="node-meta-box">
+                    <h4>Cluster_Node_Gamma // ap-south-01</h4>
+                    <p>IP Routing Endpoint: <span>10.0.84.25</span> • Handshake Load Sync: <strong class="alert-text-color">Degraded (85% Spike)</strong></p>
+                </div>
+                <div class="node-badge-action-footer">
+                    <span class="node-architecture-badge alert-text-badge">Spike Threat</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<style>
+    /* ==========================================================================
+   🌟 HIGH-TECH INFRASTRUCTURE NODE CLUSTERING LAYOUT STYLES
+   ========================================================================== */
+
+/* Vertically Stacking Core Node Layout Rows Container Box */
+.cluster-nodes-hull-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.node-status-row-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(17, 23, 38, 0.6) 0%, rgba(11, 15, 25, 0.4) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    position: relative;
+    width: 100%;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Structural border neon line trace on hover */
+.node-status-row-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.node-status-row-card:hover {
+    transform: translateX(4px);
+    border-color: rgba(6, 182, 212, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(6, 182, 212, 0.05);
+}
+
+/* Interactive flasher beacon avatars */
+.node-beacon-avatar {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.node-beacon-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.active-beacon {
+    background-color: var(--success);
+    box-shadow: 0 0 10px var(--success);
+}
+
+.active-beacon::after {
+    content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%;
+    border: 1px solid var(--success); top: 0; left: 0; transform: scale(1); opacity: 1;
+    animation: beaconPulseWave 2s infinite ease-out;
+}
+
+.alert-beacon {
+    background-color: #ef4444;
+    box-shadow: 0 0 10px #ef4444;
+}
+
+.alert-beacon::after {
+    content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%;
+    border: 1px solid #ef4444; top: 0; left: 0; transform: scale(1); opacity: 1;
+    animation: beaconPulseWave 1.5s infinite ease-out;
+}
+
+.node-meta-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex-grow: 1;
+}
+
+.node-meta-box h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.25px;
+    margin: 0;
+}
+
+.node-meta-box p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.node-meta-box p span { font-family: monospace; color: #ffffff; }
+.node-meta-box p strong { color: var(--primary); font-weight: 600; }
+.node-meta-box p strong.alert-text-color { color: #ef4444; }
+
+/* Right Aligned Hardware Deployment Badge Overlays */
+.node-badge-action-footer {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.node-architecture-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 0.85rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+}
+
+.node-status-row-card:hover .node-architecture-badge {
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: rgba(6, 182, 212, 0.02);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.05);
+}
+
+/* Red alert override injection layout profiles for degraded clusters */
+.node-warning-state {
+    border-color: rgba(239, 68, 68, 0.15);
+    background-color: rgba(239, 68, 68, 0.02);
+}
+.node-warning-state h4 { color: #fca5a5; }
+
+.node-warning-state .node-architecture-badge {
+    background-color: rgba(239, 68, 68, 0.06);
+    border-color: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+}
+
+.node-warning-state:hover .node-architecture-badge {
+    border-color: #ef4444;
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.03);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.05);
+}
+
+/* 🌀 RADAR BEACON PLATING KEYFRAME REVEALS */
+@keyframes beaconPulseWave {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* ==========================================================================
+   📱 ADAPTIVE MOBILE DRAWER RESPONSIVE REFLOW BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Shifts wide horizontal row cells into stacked vertical grid blocks to prevent string overlapping */
+    .node-status-row-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+        padding: 1.5rem;
+    }
+    
+    .node-beacon-avatar {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .node-badge-action-footer {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        padding-top: 0.85rem;
+        margin-top: 0.25rem;
+    }
+    
+    .node-architecture-badge {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+            <!-- 🌟 SECTION 03: QUANTUM PROXY -->
+           <!-- 🌟 ENHANCED CRYPTOGRAPHIC QUANTUM PROXY LAYER -->
+<section class="viewport-content-section" id="section-quantum-proxy">
+    
+    <!-- Row Track Alpha: 3-Cell Security Vitals Grid -->
+    <div class="dash-stats-grid-track">
+        
+        <!-- Proxy Metric Card 01 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Shield Operational Mode</p>
+                <div class="metric-vector-icon text-cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+            </div>
+            <h3>Active <span class="unit-txt">Proxy</span></h3>
+            <span class="trend-indicator up-trend">✓ Zero Leakage</span>
+        </div>
+
+        <!-- Proxy Metric Card 02 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Next Key Scramble Rotation</p>
+                <div class="metric-vector-icon text-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                </div>
+            </div>
+            <h3>242 <span class="unit-txt">Sec</span></h3>
+            <div class="linear-progress-bar-hull">
+                <div class="progress-bar-fill progress-blue" style="width: 80%"></div>
+            </div>
+        </div>
+
+        <!-- Proxy Metric Card 03 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Isolated Mutations Track</p>
+                <div class="metric-vector-icon text-emerald">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+            </div>
+            <h3>0 <span class="unit-txt">Breaches</span></h3>
+            <span class="trend-indicator stable-trend">• Hardened Core</span>
+        </div>
+
+    </div>
+
+    <!-- Row Track Beta: Cryptography Operational Parameters Ledger -->
+    <div class="dashboard-visual-hull-panel">
+        <div class="panel-section-header">
+            <div class="panel-meta-titles">
+                <h4>Quantum-Resistant Shield Configurations</h4>
+                <p>Orchestrating active network proxies, TLS 1.3 payload tunnels, and automated token isolation tracks.</p>
+            </div>
+            <span class="proxy-terminal-badge">AES-256 Compliant</span>
+        </div>
+
+        <!-- Structured Key-Value Parameter Board -->
+        <div class="proxy-specs-lines">
+            
+            <div class="spec-line-item">
+                <div class="spec-label-box">
+                    <span class="spec-bullet-node"></span>
+                    <p>Primary Cryptographic Cipher</p>
+                </div>
+                <strong>Kyber-1024 / ChaCha20-Poly1305</strong>
+            </div>
+
+            <div class="spec-line-item">
+                <div class="spec-label-box">
+                    <span class="spec-bullet-node"></span>
+                    <p>Dynamic Token Rotation Interval</p>
+                </div>
+                <strong>300 Seconds Automated Cycle</strong>
+            </div>
+
+            <div class="spec-line-item">
+                <div class="spec-label-box">
+                    <span class="spec-bullet-node"></span>
+                    <p>Active Handshake Protection Protocol</p>
+                </div>
+                <strong>TLS 1.3 Post-Quantum Hybrid</strong>
+            </div>
+
+            <div class="spec-line-item">
+                <div class="spec-label-box">
+                    <span class="spec-bullet-node"></span>
+                    <p>Data Mutation Isolation Status</p>
+                </div>
+                <strong class="text-success-badge">Air-Gapped Sandbox</strong>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<style>
+    /* ==========================================================================
+   🌟 QUANTUM PROXY SYSTEM COMPONENT STYLES
+   ========================================================================== */
+
+/* Progress bar color modifier override track */
+.progress-blue {
+    background: linear-gradient(90deg, var(--accent), #60a5fa) !important;
+    box-shadow: 0 0 8px var(--accent) !important;
+}
+
+.proxy-terminal-badge {
+    background-color: rgba(6, 182, 212, 0.06);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    color: var(--primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.4rem 0.95rem;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Cryptographic Specs Ledger Panel Grid Layout */
+.proxy-specs-lines {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.spec-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.spec-line-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.spec-label-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.spec-bullet-node {
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--primary);
+}
+
+.spec-label-box p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.spec-line-item strong {
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(7, 10, 19, 0.45);
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.spec-line-item strong.text-success-badge {
+    color: var(--success);
+    background-color: rgba(16, 185, 129, 0.04);
+    border-color: rgba(16, 185, 129, 0.15);
+}
+
+/* ==========================================================================
+   📱 ADAPTIVE MOBILE DRAWER RESPONSIVE REFLOW BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .panel-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .proxy-terminal-badge {
+        width: fit-content;
+    }
+    
+    /* 🌟 FIX: Transforms horizontal row properties into vertical block stacks to stop word clipping */
+    .spec-line-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 1.25rem 0;
+    }
+    
+    .spec-line-item strong {
+        width: 100%;
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+    }
+}
+
+</style>
+
+           <!-- 🌟 ENHANCED TERMINAL READOUT TELEMETRY LOGS ENGINE -->
+<section class="viewport-content-section" id="section-telemetry-logs">
+    
+    <!-- Row Track Alpha: 3-Cell Live Performance Metrics Grid -->
+    <div class="dash-stats-grid-track">
+        
+        <!-- Log Metric Card 01 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Log Ingestion Velocity</p>
+                <div class="metric-vector-icon text-cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </div>
+            </div>
+            <h3>24.8 <span class="unit-txt">KB/s</span></h3>
+            <span class="trend-indicator up-trend">✓ Stream Stable</span>
+        </div>
+
+        <!-- Log Metric Card 02 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Active Thread Listeners</p>
+                <div class="metric-vector-icon text-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                </div>
+            </div>
+            <h3>12 <span class="unit-txt">Workers</span></h3>
+            <span class="trend-indicator stable-trend">• Fully Pooled</span>
+        </div>
+
+        <!-- Log Metric Card 03 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Sandbox Error Incident Trace</p>
+                <div class="metric-vector-icon text-violet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                </div>
+            </div>
+            <h3>0 <span class="unit-txt">Faults</span></h3>
+            <span class="trend-indicator up-trend">✓ 0.00% Error Rate</span>
+        </div>
+
+    </div>
+
+    <!-- Row Track Beta: Immersive Interactive Developer Terminal Screen Canvas -->
+    <div class="console-log-hull-shell">
+        
+        <!-- Interactive Terminal Bar Title Header -->
+        <div class="console-log-header">
+            <div class="console-mac-buttons-row">
+                <span class="dot-btn btn-close"></span>
+                <span class="dot-btn btn-min"></span>
+                <span class="dot-btn btn-max"></span>
+            </div>
+            <span class="console-title-text-string">nexus-runtime-telemetry-stream.log</span>
+        </div>
+
+        <!-- High-Contrast Mock Syntax Body Output Grid -->
+        <div class="console-log-body-text">
+            <p class="log-info">[INFO] 2026-08-02 14:02:11 // Initializing autonomic edge routing network channels tunnel tracks...</p>
+            <p class="log-info">[INFO] 2026-08-02 14:02:11 // Mapping secure handshake token validation keys sequence rules matched [200 OK]</p>
+            <p class="log-warn">[WARN] 2026-08-02 14:02:15 // Gateway proxy failover path ap-south-01 latency trace boundary near threshold limits</p>
+            <p class="log-info">[INFO] 2026-08-02 14:02:18 // Executing isolated automated sandbox memory cloning pipeline allocation routines...</p>
+            <p class="log-success">[SUCCESS] 2026-08-02 14:02:22 // Cluster state optimized cleanly. Memory pool spill risk cleared.</p>
+            <p class="log-info"><span class="terminal-blink-cursor">_</span></p>
+        </div>
+
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   🌟 DEVELOPER TERMINAL TELEMETRY LOGS SYSTEM COMPONENT STYLES
+   ========================================================================== */
+
+/* Immersive Code Console Sheet Hull Outer Shell */
+.console-log-hull-shell {
+    width: 100%;
+    border-radius: 12px;
+    background-color: #04060d;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 4px 30px rgba(0, 0, 0, 0.8), 0 20px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-log-header {
+    background-color: rgba(255, 255, 255, 0.01);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Emulates high-tech window dots controllers */
+.console-mac-buttons-row {
+    display: flex;
+    gap: 6px;
+}
+.console-mac-buttons-row .dot-btn {
+    width: 10px; height: 10px; border-radius: 50%; display: block;
+}
+.console-mac-buttons-row .btn-close { background-color: #ef4444; opacity: 0.4; }
+.console-mac-buttons-row .btn-min { background-color: #f59e0b; opacity: 0.4; }
+.console-mac-buttons-row .btn-max { background-color: var(--success); opacity: 0.4; }
+
+.console-title-text-string {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Console Logs Syntax Core Plating Area */
+.console-log-body-text {
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 380px;
+    overflow-y: auto;
+}
+
+/* Custom styled modern scrollbar tracks for high contrast log readouts */
+.console-log-body-text::-webkit-scrollbar { width: 6px; }
+.console-log-body-text::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
+.console-log-body-text::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+.console-log-body-text::-webkit-scrollbar-thumb:hover { background: rgba(6, 182, 212, 0.2); }
+
+.console-log-body-text p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Syntax classification tags mapping colors */
+.log-info { color: #cbd5e1; }
+.log-warn { color: #f59e0b; font-weight: 600; }
+.log-success { color: var(--success); font-weight: 700; }
+
+/* Flashing developer prompt blinking cursor effect */
+.terminal-blink-cursor {
+    font-weight: 700;
+    color: var(--primary);
+    animation: promptCursorBlink 1s infinite alternate;
+}
+
+@keyframes promptCursorBlink {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ==========================================================================
+   📱 ADAPTIVE RESPONSIVE COMPLIANCE MEDIA OVERRIDES
+   ========================================================================== */
+@media (max-width: 600px) {
+    .console-log-header {
+        padding: 0.75rem 1rem;
+        gap: 1rem;
+    }
+    .console-mac-buttons-row { display: none; } /* Conceal dots on compact smartphone widths */
+    .console-log-body-text { padding: 1.25rem 1rem; gap: 0.65rem; }
+    .console-log-body-text p { font-size: 0.78rem; line-height: 1.5; }
+}
+
+</style>
+
+            <!-- 🌟 SECTION 05: BILLING METRICS -->
+           <!-- 🌟 ENHANCED INFRASTRUCTURE BILLING METRICS LEDGER SYSTEM -->
+<section class="viewport-content-section" id="section-billing-metrics">
+    
+    <!-- Row Track Alpha: 3-Cell Invoicing & Capacity Status Deck Grid -->
+    <div class="dash-stats-grid-track">
+        
+        <!-- Accounting Card 01 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Current Billing Statement Balance</p>
+                <div class="metric-vector-icon text-cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+            </div>
+            <h3>$412.80 <span class="unit-txt">USD</span></h3>
+            <span class="trend-indicator stable-trend">• Cycle Open</span>
+        </div>
+
+        <!-- Accounting Card 02 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Next Auto-Invoicing Invoiced Milestone</p>
+                <div class="metric-vector-icon text-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+            </div>
+            <h3>Aug 15, <span class="unit-txt">2026</span></h3>
+            <span class="trend-indicator up-trend">✓ Automatic Autopay Active</span>
+        </div>
+
+        <!-- Accounting Card 03 -->
+        <div class="telemetry-micro-card">
+            <div class="card-metric-header">
+                <p>Query Transformations Allocated Limit Limit</p>
+                <div class="metric-vector-icon text-violet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                </div>
+            </div>
+            <h3>84.0 <span class="unit-txt">% Used</span></h3>
+            <div class="linear-progress-bar-hull">
+                <div class="progress-bar-fill progress-violet" style="width: 84%"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Row Track Beta: Transactional Usage Statement Analytics Table Board -->
+    <div class="dashboard-visual-hull-panel">
+        <div class="panel-section-header">
+            <div class="panel-meta-titles">
+                <h4>Resource Usage Ledger Analytics</h4>
+                <p>Mapping chronological itemized billing cycle data metrics against isolated cloud staging boundaries.</p>
+            </div>
+            <span class="billing-audit-badge">Audited Ledger</span>
+        </div>
+
+        <!-- Custom Itemized Transaction Matrix Table -->
+        <div class="billing-statement-table">
+            
+            <!-- Table Header Strip -->
+            <div class="table-header-row">
+                <span>Billing Statement Metric Component</span>
+                <span>Usage Volume</span>
+                <span>Cycle Cost</span>
+            </div>
+            
+            <!-- Row Item 01 -->
+            <div class="table-data-row">
+                <div class="component-desc-box">
+                    <span class="table-bullet-indicator"></span>
+                    <span>Edge Mesh Query Transformations</span>
+                </div>
+                <span>4.2M Computations</span>
+                <span class="cost-value-txt">$210.00</span>
+            </div>
+
+            <!-- Row Item 02 -->
+            <div class="table-data-row">
+                <div class="component-desc-box">
+                    <span class="table-bullet-indicator"></span>
+                    <span>Zero-Trust Shield Token Validations</span>
+                </div>
+                <span>820K API Handshakes</span>
+                <span class="cost-value-txt">$164.00</span>
+            </div>
+
+            <!-- Row Item 03 -->
+            <div class="table-data-row">
+                <div class="component-desc-box">
+                    <span class="table-bullet-indicator"></span>
+                    <span>Sandbox Staging Perimeters Allocations</span>
+                </div>
+                <span>48 Runtime Hours</span>
+                <span class="cost-value-txt">$38.80</span>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   🌟 HIGH-TECH ACCOUNTING BILLING METRICS LAYOUT STYLES
+   ========================================================================== */
+
+/* Progress bar violet color modifier configuration */
+.progress-violet {
+    background: linear-gradient(90deg, #a855f7, #c084fc) !important;
+    box-shadow: 0 0 8px #a855f7 !important;
+}
+
+.billing-audit-badge {
+    background-color: rgba(16, 185, 129, 0.06);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: var(--success);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Glassmorphic Itemized Transaction Table Hull */
+.billing-statement-table {
+    width: 100%;
+    background-color: rgba(7, 10, 19, 0.3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-header-row, .table-data-row {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 0.8fr; /* Establishes column grids template alignment rules */
+    padding: 1.15rem 1.5rem;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.table-header-row {
+    background-color: rgba(255, 255, 255, 0.01);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.75px;
+}
+
+.table-data-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    font-size: 0.9rem;
+    color: #ffffff;
+    transition: background-color 0.25s ease;
+}
+
+.table-data-row:last-child {
+    border-bottom: none;
+}
+
+.table-data-row:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.component-desc-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.table-bullet-indicator {
+    width: 4px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--primary);
+    flex-shrink: 0;
+}
+
+.table-data-row span:nth-child(2) {
+    font-family: monospace;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.table-data-row .cost-value-txt {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.table-header-row span:nth-child(3) {
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+/* ==========================================================================
+   📱 ADAPTIVE MOBILE DRAWER RESPONSIVE REFLOW BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .panel-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .billing-audit-badge {
+        width: fit-content;
+    }
+
+    /* 🌟 FIX: Collapses flat horizontal spreadsheet cell rows into self-contained micro-card blocks */
+    .table-header-row {
+        display: none; /* Conceals spreadsheet labels on pocket phone viewports */
+    }
+    
+    .table-data-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    
+    .table-data-row .cost-value-txt {
+        text-align: left;
+        padding-right: 0;
+        margin-top: 2px;
+        font-size: 0.95rem;
+    }
+}
+
+</style>
+
+        </main>
+    </div>
+
+<style>
+    /* ==========================================================
+   DASHBOARD LAYOUT FIX
+   Place this at the END of your CSS
+========================================================== */
+
+/* Main Page Layout */
+.partner-panel-body{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    min-height:100vh;
+}
+
+/* Sidebar */
+.console-sidebar-panel{
+    width:260px;
+    flex-shrink:0;
+}
+
+/* Right Content Area */
+.dashboard-main-canvas-wrapper{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Dashboard Content */
+.dashboard-content-viewport{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+    padding:40px 30px;
+}
+
+/* Show only active page */
+.viewport-content-section{
+    display:none;
+    width:100%;
+}
+
+.viewport-content-section.display-active{
+    display:flex !important;
+    flex-direction:column;
+    gap:32px;
+    width:100%;
+}
+
+/* Statistics Cards */
+.dash-stats-grid-track{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+/* Graph & Logs Section */
+.dash-asymmetric-split-row{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+/* Dashboard Panels */
+.dashboard-visual-hull-panel{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Desktop Layout */
+@media (min-width:1200px){
+
+    .dash-asymmetric-split-row{
+        display:grid;
+        grid-template-columns:2fr 1fr;
+        gap:24px;
+        align-items:start;
+    }
+
+}
+
+/* Tablet & Mobile */
+@media (max-width:900px){
+
+    .dashboard-content-viewport{
+        padding:calc(var(--header-height) + 20px) 20px 20px;
+        gap:24px;
+    }
+
+    .viewport-content-section.display-active{
+        gap:24px;
+    }
+
+    .dash-stats-grid-track{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .dash-asymmetric-split-row{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .dashboard-visual-hull-panel{
+        width:100%;
+    }
+
+}
+/* ==========================================================
+   MOBILE RESPONSIVE + SIDEBAR SCROLL FIX
+   Place at the END of CSS
+========================================================== */
+
+@media (max-width:900px){
+
+    html,
+    body{
+        width:100%;
+        min-height:100vh;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+
+    .partner-panel-body{
+        display:block !important;
+        width:100%;
+        min-height:100vh;
+    }
+
+    .dashboard-main-canvas-wrapper{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        min-height:100vh;
+        overflow:visible;
+    }
+
+    .dashboard-content-viewport{
+        width:100%;
+        min-height:calc(100vh - var(--header-height));
+        padding:calc(var(--header-height) + 20px) 20px 30px;
+        overflow:visible;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .viewport-content-section.display-active{
+        display:flex !important;
+        flex-direction:column;
+        gap:24px;
+        width:100%;
+    }
+
+    /* Sidebar */
+    .console-sidebar-panel{
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    /* Overlay */
+    .sidebar-curtain-overlay{
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.45);
+        opacity:0;
+        visibility:hidden;
+        transition:.3s;
+        z-index:2000;
+    }
+
+    .sidebar-curtain-overlay.overlay-visible{
+        opacity:1;
+        visibility:visible;
+    }
+
+    /* =====================================================
+       LOCK BACKGROUND WHEN SIDEBAR IS OPEN
+    ====================================================== */
+body.sidebar-scroll-lock{
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+}
+/* ==========================================================================
+   🌟 SYSTEM DESIGN THEME TOKENS & VIEWPORT LAYOUT ALIGNMENTS
+   ========================================================================== */
 :root {
     --bg-main: #070a13;
     --bg-surface: #0b0f19;
     --bg-card: #111726;
     --text-main: #ffffff;
     --text-muted: #cbd5e1;
-    --primary: #06b6d4;      /* Icy Cyan Glow Focus */
+    --primary: #06b6d4;      /* Icy Cyan Focus */
     --accent: #3b82f6;       /* Sapphire Blue */
-    --success: #10b981;      /* Crisp Emerald */
+    --success: #10b981;      /* Emerald Green */
     --border: rgba(255, 255, 255, 0.05);
     --sidebar-width: 260px;
     --header-height: 70px;
 }
 
-/* Hard reset prevents early window edge margin overlaps gaps */
 html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+   width:100%;
+    min-height:100vh;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+   
 }
 
 * {
@@ -228,19 +1640,19 @@ html, body {
     padding: 0;
 }
 
-body.dash-panel-root {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+.partner-panel-body {
     display: flex;
-    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
-.dash-canvas-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
-.dash-glow-patch { position: absolute; bottom: -10%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%); filter: blur(120px); }
 
-/* SIDEBAR CONSOLE PANEL DRAG TRACK */
-.dash-sidebar-node {
+
+
+/* ==========================================================================
+   💻 SIDEBAR CONSOLE PANEL DRAG TRACKS
+   ========================================================================== */
+.console-sidebar-panel {
     width: var(--sidebar-width);
     height: 100%;
     background-color: var(--bg-surface);
@@ -252,29 +1664,52 @@ body.dash-panel-root {
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sidebar-brand-hull {
+.sidebar-branding-block {
     height: var(--header-height);
     padding: 0 1.5rem;
     display: flex;
     align-items: center;
+    gap: 0.75rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    cursor: pointer;
 }
 
-.sidebar-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; outline: none; }
-.sidebar-logo-img { width: 26px; height: 26px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1); }
-.sidebar-logo-text { font-size: 1.15rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }
-.sidebar-logo-text span { color: var(--primary); }
+.brand-image-asset {
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-.sidebar-menu-track { flex-grow: 1; padding: 1.5rem 0.75rem; overflow-y: auto; }
-.sidebar-menu-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+.brand-text-string {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+.brand-text-string span { color: var(--primary); }
 
-.menu-item-anchor {
+.sidebar-menu-navigation {
+    flex-grow: 1;
+    padding: 1.5rem 0.75rem;
+    overflow-y: auto;
+}
+
+.nav-menu-list-stack {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.nav-menu-item {
     display: flex;
     align-items: center;
     gap: 0.85rem;
     padding: 0.75rem 1rem;
     color: var(--text-muted);
-    text-decoration: none;
+    cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
     border-radius: 8px;
@@ -282,22 +1717,43 @@ body.dash-panel-root {
     transition: all 0.3s ease;
 }
 
-.menu-svg-icon { width: 16px; height: 16px; color: inherit; flex-shrink: 0; }
-.menu-item-anchor:hover { color: #ffffff; background-color: rgba(255, 255, 255, 0.02); }
+.menu-icon-vector {
+    width: 16px; height: 16px;
+    color: inherit; display: flex;
+    align-items: center; justify-content: center; flex-shrink: 0;
+}
+.menu-icon-vector svg { width: 100%; height: 100%; }
 
-.menu-item-anchor.item-active {
+.nav-menu-item:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.nav-menu-item.active-nav-tab {
     background-color: rgba(6, 182, 212, 0.03);
     border-color: var(--primary);
     color: var(--primary);
     box-shadow: 0 0 15px rgba(6, 182, 212, 0.05);
 }
 
-.sidebar-footer-actions { padding: 1.25rem 0.75rem; border-top: 1px solid rgba(255, 255, 255, 0.02); }
-.btn-sidebar-logout { display: flex; align-items: center; gap: 0.85rem; padding: 0.75rem 1rem; color: #ef4444; text-decoration: none; font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: all 0.3s ease; }
-.btn-sidebar-logout:hover { background-color: rgba(239, 68, 68, 0.08); }
+.sidebar-footer-action-block {
+    padding: 1.25rem 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
 
-/* MAIN DISPLAY VIEWPORT CONTAINER WRAPPER FIXED BLOCK FLOWS */
-.dash-viewport-main {
+.btn-sidebar-logout-trigger {
+    width: 100%; background: none; border: none;
+    display: flex; align-items: center; gap: 0.85rem;
+    padding: 0.75rem 1rem; color: #ef4444; cursor: pointer;
+    font-size: 0.9rem; font-weight: 600; border-radius: 8px;
+    font-family: inherit; transition: all 0.3s ease;
+}
+.btn-sidebar-logout-trigger:hover { background-color: rgba(239, 68, 68, 0.08); }
+
+/* ==========================================================================
+   🖥️ DESKTOP TOP BAR HEADER BLOCK INFRASTRUCTURES
+   ========================================================================== */
+.dashboard-main-canvas-wrapper {
     flex-grow: 1;
     height: 100%;
     display: flex;
@@ -306,7 +1762,7 @@ body.dash-panel-root {
     overflow: hidden;
 }
 
-.dash-top-header {
+.desktop-top-navbar {
     width: 100%;
     height: var(--header-height);
     background-color: var(--bg-surface);
@@ -318,65 +1774,55 @@ body.dash-panel-root {
     flex-shrink: 0;
 }
 
-.header-left-cluster, .header-right-cluster { display: flex; align-items: center; gap: 1.25rem; }
-.header-welcome-greeting h3 { font-size: 1.1rem; font-weight: 700; color: #ffffff; letter-spacing: -0.25px; }
+.navbar-left-breadcrumbs { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); }
+.breadcrumb-separator { padding: 0 0.5rem; color: rgba(255, 255, 255, 0.15); }
+.breadcrumb-active { color: #ffffff; font-weight: 700; }
 
-/* Dynamic Username Color Transitions */
-.text-caps-shimmer {
-    color: var(--primary);
-    text-shadow: 0 0 8px rgba(6, 182, 212, 0.25);
-    text-transform: capitalize;
+.navbar-right-action-controls { display: flex; align-items: center; gap: 1.5rem; }
+
+.btn-navbar-notification-bell {
+    background: none; border: none; color: var(--text-muted); cursor: pointer; position: relative; padding: 4px; display: flex;
+}
+.btn-navbar-notification-bell svg { transition: color 0.2s ease; }
+.btn-navbar-notification-bell:hover svg { color: #ffffff; }
+.notification-indicator-flare { position: absolute; top: 3px; right: 3px; width: 6px; height: 6px; background-color: var(--success); border-radius: 50%; box-shadow: 0 0 6px var(--success); }
+
+.navbar-profile-badge {
+    display: flex; align-items: center; gap: 0.65rem; padding: 0.45rem 1.15rem;
+    background-color: rgba(17, 23, 38, 0.4); border: 1px solid var(--border); border-radius: 8px;
+}
+.profile-avatar-active-dot { width: 6px; height: 6px; background-color: var(--success); border-radius: 50%; box-shadow: 0 0 6px var(--success); }
+.profile-user-display-string { font-size: 0.85rem; font-weight: 700; color: #ffffff; text-transform: capitalize; }
+
+.mobile-navigation-header { display: none; }
+.sidebar-curtain-overlay { display: none; }
+
+.mobile-avatar-badge{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:8px 14px;
+    border-radius:8px;
+
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+
+    color:#00d4ff;
+    font-weight:600;
+    font-size:14px;
 }
 
-.btn-header-bell-relay {
-    background: none; border: none; color: var(--text-muted); cursor: pointer; position: relative; padding: 6px; display: flex; align-items: center; outline: none;
+.mobile-avatar-badge .operator-identity-string{
+    color:#00d4ff;
 }
-.bell-vector-icon { width: 18px; height: 18px; transition: color 0.2s ease; }
-.btn-header-bell-relay:hover .bell-vector-icon { color: #ffffff; }
-.bell-active-alert-dot { position: absolute; top: 5px; right: 5px; width: 6px; height: 6px; background-color: var(--success); border-radius: 50%; box-shadow: 0 0 6px var(--success); }
-
-/* 🌟 UPDATED: GLASSMORPHIC TEXT PROFILE BADGE WRAPPER */
-.header-profile-text-hull {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    padding: 0.45rem 1.15rem;
-    background-color: rgba(17, 23, 38, 0.4);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.profile-active-signal {
-    width: 6px;
-    height: 6px;
-    background-color: var(--success);
-    border-radius: 50%;
-    box-shadow: 0 0 6px var(--success);
-}
-
-.profile-name-txt {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: capitalize;
-    letter-spacing: 0.25px;
-}
-
-.header-profile-text-hull:hover {
-    border-color: rgba(6, 182, 212, 0.3);
-    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.08);
-}
-
-/* Mobile Toggle Hamburger icon elements */
-.dash-hamburger-trigger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; outline: none; padding: 4px; }
-.dash-burger-bar { width: 18px; height: 2px; background-color: #ffffff; transition: transform 0.3s ease, opacity 0.3s ease; }
-
-/* DYNAMIC CONTENT BODY CANVAS DESIGN CORES */
-.dash-content-body-canvas {
+/* ==========================================================================
+   🌟 WORKSPACE CANVAS VIEWPORT DISCLOSURES & PADDING COMPLIANCE
+   ========================================================================== */
+.dashboard-content-viewport {
     flex-grow: 1;
-    /* Strict layout formatting padding requested: 50px Top, 30px Bottom */
+    /* Strict Layout Constraints requested: 50px Top, 30px Bottom padding */
     padding: 50px 2rem 30px 2rem;
     overflow-y: auto;
     display: flex;
@@ -385,196 +1831,459 @@ body.dash-panel-root {
     width: 100%;
 }
 
-.module-title-banner-box h1 { font-size: 1.75rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 0.35rem; }
-.module-title-banner-box p { font-size: 0.9rem; color: var(--text-muted); }
-
-.module-testing-stage-perimeter {
-    flex-grow: 1;
-    width: 100%;
-    min-height: 300px;
-    background-color: rgba(17, 23, 38, 0.15);
+.dashboard-visual-hull-panel {
+    background-color: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 12px;
+    padding: 2.25rem 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-.stage-placeholder-inner { text-align: center; max-width: 340px; padding: 0 1rem; }
-.stage-vector-hull { width: 40px; height: 40px; margin: 0 auto 1.25rem auto; color: rgba(6, 182, 212, 0.2); display: flex; justify-content: center; align-items: center; }
-.stage-icon-spinner { width: 100%; height: 100%; }
-.stage-placeholder-inner h3 { font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem; }
-.stage-placeholder-inner p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
-.stage-placeholder-inner p strong { color: var(--primary); font-family: monospace; font-size: 0.95rem; }
+.section-display-heading { font-size: 1.5rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }
+.section-display-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; }
 
-/* 📱 ADAPTIVE MOBILE BREAKPOINTS RESPONSIVE DRAWER MATRIX SLIDER OVERRIDES */
-@media (max-width: 900px) {
-    /* Displays responsive toggle keys */
-    .dash-hamburger-trigger { 
-        display: flex !important; 
-    }
-    
-    .dash-top-header { 
-        padding: 0 1.25rem; 
-    }
-    
-    .dash-content-body-canvas { 
-        padding: 40px 1.25rem 30px 1.25rem; 
-    }
-    
-    /* 🌟 FIX: Absolute translation placement forces sidebar container to retain full 260px boundaries offscreen */
-    .dash-sidebar-node {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        height: 100vh !important;
-        width: var(--sidebar-width) !important; /* Locks width parameters to stop early text clipping/hiding */
-        z-index: 2000 !important;
-        transform: translateX(-100%); /* Hides complete container panel cleanly left of viewport */
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        box-shadow: 25px 0 50px rgba(0, 0, 0, 0.6);
-    }
-    
-    /* 🌟 FIX: Translates block matrix outward evenly instead of expanding container width values */
-    .dash-sidebar-node.drawer-active {
-        transform: translateX(0) !important;
-    }
-    
-    .menu-item-anchor {
-        white-space: nowrap !important; /* Prevents text from dropping or splitting awkwardly on two lines */
-    }
-    
-    /* Hamburger cross lines transformation animations triggers toggle */
-    .dash-hamburger-trigger.toggle-triggered .dash-burger-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); background-color: var(--primary); }
-    .dash-hamburger-trigger.toggle-triggered .dash-burger-bar:nth-child(2) { opacity: 0; }
-    .dash-hamburger-trigger.toggle-triggered .dash-burger-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); background-color: var(--primary); }
+/* Inverts visibility layers initially on compilation loops to eliminate overlapping rows stacked */
+.viewport-content-section {
+    width: 100%;
+    display: none;
+    animation: workspaceRevealFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.viewport-content-section.display-active { display: flex !important; }
+
+@keyframes workspaceRevealFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
+/* ==========================================================================
+   📱 ADAPTIVE MOBILE DRAWER RESPONSIVE REFLEX OVERRIDES
+   ========================================================================== */
+/* ==========================================================
+   MOBILE RESPONSIVE (FIXED)
+========================================================== */
 
-    </style>
+@media (max-width:900px){
 
-<script>
+    html,
+    body{
+        width:100%;
+        min-height:100vh;
+        overflow-x:hidden;
+    }
 
-document.addEventListener("DOMContentLoaded", () => {
+    /* Lock background when sidebar is open */
+    body.sidebar-scroll-lock{
+        overflow:hidden !important;
+        position:fixed;
+        width:100%;
+        height:100%;
+    }
 
-    // 🌟 GLOBAL RENDER SELECTORS INITIALIZATION TRACKS
+    .partner-panel-body{
+        display:block;
+        width:100%;
+        min-height:100vh;
+    }
+
+    /* Hide Desktop Header */
+    .desktop-top-navbar{
+        display:none !important;
+    }
+
+    /* Mobile Header */
+    .mobile-navigation-header{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        height:var(--header-height);
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:0 20px;
+        background:var(--bg-surface);
+        border-bottom:1px solid var(--border);
+        z-index:3000;
+    }
+
+    .hamburger-menu-trigger{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:none;
+        border:none;
+        color:#fff;
+        cursor:pointer;
+    }
+
+    .mobile-avatar-badge{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:8px 14px;
+        border-radius:8px;
+        background:rgba(17,23,38,.45);
+        border:1px solid var(--border);
+        color:#fff;
+        font-size:.9rem;
+        font-weight:600;
+    }
+
+    /* Sidebar */
+    .console-sidebar-panel{
+        position:fixed;
+        top:0;
+        left:0;
+        width:var(--sidebar-width);
+        height:100vh;
+
+        transform:translateX(-100%);
+        transition:transform .35s ease;
+
+        z-index:2500;
+        box-shadow:25px 0 50px rgba(0,0,0,.55);
+
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .console-sidebar-panel.mobile-open-drawer{
+        transform:translateX(0);
+    }
+
+    /* Overlay */
+    .sidebar-curtain-overlay{
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.45);
+        opacity:0;
+        visibility:hidden;
+        transition:.3s;
+        z-index:2000;
+    }
+
+    .sidebar-curtain-overlay.overlay-visible{
+        opacity:1;
+        visibility:visible;
+    }
+
+    /* Main Wrapper */
+    .dashboard-main-canvas-wrapper{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        min-height:100vh;
+        overflow:visible;
+    }
+
+    /* Content */
+    .dashboard-content-viewport{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        gap:24px;
+
+        padding:calc(var(--header-height) + 20px) 20px 30px;
+
+        overflow:visible;
+    }
+
+    /* Sections */
+    .viewport-content-section{
+        display:none;
+        width:100%;
+    }
+
+    .viewport-content-section.display-active{
+        display:flex !important;
+        flex-direction:column;
+        gap:24px;
+        width:100%;
+    }
+
+    .nav-menu-item{
+        white-space:nowrap;
+    }
+
+}
+
+</style>
+
+<script>document.addEventListener("DOMContentLoaded", () => {
+
+    // =====================================================
+    // 🌟 SELECTORS
+    // =====================================================
+
     const identityStringFields = document.querySelectorAll(".operator-identity-string");
-    const menuItemAnchors = document.querySelectorAll(".menu-item-anchor");
-    const dynamicModuleTitleHeading = document.getElementById("active-module-title-string");
-    const dynamicTokenIdBadge = document.getElementById("active-module-token-id");
+    const navMenuTabs = document.querySelectorAll(".nav-menu-item");
+    const activeBreadcrumbLabel = document.getElementById("active-breadcrumb-label");
 
-    // 🌟 MOBILE NAVIGATION ELEMENTS
-    const mobileMenuToggleBtn = document.getElementById("dash-menu-toggle");
-    const consoleSidebarNode = document.getElementById("console-sidebar");
+    const mobileHamburgerBtn = document.getElementById("mobile-drawer-toggle");
+    const systemSidebarPanel = document.getElementById("primary-console-sidebar");
+    const mobileBackdropOverlay = document.getElementById("drawer-dismiss-backdrop");
 
-    // 🌟 1. DISPLAY LOGGED-IN USER NAME
-    const parseOperatorIdentityToken = () => {
+    const logoutTriggerBtn = document.getElementById("btn-session-logout");
+    const brandReloadActionContainers = document.querySelectorAll(".action-brand-reload");
 
-        let operatorName = localStorage.getItem("activeOperatorName");
-        let operatorEmail = localStorage.getItem("activeOperatorEmail");
+    // =====================================================
+    // 🌟 DISPLAY USER NAME
+    // =====================================================
 
-        // Fallback for testing
-        if (!operatorName && !operatorEmail) {
-            operatorEmail = "jeevi@gmail.com";
+    function parseOperatorIdentityToken() {
+
+        const sessionActiveMail =
+            localStorage.getItem("activeOperatorEmail") ||
+            localStorage.getItem("activeClientEmail");
+
+        if (sessionActiveMail && sessionActiveMail.includes("@")) {
+
+            const username = sessionActiveMail.split("@")[0];
+
+            identityStringFields.forEach(field => {
+                field.textContent = username;
+            });
+
+        } else {
+
+            identityStringFields.forEach(field => {
+                field.textContent = "User";
+            });
+
         }
 
-        // If name is not stored, derive it from email
-        if (!operatorName && operatorEmail) {
-            operatorName = operatorEmail
-                .split("@")[0]
-                .replace(/[._-]/g, " ")
-                .replace(/\b\w/g, char => char.toUpperCase());
-        }
-
-        // Final fallback
-        if (!operatorName) {
-            operatorName = "Guest";
-        }
-
-        identityStringFields.forEach(field => {
-            if (field) {
-                field.textContent = operatorName;
-            }
-        });
-    };
+    }
 
     parseOperatorIdentityToken();
 
-    // 🌟 2. SIDEBAR MENU NAVIGATION
-    menuItemAnchors.forEach(anchor => {
-        anchor.addEventListener("click", (event) => {
-            event.preventDefault();
+    // =====================================================
+    // 🌟 RESTORE LAST ACTIVE PAGE
+    // =====================================================
 
-            menuItemAnchors.forEach(item => item.classList.remove("item-active"));
-            anchor.classList.add("item-active");
+    function restoreLastActiveSection() {
 
-            const sectionTargetToken = anchor.getAttribute("data-section");
+        const savedSection =
+            localStorage.getItem("partnerDashboardSection");
 
-            if (dynamicModuleTitleHeading) {
-                dynamicModuleTitleHeading.textContent = anchor.querySelector("span").textContent;
+        if (!savedSection) return;
+
+        navMenuTabs.forEach(item =>
+            item.classList.remove("active-nav-tab")
+        );
+
+        document
+            .querySelectorAll(".viewport-content-section")
+            .forEach(section =>
+                section.classList.remove("display-active")
+            );
+
+        const menu = document.querySelector(
+            `.nav-menu-item[data-target-section="${savedSection}"]`
+        );
+
+        const section = document.getElementById(
+            `section-${savedSection}`
+        );
+
+        if (menu) {
+
+            menu.classList.add("active-nav-tab");
+
+            const label =
+                menu.querySelector(".menu-label-text").textContent;
+
+            if (activeBreadcrumbLabel) {
+                activeBreadcrumbLabel.textContent = label;
             }
 
-            if (dynamicTokenIdBadge) {
-                dynamicTokenIdBadge.textContent = sectionTargetToken;
+        }
+
+        if (section) {
+            section.classList.add("display-active");
+        }
+
+    }
+
+    restoreLastActiveSection();
+
+    // =====================================================
+    // 🌟 OPEN SIDEBAR
+    // =====================================================
+
+    function openMobileSidebarPanel() {
+
+        systemSidebarPanel.classList.add("mobile-open-drawer");
+        mobileBackdropOverlay.classList.add("overlay-visible");
+
+        document.body.classList.add("sidebar-scroll-lock");
+
+    }
+
+    // =====================================================
+    // 🌟 CLOSE SIDEBAR
+    // =====================================================
+
+    function closeMobileSidebarPanel() {
+
+        systemSidebarPanel.classList.remove("mobile-open-drawer");
+        mobileBackdropOverlay.classList.remove("overlay-visible");
+
+        document.body.classList.remove("sidebar-scroll-lock");
+
+    }
+
+    // =====================================================
+    // 🌟 SIDEBAR NAVIGATION
+    // =====================================================
+
+    navMenuTabs.forEach(tab => {
+
+        tab.addEventListener("click", () => {
+
+            navMenuTabs.forEach(item =>
+                item.classList.remove("active-nav-tab")
+            );
+
+            tab.classList.add("active-nav-tab");
+
+            const targetSection =
+                tab.dataset.targetSection;
+
+            // Save active page
+            localStorage.setItem(
+                "partnerDashboardSection",
+                targetSection
+            );
+
+            const label =
+                tab.querySelector(".menu-label-text").textContent;
+
+            if (activeBreadcrumbLabel) {
+                activeBreadcrumbLabel.textContent = label;
             }
 
-            if (mobileMenuToggleBtn && mobileMenuToggleBtn.classList.contains("toggle-triggered")) {
-                closeResponsiveSidebarPanel();
+            document
+                .querySelectorAll(".viewport-content-section")
+                .forEach(section =>
+                    section.classList.remove("display-active")
+                );
+
+            document
+                .getElementById(`section-${targetSection}`)
+                ?.classList.add("display-active");
+
+            if (window.innerWidth <= 900) {
+                closeMobileSidebarPanel();
             }
+
         });
+
     });
 
-    // 🌟 3. MOBILE SIDEBAR
-    function closeResponsiveSidebarPanel() {
-        if (mobileMenuToggleBtn && consoleSidebarNode) {
-            mobileMenuToggleBtn.classList.remove("toggle-triggered");
-            consoleSidebarNode.classList.remove("drawer-active");
-            mobileMenuToggleBtn.setAttribute("aria-expanded", "false");
-        }
-    }
+    // =====================================================
+    // 🌟 HAMBURGER MENU
+    // =====================================================
 
-    if (mobileMenuToggleBtn && consoleSidebarNode) {
+    if (
+        mobileHamburgerBtn &&
+        systemSidebarPanel &&
+        mobileBackdropOverlay
+    ) {
 
-        mobileMenuToggleBtn.addEventListener("click", (e) => {
+        mobileHamburgerBtn.addEventListener("click", function (e) {
+
             e.stopPropagation();
 
-            const isOpen = mobileMenuToggleBtn.classList.toggle("toggle-triggered");
+            if (systemSidebarPanel.classList.contains("mobile-open-drawer")) {
 
-            consoleSidebarNode.classList.toggle("drawer-active", isOpen);
-            mobileMenuToggleBtn.setAttribute("aria-expanded", isOpen);
-        });
+                closeMobileSidebarPanel();
 
-        document.addEventListener("click", (event) => {
-            if (
-                !consoleSidebarNode.contains(event.target) &&
-                !mobileMenuToggleBtn.contains(event.target)
-            ) {
-                if (consoleSidebarNode.classList.contains("drawer-active")) {
-                    closeResponsiveSidebarPanel();
-                }
+            } else {
+
+                openMobileSidebarPanel();
+
             }
+
         });
+
+        mobileBackdropOverlay.addEventListener(
+            "click",
+            closeMobileSidebarPanel
+        );
+
     }
 
-    // 🌟 4. LOGOUT
-    const sessionLogoutBtn = document.getElementById("console-logout-trigger");
+    // =====================================================
+    // 🌟 BRAND RELOAD
+    // =====================================================
 
-    if (sessionLogoutBtn) {
-        sessionLogoutBtn.addEventListener("click", (event) => {
+    brandReloadActionContainers.forEach(trigger => {
+
+        trigger.addEventListener("click", function (e) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const activeMenu =
+                document.querySelector(".nav-menu-item.active-nav-tab");
+
+            if (activeMenu) {
+
+                localStorage.setItem(
+                    "partnerDashboardSection",
+                    activeMenu.dataset.targetSection
+                );
+
+            }
+
+            location.reload();
+
+        });
+
+    });
+
+    // =====================================================
+    // 🌟 LOGOUT
+    // =====================================================
+
+    if (logoutTriggerBtn) {
+
+        logoutTriggerBtn.addEventListener("click", function (event) {
+
             event.preventDefault();
 
-            localStorage.removeItem("activeOperatorName");
             localStorage.removeItem("activeOperatorEmail");
+            localStorage.removeItem("activeOperatorName");
+            localStorage.removeItem("activeOperatorRole");
+
+            localStorage.removeItem("activeClientEmail");
+            localStorage.removeItem("activeClientName");
+            localStorage.removeItem("activeClientRole");
+
+            localStorage.removeItem("partnerDashboardSection");
 
             window.location.href = "login.html";
+
         });
+
     }
 
+    // =====================================================
+    // 🌟 WINDOW RESIZE
+    // =====================================================
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 900) {
+            closeMobileSidebarPanel();
+        }
+
+    });
+
 });
-
 </script>
-
 </body>
 </html>
