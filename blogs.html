@@ -222,12 +222,12 @@
             </p>
             
             <!-- Interactive Category Tag Selector Track -->
-            <div class="bl-category-chips">
-                <a href="#all" class="chip-node active-chip">All Logs</a>
-                <a href="#architecture" class="chip-node">Architecture</a>
-                <a href="#security" class="chip-node">Security</a>
-                <a href="#telemetry" class="chip-node">Telemetry</a>
-            </div>
+           <div class="bl-cta-wrapper">
+    <a href="404.html" class="bl-primary-cta">
+        Explore Latest Articles
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</div>
         </div>
 
         <!-- Right Side Column: Glassmorphic Trending Feature Board Box -->
@@ -246,7 +246,7 @@
                     <div class="hud-meta-date">Featured Log • July 2026</div>
                     <h3 class="hud-post-title">Mitigating Core Multi-Tenant Thread Locks</h3>
                     <p class="hud-post-desc">An urgent post-mortem analysis detail mapping how we resolved Layer-3 execution memory leak stalls.</p>
-                    <a href="#featured-log" class="hud-read-anchor">
+                    <a href="404.html" class="hud-read-anchor">
                         <span>Read Post-Mortem</span>
                         <svg class="hud-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -262,6 +262,70 @@
 </section>
 
 <style>
+    .bl-cta-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+    margin:2rem 0;
+    flex-wrap:wrap;
+}
+
+.bl-primary-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    padding:14px 30px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.bl-primary-cta:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.bl-secondary-cta{
+    display:inline-flex;
+    align-items:center;
+    padding:14px 30px;
+    border:2px solid #2563eb;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.bl-secondary-cta:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+.bl-blog-cta-card{
+    max-width:700px;
+    margin:2rem auto;
+    padding:2.5rem;
+    text-align:center;
+    border-radius:20px;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+}
+
+.bl-blog-cta-card h3{
+    font-size:2rem;
+    margin-bottom:.75rem;
+}
+
+.bl-blog-cta-card p{
+    margin-bottom:1.5rem;
+    color:#cbd5e1;
+    line-height:1.6;
+}
    /* 🌟 CYBERPUNK PALETTE VARIABLE ENGINE SETUP */
 :root {
     --bg-main: #070a13;
@@ -696,7 +760,7 @@
                     <div class="bl-meta-row">July 28, 2026 • 5 min read</div>
                     <h3 class="bl-post-title">Optimizing Global Edge Micro-Routing Arrays</h3>
                     <p class="bl-post-desc">An in-depth breakdown of how we achieved sub-1.5ms request routing by decoupling state verification layers from core node processors.</p>
-                    <a href="#article-1" class="bl-read-link">
+                    <a href="404.html" class="bl-read-link">
                         <span>Read Technical Log</span>
                         <svg class="bl-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
@@ -713,7 +777,7 @@
                     <div class="bl-meta-row">July 20, 2026 • 8 min read</div>
                     <h3 class="bl-post-title">Securing Data Mutations with Zero-Trust Proxies</h3>
                     <p class="bl-post-desc">How continuous dynamic identity validation isolates compromised infrastructure components before runtime threats reach storage blocks.</p>
-                    <a href="#article-2" class="bl-read-link">
+                    <a href="404.html" class="bl-read-link">
                         <span>Read Technical Log</span>
                         <svg class="bl-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
@@ -730,7 +794,7 @@
                     <div class="bl-meta-row">July 15, 2026 • 6 min read</div>
                     <h3 class="bl-post-title">Preventing Memory Cascades using AI Pipelines</h3>
                     <p class="bl-post-desc">Deploying predictive telemetry patterns onto staging environments to isolate and patch microservice memory leaks prior to production releases.</p>
-                    <a href="#article-3" class="bl-read-link">
+                    <a href="404.html" class="bl-read-link">
                         <span>Read Technical Log</span>
                         <svg class="bl-arrow-vector" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
@@ -1039,11 +1103,11 @@
                         <img src="./Assests/network visualization.webp" alt="Studio microphone recording array infrastructure panel illustration" class="audio-thumb-img">
                         
                         <!-- Interactive Play Trigger Button -->
-                        <button class="btn-audio-play" aria-label="Play Log Briefing 204">
-                            <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </button>
+                      <a href="404.html" class="btn-audio-play" aria-label="View Custom 404 Page">
+    <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 17l5-5-5-5"></path>
+    </svg>
+</a>
                     </div>
 
                     <!-- Audio Metadata Context Details -->
@@ -1061,11 +1125,11 @@
                     <div class="audio-thumbnail-box">
                         <img src="./Assests/status analytics.webp" alt="Server core node telemetry signals visual illustration" class="audio-thumb-img">
                         
-                        <button class="btn-audio-play" aria-label="Play Log Briefing 203">
-                            <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </button>
+               <a href="404.html" class="btn-audio-play" aria-label="View Custom 404 Page">
+    <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 17l5-5-5-5"></path>
+    </svg>
+</a>
                     </div>
 
                     <div class="audio-meta-details">
@@ -1081,6 +1145,29 @@
 </section>
 
 <style>
+    .btn-404-navigation{
+    display:inline-flex;
+    align-items:center;
+    gap:0.6rem;
+    padding:12px 22px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:0.95rem;
+    font-weight:600;
+    transition:all 0.3s ease;
+}
+
+.btn-404-navigation:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.navigation-icon{
+    width:18px;
+    height:18px;
+}
     /* 🌟 AUDIO BRIEFINGS COMPONENT SYSTEM ENGINE */
 .bl-audio-frame {
     position: relative;
@@ -1783,14 +1870,11 @@
                         <img src="./Assests/network visualization.webp" alt="Active system monitoring grid telemetry screen asset poster layout" class="vlog-thumb-img">
                         
                         <!-- Interactive Play Trigger Button -->
-                        <button class="btn-vlog-play" aria-label="Initialize Video Terminal Breakdown 09">
-                            <span class="vlog-pulse-ring"></span>
-                            <div class="vlog-play-vector-box">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
-                            </div>
-                        </button>
+                       <a href="404.html" class="btn-audio-play" aria-label="View Custom 404 Page">
+    <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 17l5-5-5-5"></path>
+    </svg>
+</a>
                     </div>
 
                     <!-- Video Information Details -->
@@ -1808,14 +1892,11 @@
                     <div class="vlog-thumbnail-box">
                         <img src="./Assests/status analytics.webp" alt="Integrated deployment log tracks and terminal compilation telemetry grid poster layout" class="vlog-thumb-img">
                         
-                        <button class="btn-vlog-play" aria-label="Initialize Video Terminal Breakdown 08">
-                            <span class="vlog-pulse-ring"></span>
-                            <div class="vlog-play-vector-box">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
-                            </div>
-                        </button>
+                       <a href="404.html" class="btn-audio-play" aria-label="View Custom 404 Page">
+    <svg class="audio-play-vector" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M10 17l5-5-5-5"></path>
+    </svg>
+</a>
                     </div>
 
                     <div class="vlog-meta-details">
@@ -2170,7 +2251,7 @@
                 <div class="author-card-inner">
                     <!-- High-contrast profile frame matrix layout -->
                     <div class="author-profile-hull">
-                        <img src="https://unsplash.com" alt="Dr. Evelyn Vance Senior Systems Architect Profile Picture" class="author-profile-img">
+                        <img src="./Assests/Leader 2.webp" alt="Dr. Evelyn Vance Senior Systems Architect Profile Picture" class="author-profile-img">
                         <div class="author-active-badge">
                             <span class="author-pulse-dot"></span>
                             <span>Online</span>
@@ -2194,7 +2275,7 @@
                 <div class="author-featured-tag">Lead Editor</div>
                 <div class="author-card-inner">
                     <div class="author-profile-hull">
-                        <img src="https://unsplash.com" alt="Arjun Raghav Lead Cryptographer Profile Picture" class="author-profile-img">
+                        <img src="./Assests/Leader 1.webp" alt="Arjun Raghav Lead Cryptographer Profile Picture" class="author-profile-img">
                         <div class="author-active-badge">
                             <span class="author-pulse-dot"></span>
                             <span>Online</span>
@@ -2215,7 +2296,7 @@
             <div class="author-node-card">
                 <div class="author-card-inner">
                     <div class="author-profile-hull">
-                        <img src="https://unsplash.com" alt="Liam Sterling Director of Telemetry Pipelines Profile Picture" class="author-profile-img">
+                        <img src="./Assests/Leader 3.webp" alt="Liam Sterling Director of Telemetry Pipelines Profile Picture" class="author-profile-img">
                         <div class="author-active-badge">
                             <span class="author-pulse-dot"></span>
                             <span>Offline</span>
@@ -2598,7 +2679,7 @@
             </h2>
             
             <div class="one-line-actions">
-                <a href="#deploy" class="btn-one-line-glow">Provision Node</a>
+                <a href="404.html" class="btn-one-line-glow">Provision Node</a>
             </div>
         </div>
 
@@ -2807,25 +2888,25 @@
             </div>
             
             <div class="footer-social-row">
-                <a href="#facebook" class="social-circle-node" aria-label="Facebook Operator Track">
+                <a href="404.html" class="social-circle-node" aria-label="Facebook Operator Track">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
                 </a>
-                <a href="#instagram" class="social-circle-node" aria-label="Instagram Telemetry Channel">
+                <a href="404.html" class="social-circle-node" aria-label="Instagram Telemetry Channel">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                     </svg>
                 </a>
-                <a href="#telegram" class="social-circle-node" aria-label="Telegram Signal Relay">
+                <a href="404.html" class="social-circle-node" aria-label="Telegram Signal Relay">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
                         <path d="m22 2-7 20-4-9-9-4Z"/>
                         <path d="M22 2 11 13"/>
                     </svg>
                 </a>
-                <a href="#youtube" class="social-circle-node" aria-label="YouTube Visual Streaming Panel">
+                <a href="404.html" class="social-circle-node" aria-label="YouTube Visual Streaming Panel">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-svg-path">
                         <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
                         <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
@@ -2838,10 +2919,10 @@
         <div class="footer-links-column">
             <h4 class="column-title-heading">Quick Links</h4>
             <ul class="footer-links-stack">
-                <li><a href="#workflows">Workflows</a></li>
-                <li><a href="#ai-agents">AI Agents</a></li>
-                <li><a href="#analytics">Analytics</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
 
@@ -2849,10 +2930,10 @@
         <div class="footer-links-column">
             <h4 class="column-title-heading">Support Hub</h4>
             <ul class="footer-links-stack">
-                <li><a href="#sla">SLA & Warranties</a></li>
-                <li><a href="#model-swap">Model Swap Portals</a></li>
-                <li><a href="#faq">Help & FAQ Center</a></li>
-                <li><a href="#patch-logs">Kernel Patch Logs</a></li>
+                <li><a href="404.html">SLA & Warranties</a></li>
+                <li><a href="404.html">Model Swap Portals</a></li>
+                <li><a href="404.html">Help & FAQ Center</a></li>
+                <li><a href="404.html">Kernel Patch Logs</a></li>
             </ul>
         </div>
 
@@ -2882,9 +2963,9 @@
         <div class="compliance-inner-flex">
             <p class="footer-copyright-statement">&copy; 2026 Stackly Industries. All rights reserved.</p>
             <div class="compliance-links-track">
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
-                <a href="#cookies">Cookie Management</a>
+                <a href="404.html">Privacy Policy</a>
+                <a href="404.html">Terms of Service</a>
+                <a href="404.html">Cookie Management</a>
             </div>
         </div>
     </div>
