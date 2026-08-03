@@ -1039,7 +1039,188 @@
     .bl-card-content { padding: 1.75rem 1.5rem; }
 }
 
+/* ==========================================
+   BLOG GRID RESPONSIVE ADD-ON
+========================================== */
 
+/* Large Tablet */
+@media (max-width:1024px){
+
+    .bl-grid-frame{
+        padding:50px 0;
+    }
+
+    .bl-grid-container{
+        padding:0 24px;
+    }
+
+    .bl-section-header{
+        margin-bottom:3rem;
+    }
+
+    .bl-section-title{
+        font-size:2.2rem;
+        line-height:1.3;
+    }
+
+    .bl-section-desc{
+        max-width:700px;
+        margin:0 auto;
+    }
+
+    .bl-article-track{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .bl-card-content{
+        padding:1.8rem;
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:768px){
+
+    .bl-grid-frame{
+        padding:45px 0;
+    }
+
+    .bl-grid-container{
+        padding:0 20px;
+    }
+
+    .bl-section-header{
+        max-width:100%;
+        margin-bottom:2.5rem;
+    }
+
+    .bl-section-title{
+        font-size:1.9rem;
+        line-height:1.35;
+        word-break:break-word;
+    }
+
+    .bl-section-desc{
+        font-size:.95rem;
+        line-height:1.8;
+    }
+
+    .bl-article-track{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .bl-card-content{
+        padding:1.5rem;
+    }
+
+    .bl-post-title{
+        font-size:1.15rem;
+    }
+
+    .bl-post-desc{
+        font-size:.92rem;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:576px){
+
+    .bl-grid-container{
+        padding:0 16px;
+    }
+
+    .bl-section-badge{
+        font-size:.68rem;
+        padding:6px 14px;
+    }
+
+    .bl-section-title{
+        font-size:1.55rem;
+        line-height:1.4;
+    }
+
+    .bl-section-desc{
+        font-size:.9rem;
+    }
+
+    .bl-matrix-card{
+        border-radius:14px;
+    }
+
+    .bl-card-image{
+        aspect-ratio:16/11;
+    }
+
+    .bl-category-tag{
+        top:12px;
+        left:12px;
+        font-size:.68rem;
+        padding:5px 10px;
+    }
+
+    .bl-card-content{
+        padding:20px 18px;
+    }
+
+    .bl-meta-row{
+        font-size:.72rem;
+    }
+
+    .bl-post-title{
+        font-size:1.05rem;
+        line-height:1.5;
+    }
+
+    .bl-post-desc{
+        font-size:.88rem;
+        line-height:1.7;
+        margin-bottom:1.4rem;
+    }
+
+    .bl-read-link{
+        width:100%;
+        justify-content:center;
+        padding:12px 16px;
+        border:1px solid rgba(34,211,238,.18);
+        border-radius:8px;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width:400px){
+
+    .bl-grid-container{
+        padding:0 14px;
+    }
+
+    .bl-section-title{
+        font-size:0.95rem;
+    }
+
+    .bl-card-content{
+        padding:18px 16px;
+    }
+
+    .bl-post-title{
+        font-size:1rem;
+    }
+
+    .bl-post-desc{
+        font-size:.85rem;
+    }
+
+    .bl-read-link{
+        font-size:.85rem;
+    }
+
+}
 </style>
 
 <script>
@@ -1428,6 +1609,221 @@
     .audio-meta-details { align-items: center; }
 }
 
+/* =====================================================
+   RESPONSIVE ADD-ON
+===================================================== */
+
+/* Large Tablets */
+@media (max-width:1024px){
+
+    .bl-audio-container{
+        padding:0 1.5rem;
+    }
+
+    .bl-audio-grid{
+        grid-template-columns:1fr;
+        gap:2rem;
+    }
+
+    .bl-audio-title{
+        font-size:2.2rem;
+    }
+
+}
+
+
+/* Tablets */
+@media (max-width:768px){
+
+    .bl-audio-frame{
+        padding:45px 0 30px;
+    }
+
+    .bl-audio-container{
+        padding:0 1.25rem;
+    }
+
+    .bl-audio-header{
+        margin-bottom:2.5rem;
+    }
+
+    .bl-audio-title{
+        font-size:2rem;
+    }
+
+    .bl-audio-desc{
+        font-size:1rem;
+    }
+
+    .audio-card-inner{
+        gap:1.25rem;
+        padding:1.5rem;
+    }
+
+    .audio-thumbnail-box{
+        width:95px;
+        height:95px;
+    }
+
+    .audio-node-title{
+        font-size:1.05rem;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:576px){
+
+    .bl-audio-container{
+        padding:0 1rem;
+    }
+
+    .bl-audio-grid{
+        grid-template-columns:1fr;
+        gap:1.5rem;
+    }
+
+    .audio-card-inner{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+        padding:1.5rem;
+    }
+
+    .audio-meta-details{
+        align-items:center;
+    }
+
+    .audio-thumbnail-box{
+        width:90px;
+        height:90px;
+    }
+
+    .btn-audio-play{
+        width:42px;
+        height:42px;
+    }
+
+    .audio-play-vector{
+        width:11px;
+        height:11px;
+    }
+
+    .audio-node-title{
+        font-size:1rem;
+        line-height:1.4;
+    }
+
+    .audio-node-desc{
+        font-size:.9rem;
+    }
+
+    .audio-tag-line{
+        font-size:.75rem;
+    }
+
+}
+
+
+/* Small Phones (375px) */
+@media (max-width:375px){
+
+    .bl-audio-frame{
+        padding:40px 0 25px;
+    }
+
+    .bl-audio-container{
+        padding:0 .85rem;
+    }
+
+    .bl-audio-title{
+        font-size:1.7rem;
+    }
+
+    .bl-audio-desc{
+        font-size:.92rem;
+    }
+
+    .audio-card-inner{
+        padding:1.25rem;
+        gap:1rem;
+    }
+
+    .audio-thumbnail-box{
+        width:80px;
+        height:80px;
+    }
+
+    .btn-audio-play{
+        width:38px;
+        height:38px;
+    }
+
+    .audio-node-title{
+        font-size:.95rem;
+    }
+
+    .audio-node-desc{
+        font-size:.84rem;
+        line-height:1.55;
+    }
+
+}
+
+
+/* Extra Small Phones (320px) */
+@media (max-width:320px){
+
+    .bl-audio-container{
+        padding:0 .75rem;
+    }
+
+    .bl-audio-title{
+        font-size:1.45rem;
+    }
+
+    .bl-audio-badge{
+        font-size:.65rem;
+        padding:.35rem .8rem;
+    }
+
+    .bl-audio-desc{
+        font-size:.85rem;
+    }
+
+    .audio-card-inner{
+        padding:1rem;
+    }
+
+    .audio-thumbnail-box{
+        width:72px;
+        height:72px;
+    }
+
+    .btn-audio-play{
+        width:34px;
+        height:34px;
+    }
+
+    .audio-play-vector{
+        width:10px;
+        height:10px;
+    }
+
+    .audio-tag-line{
+        font-size:.68rem;
+    }
+
+    .audio-node-title{
+        font-size:.9rem;
+    }
+
+    .audio-node-desc{
+        font-size:.8rem;
+    }
+
+}
 </style>
 
 <script>
@@ -1779,6 +2175,181 @@
     .btn-bl-dispatch-submit { left: 5px; right: 5px; bottom: 5px; top: auto; height: 42px; justify-content: center; border-radius: 10px; }
 }
 
+/* =========================================================
+   RESPONSIVE ADD-ON - BLOG SUBSCRIBE SECTION
+   ========================================================= */
+
+/* Large Tablets */
+@media (max-width:991px){
+
+    .bl-sub-container{
+        padding:0 1.5rem;
+    }
+
+    .bl-sub-split-layout{
+        grid-template-columns:1fr;
+        gap:2.5rem;
+        padding:2.75rem;
+        text-align:center;
+    }
+
+    .bl-sub-info-side{
+        align-items:center;
+    }
+
+    .bl-sub-desc{
+        max-width:600px;
+        margin:auto;
+    }
+
+    .bl-sub-form-side{
+        width:100%;
+        max-width:650px;
+        margin:auto;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .bl-sub-frame{
+        padding:40px 0;
+    }
+
+    .bl-sub-container{
+        padding:0 18px;
+    }
+
+    .bl-sub-card-hull{
+        border-radius:18px;
+    }
+
+    .bl-sub-split-layout{
+        padding:2rem 1.5rem;
+        gap:2rem;
+    }
+
+    .bl-sub-title{
+        font-size:1.9rem;
+        line-height:1.3;
+    }
+
+    .bl-sub-desc{
+        font-size:.95rem;
+    }
+
+    .bl-input-wrapper-node{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .bl-dispatch-input{
+        position:static;
+        width:100%;
+        padding:15px 18px;
+        border-radius:12px;
+        text-align:left;
+    }
+
+    .btn-bl-dispatch-submit{
+        position:static;
+        width:100%;
+        height:50px;
+        justify-content:center;
+        border-radius:12px;
+    }
+
+    .bl-dispatch-error-alert{
+        padding-left:0;
+        text-align:center;
+    }
+}
+
+/* Small Phones */
+@media (max-width:480px){
+
+    .bl-sub-frame{
+        padding:35px 0;
+    }
+
+    .bl-sub-container{
+        padding:0 15px;
+    }
+
+    .bl-sub-card-hull{
+        border-radius:16px;
+    }
+
+    .bl-sub-split-layout{
+        padding:1.5rem 1rem;
+        gap:1.5rem;
+    }
+
+    .bl-sub-badge{
+        font-size:.68rem;
+        padding:.35rem .9rem;
+    }
+
+    .bl-sub-title{
+        font-size:1.55rem;
+        line-height:1.35;
+    }
+
+    .bl-sub-desc{
+        font-size:.9rem;
+        line-height:1.6;
+    }
+
+    .bl-dispatch-input{
+        font-size:.9rem;
+        padding:14px 16px;
+    }
+
+    .btn-bl-dispatch-submit{
+        height:46px;
+        font-size:.9rem;
+    }
+
+    .bl-send-vector{
+        width:11px;
+        height:11px;
+    }
+}
+
+/* Extra Small Phones (320px) */
+@media (max-width:360px){
+
+    .bl-sub-container{
+        padding:0 12px;
+    }
+
+    .bl-sub-split-layout{
+        padding:1.25rem .9rem;
+    }
+
+    .bl-sub-title{
+        font-size:1.35rem;
+    }
+
+    .bl-sub-desc{
+        font-size:.85rem;
+    }
+
+    .bl-dispatch-input{
+        font-size:.85rem;
+        padding:13px 14px;
+    }
+
+    .btn-bl-dispatch-submit{
+        height:44px;
+        font-size:.82rem;
+        padding:0 12px;
+    }
+
+    .bl-send-vector{
+        display:none;
+    }
+}
 </style>
 
 <script>
@@ -2192,6 +2763,236 @@
     .vlog-play-vector-box { width: 12px; height: 12px; }
 }
 
+/* ==========================================================
+   VIDEO VLOG SECTION - RESPONSIVE ENHANCEMENT ADD-ON
+========================================================== */
+
+
+/* Large Tablet Devices */
+@media (max-width: 1200px){
+
+    .bl-vlog-container{
+        padding:0 1.5rem;
+    }
+
+    .bl-vlog-grid{
+        gap:2rem;
+        grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+
+
+    .vlog-card-inner{
+        padding:1.5rem;
+    }
+
+
+    .bl-vlog-title{
+        font-size:2.25rem;
+    }
+
+}
+
+
+/* Tablet Portrait */
+@media (max-width: 900px){
+
+    .bl-vlog-frame{
+        padding:45px 0 30px;
+    }
+
+
+    .bl-vlog-container{
+        padding:0 1.25rem;
+    }
+
+
+    .bl-vlog-grid{
+        grid-template-columns:1fr;
+        gap:2rem;
+    }
+
+
+    .bl-vlog-header{
+        margin-bottom:2.5rem;
+        max-width:600px;
+    }
+
+
+    .bl-vlog-title{
+        font-size:2rem;
+    }
+
+
+    .bl-vlog-desc{
+        font-size:1rem;
+    }
+
+
+    .vlog-player-card{
+        width:100%;
+    }
+
+
+    .vlog-thumbnail-box{
+        aspect-ratio:16/9;
+    }
+
+}
+
+
+
+/* Mobile Landscape */
+@media(max-width:600px){
+
+    .bl-vlog-frame{
+        padding:35px 0 25px;
+    }
+
+
+    .bl-vlog-container{
+        padding:0 1rem;
+    }
+
+
+    .bl-vlog-header{
+        margin-bottom:2rem;
+    }
+
+
+    .bl-vlog-badge{
+        font-size:.7rem;
+        padding:.35rem .9rem;
+    }
+
+
+    .bl-vlog-title{
+        font-size:1.75rem;
+        line-height:1.25;
+        letter-spacing:-0.3px;
+    }
+
+
+    .bl-vlog-desc{
+        font-size:.92rem;
+        line-height:1.5;
+    }
+
+
+    .vlog-card-inner{
+        padding:1rem;
+        gap:1rem;
+    }
+
+
+    .vlog-thumbnail-box{
+        border-radius:10px;
+        aspect-ratio:16/10;
+    }
+
+
+    .vlog-thumb-img{
+        object-position:center;
+    }
+
+
+    .btn-audio-play,
+    .btn-vlog-play{
+
+        width:48px;
+        height:48px;
+
+    }
+
+
+    .audio-play-vector,
+    .vlog-play-vector-box{
+
+        width:12px;
+        height:12px;
+
+    }
+
+
+    .vlog-tag-line{
+        font-size:.7rem;
+    }
+
+
+    .vlog-node-title{
+        font-size:1.05rem;
+        line-height:1.35;
+    }
+
+
+    .vlog-node-desc{
+        font-size:.88rem;
+    }
+
+}
+
+
+
+/* Small Mobile Devices */
+@media(max-width:380px){
+
+
+    .bl-vlog-container{
+        padding:0 .8rem;
+    }
+
+
+    .bl-vlog-title{
+        font-size:1.05rem;
+    }
+
+
+    .vlog-card-inner{
+        padding:.85rem;
+    }
+
+
+    .vlog-node-title{
+        font-size:1rem;
+    }
+
+
+    .vlog-thumbnail-box{
+        aspect-ratio:4/3;
+    }
+
+}
+
+
+/* Fix Image + Card Overflow Globally */
+.bl-vlog-frame,
+.bl-vlog-container,
+.bl-vlog-grid,
+.vlog-player-card{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+
+.vlog-thumb-img{
+    display:block;
+}
+
+
+
+/* Touch Device Hover Fix */
+@media (hover:none){
+
+    .vlog-player-card:hover{
+        transform:none;
+        box-shadow:none;
+    }
+
+
+    .vlog-player-card:hover .vlog-thumb-img{
+        transform:none;
+    }
+
+}
 </style>
 
 <script>
@@ -2230,7 +3031,7 @@
     
     <!-- Background Canvas Texture Layer Mapping -->
     <div class="bl-authors-bg-layer">
-        <img src="https://unsplash.com" alt="Icy tech circuit digital topography canvas matrix background" class="bl-authors-mesh-img">
+        <img src="./Assests/cloud eco.webp" alt="Icy tech circuit digital topography canvas matrix background" class="bl-authors-mesh-img">
         <div class="bl-authors-ambient-glow neon-sapphire-blur"></div>
     </div>
 
@@ -2626,6 +3427,301 @@
     .author-card-inner { padding: 2.25rem 1.75rem; }
 }
 
+/* ==========================================================
+   AUTHORS SECTION - RESPONSIVE ENHANCEMENT ADD-ON
+========================================================== */
+
+
+/* Large Tablets / Small Laptops */
+@media (max-width:1200px){
+
+    .bl-authors-container{
+        padding:0 1.5rem;
+    }
+
+
+    .bl-authors-grid-track{
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+        gap:2rem;
+    }
+
+
+    .author-card-inner{
+        padding:2.25rem 1.75rem;
+    }
+
+
+    .bl-authors-title{
+        font-size:2.25rem;
+    }
+
+}
+
+
+
+/* Tablet Devices */
+@media (max-width:992px){
+
+    .bl-authors-frame{
+        padding:45px 0 30px;
+    }
+
+
+    .bl-authors-container{
+        padding:0 1.25rem;
+    }
+
+
+    .bl-authors-header{
+        margin-bottom:2.5rem;
+    }
+
+
+    .bl-authors-title{
+        font-size:2rem;
+    }
+
+
+    .bl-authors-desc{
+        font-size:1rem;
+    }
+
+
+    .bl-authors-grid-track{
+        grid-template-columns:1fr;
+        max-width:600px;
+        margin:0 auto;
+        gap:2rem;
+    }
+
+
+    .author-node-card{
+        width:100%;
+    }
+
+
+    .author-card-inner{
+        padding:2.5rem 2rem;
+    }
+
+
+}
+
+
+
+/* Mobile Devices */
+@media(max-width:600px){
+
+
+    .bl-authors-frame{
+        padding:35px 0 25px;
+    }
+
+
+    .bl-authors-container{
+        padding:0 1rem;
+    }
+
+
+    .bl-authors-header{
+        margin-bottom:2rem;
+    }
+
+
+    .bl-authors-badge{
+        font-size:.7rem;
+        padding:.35rem .85rem;
+    }
+
+
+    .bl-authors-title{
+        font-size:1.75rem;
+        line-height:1.25;
+        letter-spacing:-0.3px;
+    }
+
+
+    .bl-authors-desc{
+        font-size:.92rem;
+        line-height:1.5;
+    }
+
+
+    .bl-authors-grid-track{
+        gap:1.5rem;
+    }
+
+
+    .author-card-inner{
+        padding:2rem 1.25rem;
+    }
+
+
+    .author-profile-hull{
+
+        width:95px;
+        height:95px;
+        margin-bottom:1.4rem;
+
+    }
+
+
+    .author-name{
+        font-size:1.15rem;
+    }
+
+
+    .author-role{
+        font-size:.75rem;
+    }
+
+
+    .author-bio{
+
+        font-size:.86rem;
+        line-height:1.5;
+        min-height:auto;
+        margin-bottom:1.25rem;
+
+    }
+
+
+    .author-metric-tag{
+
+        font-size:.7rem;
+        padding:.35rem .8rem;
+
+    }
+
+
+    .author-featured-tag{
+
+        top:.9rem;
+        right:1rem;
+        font-size:.65rem;
+        padding:.2rem .6rem;
+
+    }
+
+
+}
+
+
+
+/* Small Mobile Devices (320px - 380px) */
+@media(max-width:380px){
+
+
+    .bl-authors-container{
+        padding:0 .75rem;
+    }
+
+
+    .bl-authors-title{
+        font-size:1.5rem;
+    }
+
+
+    .bl-authors-desc{
+        font-size:.85rem;
+    }
+
+
+    .author-node-card{
+        border-radius:12px;
+    }
+
+
+    .author-card-inner{
+        padding:1.75rem .9rem;
+    }
+
+
+    .author-profile-hull{
+
+        width:85px;
+        height:85px;
+
+    }
+
+
+    .author-active-badge{
+
+        padding:.12rem .5rem;
+        gap:.3rem;
+
+    }
+
+
+    .author-active-badge span{
+
+        font-size:.38rem;
+
+    }
+
+
+    .author-name{
+        font-size:1.05rem;
+    }
+
+
+    .author-role{
+        font-size:.7rem;
+    }
+
+
+    .author-bio{
+        font-size:.8rem;
+    }
+
+
+    .author-metric-tag{
+        font-size:.65rem;
+    }
+
+}
+
+
+
+/* Extra Safety - Prevent Horizontal Overflow */
+.bl-authors-frame,
+.bl-authors-container,
+.bl-authors-grid-track,
+.author-node-card{
+
+    max-width:100%;
+    overflow-x:hidden;
+
+}
+
+
+.author-profile-img{
+
+    display:block;
+
+}
+
+
+
+/* Disable Hover Lift on Touch Screens */
+@media(hover:none){
+
+
+    .author-node-card:hover{
+
+        transform:none;
+        box-shadow:none;
+
+    }
+
+
+    .author-node-card:hover .author-profile-img{
+
+        transform:none;
+
+    }
+
+}
 </style>
 
 <script>
@@ -2832,6 +3928,143 @@
     }
 }
 
+/* ==========================================
+   RESPONSIVE ADD-ON - ONE LINE CTA SECTION
+========================================== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+
+    .one-line-cta-frame{
+        padding: 45px 0 30px;
+    }
+
+    .one-line-cta-container{
+        padding: 0 1.75rem;
+    }
+
+    .one-line-title{
+        font-size: 1.55rem;
+        line-height: 1.4;
+    }
+
+    .one-line-flex-row{
+        gap: 2rem;
+    }
+
+    .btn-one-line-glow{
+        padding: 0.85rem 1.8rem;
+    }
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .one-line-cta-frame{
+        padding:40px 0 30px;
+    }
+
+    .one-line-cta-container{
+        padding:0 1.5rem;
+    }
+
+    .one-line-flex-row{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        gap:1.75rem;
+    }
+
+    .one-line-title{
+        width:100%;
+        font-size:1.45rem;
+        line-height:1.45;
+    }
+
+    .one-line-actions{
+        width:100%;
+    }
+
+    .btn-one-line-glow{
+        width:100%;
+        max-width:320px;
+        margin:auto;
+        text-align:center;
+        padding:0.95rem 1.5rem;
+    }
+
+    .sky-glow-patch{
+        right:-20%;
+        opacity:.18;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width:576px){
+
+    .one-line-cta-frame{
+        padding:35px 0 25px;
+    }
+
+    .one-line-cta-container{
+        padding:0 1.2rem;
+    }
+
+    .one-line-title{
+        font-size:1.25rem;
+        line-height:1.5;
+        letter-spacing:-0.3px;
+    }
+
+    .btn-one-line-glow{
+        font-size:.95rem;
+        padding:0.9rem 1rem;
+        border-radius:10px;
+    }
+
+    .one-line-ambient-glow{
+        width:260px;
+        height:180px;
+        filter:blur(70px);
+    }
+}
+
+/* Small Phones */
+@media (max-width:480px){
+
+    .one-line-cta-container{
+        padding:0 1rem;
+    }
+
+    .one-line-title{
+        font-size:1.15rem;
+        line-height:1.55;
+    }
+
+    .btn-one-line-glow{
+        width:100%;
+        max-width:100%;
+        font-size:.9rem;
+    }
+
+    .sky-glow-patch{
+        display:none;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width:360px){
+
+    .one-line-title{
+        font-size:1.05rem;
+    }
+
+    .btn-one-line-glow{
+        padding:0.85rem;
+        font-size:.85rem;
+    }
+}
 </style>
 
 <script>
@@ -3290,7 +4523,236 @@
     .floating-back-top-trigger { bottom: 1.5rem; right: 1.5rem; }
 }
 
+/* ==========================================================
+   FOOTER SECTION - RESPONSIVE ADD-ON
+========================================================== */
 
+/* Large Tablets */
+@media (max-width:992px){
+
+    .tech-footer-root{
+        padding:60px 0 40px;
+    }
+
+    .footer-grid-container{
+        grid-template-columns:1.3fr 1fr;
+        gap:3rem 2rem;
+        padding:0 2rem;
+    }
+
+    .footer-summary-block{
+        grid-column:1 / -1;
+        max-width:700px;
+    }
+
+    .footer-dispatch-column{
+        grid-column:1 / -1;
+        justify-self:start;
+        max-width:500px;
+    }
+
+    .footer-links-column{
+        justify-self:start;
+        min-width:auto;
+    }
+
+    .footer-base-compliance-row{
+        margin-top:3rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .tech-footer-root{
+        padding:55px 0 35px;
+    }
+
+    .footer-grid-container{
+        grid-template-columns:1fr;
+        gap:2.5rem;
+        padding:0 1.5rem;
+    }
+
+    .footer-summary-block,
+    .footer-links-column,
+    .footer-dispatch-column{
+        align-items:center;
+        justify-self:center;
+        text-align:center;
+        max-width:100%;
+        grid-column:auto;
+    }
+
+    .footer-brand-anchor{
+        justify-content:center;
+    }
+
+    .footer-corporate-desc{
+        max-width:600px;
+    }
+
+    .footer-location-line{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .footer-social-row{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .footer-links-stack{
+        align-items:center;
+    }
+
+    .column-title-heading::after{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .dispatch-input-row{
+        max-width:420px;
+    }
+
+    .footer-base-compliance-row{
+        margin-top:2.5rem;
+        padding:1.5rem 1.5rem 0;
+    }
+
+    .compliance-inner-flex{
+        flex-direction:column;
+        text-align:center;
+        gap:1rem;
+    }
+
+    .compliance-links-track{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:1rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .tech-footer-root{
+        padding:50px 0 30px;
+    }
+
+    .footer-grid-container{
+        padding:0 1rem;
+        gap:2rem;
+    }
+
+    .footer-brand-logo{
+        width:100px;
+        height:auto;
+    }
+
+    .footer-corporate-desc,
+    .dispatch-instructions-text{
+        font-size:.88rem;
+        line-height:1.7;
+    }
+
+    .location-string-text{
+        font-size:.82rem;
+    }
+
+    .column-title-heading{
+        font-size:.82rem;
+        margin-bottom:1rem;
+    }
+
+    .footer-links-stack{
+        gap:.75rem;
+    }
+
+    .footer-links-stack a{
+        font-size:.88rem;
+    }
+
+    .dispatch-text-input{
+        font-size:.88rem;
+        padding:.75rem 3.2rem .75rem 1rem;
+    }
+
+    .btn-dispatch-arrow{
+        width:34px;
+        height:34px;
+    }
+
+    .footer-base-compliance-row{
+        padding:1.25rem 1rem 0;
+    }
+
+    .footer-copyright-statement,
+    .compliance-links-track a{
+        font-size:.75rem;
+    }
+
+    .floating-back-top-trigger{
+        width:40px;
+        height:40px;
+        right:1rem;
+        bottom:1rem;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:380px){
+
+    .footer-grid-container{
+        padding:0 .8rem;
+    }
+
+    .footer-brand-logo{
+        width:90px;
+    }
+
+    .footer-corporate-desc,
+    .dispatch-instructions-text{
+        font-size:.84rem;
+    }
+
+    .location-string-text{
+        font-size:.78rem;
+    }
+
+    .footer-links-stack a{
+        font-size:.84rem;
+    }
+
+    .dispatch-text-input{
+        font-size:.84rem;
+    }
+
+    .btn-dispatch-arrow{
+        width:32px;
+        height:32px;
+    }
+
+    .footer-social-row{
+        gap:.65rem;
+    }
+
+    .social-circle-node{
+        width:34px;
+        height:34px;
+    }
+
+    .floating-back-top-trigger{
+        width:38px;
+        height:38px;
+        right:.8rem;
+        bottom:.8rem;
+    }
+
+}
 </style>
 
 <script>

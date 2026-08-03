@@ -1146,17 +1146,237 @@ mask-composite: exclude;
     transform: translateX(4px);
 }
 
-/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
-@media (max-width: 768px) {
-    .services-header-block h2 {
-        font-size: 2rem;
+/* ==========================================================
+   SERVICES SECTION - COMPLETE RESPONSIVE ADD-ON
+========================================================== */
+
+/* Large Laptop */
+@media (max-width:1200px){
+
+    .services-container{
+        padding:0 1.8rem;
     }
-    .services-grid-track {
-        grid-template-columns: 1fr; /* Stacks column sets vertically on tablet and smaller screen viewports */
+
+    .services-grid-track{
+        gap:1.75rem;
     }
-    .card-inner-hull {
-        padding: 2rem;
+
+    .services-header-block h2{
+        font-size:2.3rem;
     }
+
+}
+
+
+/* Laptop */
+@media (max-width:1024px){
+
+    .services-frame{
+        padding:60px 0 40px;
+    }
+
+    .services-container{
+        padding:0 1.5rem;
+    }
+
+    .services-header-block{
+        margin-bottom:3rem;
+    }
+
+    .services-header-block h2{
+        font-size:2.1rem;
+    }
+
+    .services-subtitle-desc{
+        font-size:1rem;
+    }
+
+    .services-grid-track{
+        grid-template-columns:repeat(2,1fr);
+        gap:1.5rem;
+    }
+
+    .card-inner-hull{
+        padding:2rem;
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:900px){
+
+    .services-frame{
+        padding:55px 0 35px;
+    }
+
+    .services-container{
+        padding:0 1.25rem;
+    }
+
+    .services-grid-track{
+        grid-template-columns:1fr;
+        max-width:650px;
+        margin:auto;
+        gap:1.5rem;
+    }
+
+    .services-header-block{
+        margin-bottom:2.5rem;
+    }
+
+    .services-header-block h2{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .services-subtitle-desc{
+        font-size:.95rem;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:768px){
+
+    .services-container{
+        padding:0 1rem;
+    }
+
+    .services-mini-badge{
+        font-size:.72rem;
+        padding:.4rem 1rem;
+    }
+
+    .services-header-block h2{
+        font-size:1.8rem;
+    }
+
+    .services-subtitle-desc{
+        font-size:.92rem;
+        line-height:1.7;
+    }
+
+    .service-card-node{
+        border-radius:14px;
+    }
+
+    .card-inner-hull{
+        padding:1.5rem;
+    }
+
+    .service-icon-box{
+        width:52px;
+        height:52px;
+        margin-bottom:1.2rem;
+    }
+
+    .service-node-title{
+        font-size:1.2rem;
+    }
+
+    .service-node-desc{
+        font-size:.9rem;
+        line-height:1.7;
+        margin-bottom:1.5rem;
+
+        /* Prevent text overflow */
+        word-break:break-word;
+        overflow-wrap:anywhere;
+    }
+
+    .service-node-link{
+        font-size:.9rem;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width:576px){
+
+    .services-frame{
+        padding:50px 0 30px;
+    }
+
+    .services-container{
+        padding:0 .9rem;
+    }
+
+    .services-header-block{
+        margin-bottom:2rem;
+    }
+
+    .services-header-block h2{
+        font-size:1.6rem;
+    }
+
+    .services-subtitle-desc{
+        font-size:.88rem;
+    }
+
+    .card-inner-hull{
+        padding:1.25rem;
+    }
+
+    .service-icon-box{
+        width:48px;
+        height:48px;
+    }
+
+    .service-node-title{
+        font-size:1.1rem;
+    }
+
+    .service-node-desc{
+        font-size:.85rem;
+    }
+
+    .service-node-link{
+        font-size:.85rem;
+    }
+
+}
+
+
+/* Very Small Mobile */
+@media (max-width:380px){
+
+    .services-container{
+        padding:0 .75rem;
+    }
+
+    .services-header-block h2{
+        font-size:1.4rem;
+    }
+
+    .services-mini-badge{
+        font-size:.65rem;
+    }
+
+    .card-inner-hull{
+        padding:1rem;
+    }
+
+    .service-node-title{
+        font-size:1rem;
+    }
+
+    .service-node-desc{
+        font-size:.82rem;
+        line-height:1.6;
+    }
+
+    .service-node-link{
+        font-size:.8rem;
+    }
+
+    .service-icon-box{
+        width:44px;
+        height:44px;
+    }
+
 }
 
 </style>
@@ -1508,6 +1728,191 @@ mask-composite: exclude;
     .counter-numeric-val { font-size: 2.4rem; }
 }
 
+/* ==========================================================
+   PERFORMANCE METRICS - RESPONSIVE ADD-ON
+========================================================== */
+
+/* Large Tablets */
+@media (max-width:992px){
+
+    .metrics-frame{
+        padding:60px 0 40px;
+    }
+
+    .metrics-container{
+        grid-template-columns:1fr;
+        gap:3.5rem;
+        text-align:center;
+    }
+
+    .metrics-summary-block{
+        align-items:center;
+    }
+
+    .metrics-desc{
+        max-width:700px;
+        margin:0 auto 2.5rem;
+    }
+
+    .metrics-visual-block{
+        order:-1;
+    }
+
+    .dashboard-terminal-frame{
+        max-width:550px;
+        margin:auto;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .metrics-frame{
+        padding:50px 0 35px;
+    }
+
+    .metrics-container{
+        padding:0 1.25rem;
+        gap:3rem;
+    }
+
+    .metrics-tag{
+        font-size:.72rem;
+        padding:.45rem .95rem;
+    }
+
+    .metrics-title{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .metrics-desc{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .counters-grid-wrapper{
+        grid-template-columns:repeat(3,1fr);
+        gap:1rem;
+    }
+
+    .counter-node-item{
+        padding:1rem;
+        background:rgba(255,255,255,.03);
+        border:1px solid rgba(255,255,255,.05);
+        border-radius:14px;
+    }
+
+    .counter-numeric-val{
+        font-size:2.2rem;
+    }
+
+    .counter-metric-label{
+        font-size:.8rem;
+    }
+
+    .dashboard-terminal-frame{
+        max-width:100%;
+    }
+
+    .terminal-status-overlay{
+        left:16px;
+        right:16px;
+        bottom:16px;
+        width:auto;
+        justify-content:center;
+        padding:.8rem 1rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .metrics-frame{
+        padding:45px 0 30px;
+    }
+
+    .metrics-container{
+        padding:0 1rem;
+    }
+
+    .metrics-title{
+        font-size:1.65rem;
+    }
+
+    .metrics-desc{
+        font-size:.9rem;
+    }
+
+    .counters-grid-wrapper{
+        grid-template-columns:1fr;
+        gap:1rem;
+        border-top:none;
+        padding-top:0;
+    }
+
+    .counter-node-item{
+        align-items:center;
+        text-align:center;
+        padding:1.25rem;
+    }
+
+    .counter-numeric-val{
+        font-size:2rem;
+    }
+
+    .dashboard-terminal-frame{
+        max-width:100%;
+        aspect-ratio:1/1;
+    }
+
+    .dashboard-main-img{
+        object-fit:cover;
+    }
+
+    .terminal-status-overlay{
+        position:relative;
+        left:auto;
+        bottom:auto;
+        right:auto;
+        margin-top:1rem;
+        width:100%;
+        border-radius:12px;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .metrics-container{
+        padding:0 .85rem;
+    }
+
+    .metrics-title{
+        font-size:1.45rem;
+    }
+
+    .metrics-tag{
+        font-size:.68rem;
+    }
+
+    .counter-numeric-val{
+        font-size:1.8rem;
+    }
+
+    .counter-metric-label{
+        font-size:.75rem;
+    }
+
+    .overlay-telemetry-text{
+        font-size:.72rem;
+        text-align:center;
+    }
+
+}
 </style>
 
 <script>
@@ -1758,6 +2163,176 @@ mask-composite: exclude;
     }
 }
 
+/* ==========================================================
+   CTA SECTION - COMPLETE RESPONSIVE ADD-ON
+========================================================== */
+
+/* Laptop */
+@media (max-width:1024px){
+
+    .cta-container{
+        gap:3rem;
+        padding:0 1.5rem;
+    }
+
+    .cta-content-wrapper{
+        max-width:650px;
+    }
+
+    .cta-title{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .cta-subtitle{
+        font-size:1rem;
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:900px){
+
+    .cta-frame{
+        padding:60px 0 40px;
+    }
+
+    .cta-container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:2.5rem;
+
+        padding:0 1.5rem;
+
+    }
+
+    .cta-content-wrapper{
+        max-width:700px;
+        width:100%;
+    }
+
+    .cta-title{
+        font-size:1.9rem;
+    }
+
+    .cta-subtitle{
+        margin:0 auto;
+        max-width:620px;
+    }
+
+    .cta-actions-hub{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:1rem;
+
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:768px){
+
+    .cta-frame{
+        padding:50px 0 35px;
+    }
+
+    .cta-container{
+        padding:0 1rem;
+    }
+
+    .cta-title{
+        font-size:1.65rem;
+        line-height:1.4;
+    }
+
+    .cta-subtitle{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .cta-actions-hub{
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:1rem;
+
+    }
+
+    .btn-cta-glow,
+    .btn-cta-outline{
+
+        width:100%;
+
+        max-width:340px;
+
+        text-align:center;
+
+        padding:1rem 1.25rem;
+
+        box-sizing:border-box;
+
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width:576px){
+
+    .cta-container{
+        padding:0 .9rem;
+    }
+
+    .cta-title{
+        font-size:1.45rem;
+    }
+
+    .cta-subtitle{
+        font-size:.9rem;
+    }
+
+    .btn-cta-glow,
+    .btn-cta-outline{
+        max-width:100%;
+        font-size:.9rem;
+    }
+
+}
+
+
+/* Very Small Devices */
+@media (max-width:380px){
+
+    .cta-title{
+        font-size:1.25rem;
+    }
+
+    .cta-subtitle{
+        font-size:.82rem;
+    }
+
+    .btn-cta-glow,
+    .btn-cta-outline{
+
+        font-size:.85rem;
+
+        padding:.9rem 1rem;
+
+    }
+
+}
 </style>
 
 <script>
@@ -2088,27 +2663,228 @@ mask-composite: exclude;
     color: #a7f3d0;
 }
 
-/* 📱 ADAPTIVE MOBILE LAYOUT OVERRIDES */
-@media (max-width: 1024px) {
-    .security-title { font-size: 2.1rem; }
-    .security-container { gap: 3rem; }
+/* ==========================================================
+   SECURITY SECTION - COMPLETE RESPONSIVE ADD-ON
+========================================================== */
+
+/* Laptop */
+@media (max-width:1024px){
+
+    .security-container{
+        gap:3rem;
+        padding:0 1.5rem;
+    }
+
+    .security-title{
+        font-size:2.1rem;
+    }
+
 }
 
-@media (max-width: 900px) {
-    .security-container {
-        grid-template-columns: 1fr; /* Stacks structural rows vertically on mobile viewports */
-        text-align: center;
-        gap: 4rem;
+
+/* Tablet */
+@media (max-width:900px){
+
+    .security-frame{
+        padding:60px 0 40px;
     }
-    /* Swaps position indexes order so visual graphic slides beautifully underneath text block headings on small panels */
-    .security-visual-block {
-        grid-row: 2;
+
+    .security-container{
+        grid-template-columns:1fr;
+        gap:3rem;
+        text-align:center;
+        padding:0 1.5rem;
     }
-    .security-text-block { align-items: center; }
-    .security-bullet-stack { align-items: flex-start; text-align: left; }
-    .security-compliance-overlay { right: 10px; top: 10px; }
+
+    .security-text-block{
+        order:1;
+        align-items:center;
+    }
+
+    .security-visual-block{
+        order:2;
+        justify-content:center;
+        width:100%;
+    }
+
+    .security-desc{
+        max-width:650px;
+        margin:0 auto 2rem;
+    }
+
+    .security-panel-frame{
+        width:100%;
+        max-width:520px;
+        margin:auto;
+        aspect-ratio:auto;
+    }
+
+    .security-main-img{
+        width:100%;
+        height:auto;
+        display:block;
+        object-fit:contain;
+    }
+
+    .security-compliance-overlay{
+        top:15px;
+        right:15px;
+        left:auto;
+        max-width:220px;
+    }
+
+    .security-bullet-stack{
+        width:100%;
+        max-width:650px;
+    }
+
 }
 
+
+/* Mobile */
+@media (max-width:768px){
+
+    .security-frame{
+        padding:50px 0 35px;
+    }
+
+    .security-container{
+        padding:0 1rem;
+    }
+
+    .security-tag-badge{
+        font-size:.72rem;
+    }
+
+    .security-title{
+        font-size:1.8rem;
+        line-height:1.35;
+    }
+
+    .security-desc{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .security-panel-frame{
+        width:100%;
+        max-width:100%;
+    }
+
+    .security-main-img{
+        width:100%;
+        height:auto;
+    }
+
+    .security-compliance-overlay{
+
+        position:relative;
+
+        top:auto;
+        right:auto;
+        left:auto;
+
+        margin-top:18px;
+
+        width:100%;
+        max-width:100%;
+
+        justify-content:center;
+
+        text-align:center;
+    }
+
+    .security-bullet-stack{
+        width:100%;
+    }
+
+    .bullet-node{
+        align-items:flex-start;
+        gap:.8rem;
+    }
+
+    .bullet-text{
+        flex:1;
+        min-width:0;
+        font-size:.9rem;
+        line-height:1.6;
+        overflow-wrap:anywhere;
+        word-break:break-word;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width:576px){
+
+    .security-container{
+        padding:0 .9rem;
+    }
+
+    .security-title{
+        font-size:1.55rem;
+    }
+
+    .security-desc{
+        font-size:.88rem;
+    }
+
+    .overlay-title{
+        font-size:.85rem;
+    }
+
+    .overlay-desc{
+        font-size:.72rem;
+    }
+
+    .shield-check-vector{
+        width:20px;
+        height:20px;
+    }
+
+    .bullet-check-icon{
+        width:18px;
+        height:18px;
+        font-size:.7rem;
+    }
+
+    .bullet-text{
+        font-size:.85rem;
+    }
+
+}
+
+
+/* Very Small Devices */
+@media (max-width:380px){
+
+    .security-title{
+        font-size:1.35rem;
+    }
+
+    .security-tag-badge{
+        font-size:.65rem;
+        padding:.4rem .9rem;
+    }
+
+    .security-desc{
+        font-size:.82rem;
+    }
+
+    .overlay-title{
+        font-size:.78rem;
+    }
+
+    .overlay-desc{
+        font-size:.65rem;
+    }
+
+    .bullet-text{
+        font-size:.8rem;
+    }
+
+}
 </style>
 
 <section id="about-strategy" class="strategy-frame">
@@ -2477,6 +3253,50 @@ mask-composite: exclude;
     .hud-node-br { right: 10px; bottom: 10px; }
 }
 
+/* ABOUT SECTION MOBILE FIX */
+@media (max-width:768px){
+
+    .strategy-container{
+        width:100%;
+        max-width:100%;
+        padding:0 18px;
+        box-sizing:border-box;
+    }
+
+    .strategy-text-block{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+    }
+
+    .workflow-steps-track{
+        width:100%;
+    }
+
+    .step-card-row{
+        width:100%;
+        display:flex;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .step-content-node{
+        flex:1;
+        min-width:0;
+        width:100%;
+    }
+
+    .step-content-node h4,
+    .step-content-node p,
+    .strategy-title,
+    .strategy-desc{
+        width:100%;
+        white-space:normal;
+        word-break:break-word;
+        overflow-wrap:anywhere;
+    }
+
+}
 </style>
 
 <script>
@@ -2869,6 +3689,253 @@ mask-composite: exclude;
     .slide-inner-hull { padding: 1.75rem; }
 }
 
+.security-visual-block{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.security-panel-frame{
+    position:relative;
+    width:100%;
+    max-width:520px;
+}
+
+.security-main-img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:16px;
+    object-fit:cover;
+}
+
+.security-compliance-overlay{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+/* ==========================================================
+   REVIEWS / TESTIMONIAL SECTION - RESPONSIVE ADD-ON
+========================================================== */
+
+/* Large Tablets */
+@media (max-width:992px){
+
+    .reviews-frame{
+        padding:60px 0 40px;
+    }
+
+    .reviews-container{
+        padding:0 2rem;
+    }
+
+    .reviews-header-block{
+        margin-bottom:3rem;
+    }
+
+    .reviews-title{
+        font-size:2.25rem;
+        line-height:1.25;
+    }
+
+    .reviews-desc{
+        font-size:1rem;
+        max-width:650px;
+        margin:auto;
+    }
+
+    .reviews-slider-track{
+        gap:2rem;
+    }
+
+    .review-slide-card{
+        flex:0 0 calc(100% - 1rem);
+    }
+
+    .slide-inner-hull{
+        padding:2rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .reviews-frame{
+        padding:55px 0 35px;
+    }
+
+    .reviews-container{
+        padding:0 1.5rem;
+    }
+
+    .reviews-header-block{
+        margin-bottom:2.5rem;
+    }
+
+    .reviews-mini-tag{
+        font-size:.72rem;
+        padding:.45rem 1rem;
+    }
+
+    .reviews-title{
+        font-size:1.9rem;
+    }
+
+    .reviews-desc{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .reviews-carousel-viewport{
+        padding:1rem 0;
+    }
+
+    .reviews-slider-track{
+        gap:1.5rem;
+    }
+
+    .review-slide-card{
+        flex:0 0 100%;
+    }
+
+    .slide-inner-hull{
+        padding:1.6rem;
+        gap:1.2rem;
+    }
+
+    .slide-quote{
+        font-size:.95rem;
+    }
+
+    .operator-profile-flex{
+        gap:.8rem;
+        padding-top:1.2rem;
+    }
+
+    .operator-avatar{
+        width:42px;
+        height:42px;
+    }
+
+    .reviews-glow-orb{
+        width:360px;
+        height:360px;
+        filter:blur(100px);
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .reviews-frame{
+        padding:50px 0 30px;
+    }
+
+    .reviews-container{
+        padding:0 1rem;
+    }
+
+    .reviews-title{
+        font-size:1.55rem;
+    }
+
+    .reviews-desc{
+        font-size:.9rem;
+    }
+
+    .slide-inner-hull{
+        padding:1.25rem;
+    }
+
+    .star-rating-row{
+        font-size:.95rem;
+    }
+
+    .slide-quote{
+        font-size:.9rem;
+        line-height:1.75;
+    }
+
+    .operator-name{
+        font-size:.9rem;
+    }
+
+    .operator-meta{
+        font-size:.72rem;
+    }
+
+    .reviews-pagination-dots{
+        margin-top:2rem;
+        gap:.6rem;
+    }
+
+    .dot-selector{
+        width:9px;
+        height:9px;
+    }
+
+    .dot-selector.active-dot{
+        width:24px;
+    }
+
+    .reviews-glow-orb{
+        width:260px;
+        height:260px;
+        filter:blur(70px);
+        opacity:.08;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:380px){
+
+    .reviews-container{
+        padding:0 .8rem;
+    }
+
+    .reviews-title{
+        font-size:1.35rem;
+    }
+
+    .reviews-desc{
+        font-size:.85rem;
+    }
+
+    .slide-inner-hull{
+        padding:1rem;
+    }
+
+    .slide-quote{
+        font-size:.85rem;
+    }
+
+    .operator-avatar{
+        width:38px;
+        height:38px;
+    }
+
+    .operator-name{
+        font-size:.85rem;
+    }
+
+    .operator-meta{
+        font-size:.68rem;
+    }
+
+    .dot-selector{
+        width:8px;
+        height:8px;
+    }
+
+    .dot-selector.active-dot{
+        width:20px;
+    }
+
+}
 </style>
 
 <script>
@@ -3262,6 +4329,201 @@ mask-composite: exclude;
     .accordion-content-inner { padding: 0 1.5rem 1.25rem 1.5rem; }
     .accordion-title-text { font-size: 1rem; }
 }
+/* ==========================================================
+   FAQ SECTION - RESPONSIVE ADD-ON
+========================================================== */
+
+/* Large Tablets */
+@media (max-width:992px){
+
+    .faq-frame{
+        padding:60px 0 40px;
+    }
+
+    .faq-container{
+        max-width:100%;
+        padding:0 2rem;
+    }
+
+    .faq-header-block{
+        margin-bottom:3rem;
+    }
+
+    .faq-header-block h2{
+        font-size:2.25rem;
+        line-height:1.25;
+    }
+
+    .faq-subtitle-desc{
+        font-size:1rem;
+        max-width:650px;
+        margin:auto;
+    }
+
+    .accordion-trigger-row{
+        padding:1.4rem 1.6rem;
+    }
+
+    .accordion-content-inner{
+        padding:0 1.6rem 1.4rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .faq-frame{
+        padding:55px 0 35px;
+    }
+
+    .faq-container{
+        padding:0 1.25rem;
+    }
+
+    .faq-header-block{
+        margin-bottom:2.5rem;
+    }
+
+    .faq-header-block h2{
+        font-size:1.9rem;
+    }
+
+    .faq-subtitle-desc{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .faq-badge{
+        font-size:.72rem;
+        padding:.45rem 1rem;
+    }
+
+    .faq-accordion-stack{
+        gap:1rem;
+    }
+
+    .faq-accordion-item{
+        border-radius:10px;
+    }
+
+    .accordion-trigger-row{
+        padding:1.15rem 1.25rem;
+        gap:1rem;
+        align-items:flex-start;
+    }
+
+    .accordion-title-text{
+        font-size:1rem;
+        line-height:1.5;
+    }
+
+    .accordion-content-inner{
+        padding:0 1.25rem 1.2rem;
+    }
+
+    .faq-answer-text{
+        font-size:.92rem;
+        line-height:1.7;
+    }
+
+    .faq-ambient-glow{
+        width:350px;
+        height:350px;
+        filter:blur(90px);
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .faq-frame{
+        padding:50px 0 30px;
+    }
+
+    .faq-container{
+        padding:0 1rem;
+    }
+
+    .faq-header-block{
+        margin-bottom:2rem;
+    }
+
+    .faq-header-block h2{
+        font-size:1.55rem;
+    }
+
+    .faq-subtitle-desc{
+        font-size:.9rem;
+    }
+
+    .faq-badge{
+        font-size:.68rem;
+        padding:.4rem .9rem;
+    }
+
+    .accordion-trigger-row{
+        padding:1rem;
+        gap:.8rem;
+    }
+
+    .accordion-title-text{
+        font-size:.95rem;
+    }
+
+    .accordion-content-inner{
+        padding:0 1rem 1rem;
+    }
+
+    .faq-answer-text{
+        font-size:.88rem;
+        margin-top:.8rem;
+    }
+
+    .accordion-toggle-cross{
+        width:14px;
+        height:14px;
+    }
+
+    .accordion-toggle-cross::before{
+        top:6px;
+    }
+
+    .accordion-toggle-cross::after{
+        left:6px;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:380px){
+
+    .faq-container{
+        padding:0 .8rem;
+    }
+
+    .faq-header-block h2{
+        font-size:1.35rem;
+    }
+
+    .faq-subtitle-desc{
+        font-size:.85rem;
+    }
+
+    .accordion-trigger-row{
+        padding:.9rem;
+    }
+
+    .accordion-title-text{
+        font-size:.9rem;
+    }
+
+    .faq-answer-text{
+        font-size:.84rem;
+    }
+
+}
 
 </style>
 
@@ -3500,6 +4762,133 @@ mask-composite: exclude;
     }
 }
 
+/* ==========================================================
+   ONE-LINE CTA SECTION - RESPONSIVE ADD-ON
+========================================================== */
+
+/* Large Tablets */
+@media (max-width:992px){
+
+    .one-line-cta-frame{
+        padding:60px 0 40px;
+    }
+
+    .one-line-cta-container{
+        padding:0 2rem;
+    }
+
+    .one-line-flex-row{
+        gap:2rem;
+    }
+
+    .one-line-title{
+        font-size:1.55rem;
+        line-height:1.4;
+    }
+
+    .btn-one-line-glow{
+        padding:.85rem 2rem;
+        font-size:.92rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .one-line-cta-frame{
+        padding:55px 0 35px;
+    }
+
+    .one-line-cta-container{
+        padding:0 1.5rem;
+    }
+
+    .one-line-flex-row{
+        flex-direction:column;
+        text-align:center;
+        gap:1.75rem;
+    }
+
+    .one-line-title{
+        font-size:1.4rem;
+        line-height:1.5;
+        max-width:650px;
+        margin:0 auto;
+    }
+
+    .one-line-actions{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .btn-one-line-glow{
+        width:100%;
+        max-width:320px;
+        text-align:center;
+        padding:.95rem 1.5rem;
+    }
+
+    .one-line-ambient-glow{
+        width:320px;
+        height:180px;
+        filter:blur(80px);
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .one-line-cta-frame{
+        padding:50px 0 30px;
+    }
+
+    .one-line-cta-container{
+        padding:0 1rem;
+    }
+
+    .one-line-title{
+        font-size:1.2rem;
+        line-height:1.55;
+    }
+
+    .btn-one-line-glow{
+        width:100%;
+        max-width:100%;
+        padding:.9rem 1rem;
+        font-size:.9rem;
+        border-radius:8px;
+    }
+
+    .one-line-ambient-glow{
+        width:240px;
+        height:150px;
+        filter:blur(65px);
+        opacity:.1;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:380px){
+
+    .one-line-cta-container{
+        padding:0 .8rem;
+    }
+
+    .one-line-title{
+        font-size:1.05rem;
+        line-height:1.6;
+    }
+
+    .btn-one-line-glow{
+        font-size:.85rem;
+        padding:.85rem;
+    }
+
+}
 </style>
 
 <script>
@@ -3959,7 +5348,236 @@ mask-composite: exclude;
     .floating-back-top-trigger { bottom: 1.5rem; right: 1.5rem; }
 }
 
+/* ==========================================================
+   FOOTER SECTION - RESPONSIVE ADD-ON
+========================================================== */
 
+/* Large Tablets */
+@media (max-width:992px){
+
+    .tech-footer-root{
+        padding:60px 0 40px;
+    }
+
+    .footer-grid-container{
+        grid-template-columns:1.3fr 1fr;
+        gap:3rem 2rem;
+        padding:0 2rem;
+    }
+
+    .footer-summary-block{
+        grid-column:1 / -1;
+        max-width:700px;
+    }
+
+    .footer-dispatch-column{
+        grid-column:1 / -1;
+        justify-self:start;
+        max-width:500px;
+    }
+
+    .footer-links-column{
+        justify-self:start;
+        min-width:auto;
+    }
+
+    .footer-base-compliance-row{
+        margin-top:3rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .tech-footer-root{
+        padding:55px 0 35px;
+    }
+
+    .footer-grid-container{
+        grid-template-columns:1fr;
+        gap:2.5rem;
+        padding:0 1.5rem;
+    }
+
+    .footer-summary-block,
+    .footer-links-column,
+    .footer-dispatch-column{
+        align-items:center;
+        justify-self:center;
+        text-align:center;
+        max-width:100%;
+        grid-column:auto;
+    }
+
+    .footer-brand-anchor{
+        justify-content:center;
+    }
+
+    .footer-corporate-desc{
+        max-width:600px;
+    }
+
+    .footer-location-line{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .footer-social-row{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .footer-links-stack{
+        align-items:center;
+    }
+
+    .column-title-heading::after{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .dispatch-input-row{
+        max-width:420px;
+    }
+
+    .footer-base-compliance-row{
+        margin-top:2.5rem;
+        padding:1.5rem 1.5rem 0;
+    }
+
+    .compliance-inner-flex{
+        flex-direction:column;
+        text-align:center;
+        gap:1rem;
+    }
+
+    .compliance-links-track{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:1rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .tech-footer-root{
+        padding:50px 0 30px;
+    }
+
+    .footer-grid-container{
+        padding:0 1rem;
+        gap:2rem;
+    }
+
+    .footer-brand-logo{
+        width:100px;
+        height:auto;
+    }
+
+    .footer-corporate-desc,
+    .dispatch-instructions-text{
+        font-size:.88rem;
+        line-height:1.7;
+    }
+
+    .location-string-text{
+        font-size:.82rem;
+    }
+
+    .column-title-heading{
+        font-size:.82rem;
+        margin-bottom:1rem;
+    }
+
+    .footer-links-stack{
+        gap:.75rem;
+    }
+
+    .footer-links-stack a{
+        font-size:.88rem;
+    }
+
+    .dispatch-text-input{
+        font-size:.88rem;
+        padding:.75rem 3.2rem .75rem 1rem;
+    }
+
+    .btn-dispatch-arrow{
+        width:34px;
+        height:34px;
+    }
+
+    .footer-base-compliance-row{
+        padding:1.25rem 1rem 0;
+    }
+
+    .footer-copyright-statement,
+    .compliance-links-track a{
+        font-size:.75rem;
+    }
+
+    .floating-back-top-trigger{
+        width:40px;
+        height:40px;
+        right:1rem;
+        bottom:1rem;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:380px){
+
+    .footer-grid-container{
+        padding:0 .8rem;
+    }
+
+    .footer-brand-logo{
+        width:90px;
+    }
+
+    .footer-corporate-desc,
+    .dispatch-instructions-text{
+        font-size:.84rem;
+    }
+
+    .location-string-text{
+        font-size:.78rem;
+    }
+
+    .footer-links-stack a{
+        font-size:.84rem;
+    }
+
+    .dispatch-text-input{
+        font-size:.84rem;
+    }
+
+    .btn-dispatch-arrow{
+        width:32px;
+        height:32px;
+    }
+
+    .footer-social-row{
+        gap:.65rem;
+    }
+
+    .social-circle-node{
+        width:34px;
+        height:34px;
+    }
+
+    .floating-back-top-trigger{
+        width:38px;
+        height:38px;
+        right:.8rem;
+        bottom:.8rem;
+    }
+
+}
 </style>
 
 <script>

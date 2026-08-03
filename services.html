@@ -962,6 +962,239 @@
     .srv-card-content { padding: 1.75rem 1.5rem; }
 }
 
+/* ==========================================
+   RESPONSIVE ADD-ON - SERVICES GRID SECTION
+========================================== */
+
+/* Large Laptops */
+@media (max-width:1200px){
+
+    .srv-grid-container{
+        padding:0 1.75rem;
+    }
+
+    .srv-grid-track{
+        gap:2rem;
+    }
+
+    .srv-grid-header-block h2{
+        font-size:2.3rem;
+    }
+}
+
+
+/* Tablets */
+@media (max-width:992px){
+
+    .srv-grid-frame{
+        padding:45px 0 30px;
+    }
+
+    .srv-grid-container{
+        padding:0 1.5rem;
+    }
+
+    .srv-grid-track{
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+        gap:1.8rem;
+    }
+
+    .srv-grid-header-block{
+        margin-bottom:3rem;
+    }
+
+    .srv-grid-header-block h2{
+        font-size:2rem;
+    }
+
+    .srv-card-content{
+        padding:2rem 1.5rem;
+    }
+
+    .srv-node-title{
+        font-size:1.25rem;
+    }
+}
+
+
+/* Tablets & Mobile */
+@media (max-width:768px){
+
+    .srv-grid-frame{
+        padding:40px 0 30px;
+    }
+
+    .srv-grid-container{
+        padding:0 1.25rem;
+    }
+
+    .srv-grid-track{
+        grid-template-columns:1fr;
+        gap:1.75rem;
+    }
+
+    .srv-grid-header-block{
+        max-width:100%;
+        margin-bottom:2.5rem;
+    }
+
+    .srv-grid-header-block h2{
+        font-size:1.85rem;
+        line-height:1.35;
+    }
+
+    .srv-grid-desc{
+        font-size:1rem;
+    }
+
+    .srv-image-showcase-box{
+        aspect-ratio:16/9;
+    }
+
+    .srv-card-content{
+        padding:1.75rem 1.4rem;
+    }
+
+    .srv-features-micro-stack{
+        gap:.8rem;
+    }
+
+    .srv-grid-glow-orb{
+        width:320px;
+        height:320px;
+        filter:blur(90px);
+    }
+}
+
+
+/* Mobile */
+@media (max-width:576px){
+
+    .srv-grid-frame{
+        padding:35px 0 25px;
+    }
+
+    .srv-grid-container{
+        padding:0 1rem;
+    }
+
+    .srv-grid-header-block h2{
+        font-size:1.6rem;
+    }
+
+    .srv-grid-badge{
+        font-size:.72rem;
+        padding:.45rem .9rem;
+    }
+
+    .srv-grid-desc{
+        font-size:.95rem;
+    }
+
+    .srv-card-content{
+        padding:1.5rem 1.25rem;
+    }
+
+    .srv-node-title{
+        font-size:1.15rem;
+    }
+
+    .srv-node-desc{
+        font-size:.92rem;
+        margin-bottom:1.4rem;
+    }
+
+    .srv-features-micro-stack li{
+        font-size:.88rem;
+        gap:.65rem;
+    }
+
+    .srv-icon-badge-vector{
+        width:34px;
+        height:34px;
+        bottom:.8rem;
+        right:.8rem;
+    }
+
+    .srv-icon-badge-vector svg{
+        width:15px;
+        height:15px;
+    }
+}
+
+
+/* Small Phones */
+@media (max-width:480px){
+
+    .srv-grid-header-block h2{
+        font-size:1.45rem;
+    }
+
+    .srv-image-showcase-box{
+        aspect-ratio:4/3;
+    }
+
+    .srv-card-content{
+        padding:1.35rem 1.1rem;
+    }
+
+    .srv-node-title{
+        font-size:1.08rem;
+    }
+
+    .srv-node-desc{
+        font-size:.9rem;
+        line-height:1.55;
+    }
+
+    .srv-features-micro-stack{
+        padding-top:1rem;
+    }
+
+    .srv-features-micro-stack li{
+        align-items:flex-start;
+    }
+
+    .bullet-check-vector{
+        width:13px;
+        height:13px;
+        margin-top:3px;
+    }
+}
+
+
+/* Very Small Phones */
+@media (max-width:360px){
+
+    .srv-grid-container{
+        padding:0 .8rem;
+    }
+
+    .srv-grid-header-block h2{
+        font-size:1.3rem;
+    }
+
+    .srv-grid-desc{
+        font-size:.9rem;
+    }
+
+    .srv-card-content{
+        padding:1.2rem 1rem;
+    }
+
+    .srv-node-title{
+        font-size:1rem;
+    }
+
+    .srv-node-desc,
+    .srv-features-micro-stack li{
+        font-size:.85rem;
+    }
+
+    .srv-grid-glow-orb{
+        display:none;
+    }
+}
 
 </style>
 
@@ -1398,6 +1631,200 @@
     .srv-accordion-content { padding: 0 1.25rem 1rem 1.25rem; }
 }
 
+/* =====================================================
+   RESPONSIVE ADD-ON - SERVICE FEATURES SECTION
+===================================================== */
+
+/* Large Tablets */
+@media (max-width:1200px){
+
+    .srv-acc-container{
+        padding:0 1.75rem;
+    }
+
+    .srv-acc-split-grid{
+        gap:3.5rem;
+    }
+
+    .srv-acc-title{
+        font-size:2.2rem;
+    }
+
+    .srv-acc-panel-hull{
+        max-width:420px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .srv-acc-frame{
+        padding:45px 0 35px;
+    }
+
+    .srv-acc-split-grid{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .srv-acc-text-block{
+        order:1;
+        align-items:center;
+        text-align:center;
+    }
+
+    .srv-acc-visual-block{
+        order:2;
+    }
+
+    .srv-accordion-stack{
+        width:100%;
+        max-width:700px;
+        text-align:left;
+    }
+
+    .srv-acc-panel-hull{
+        margin:auto;
+    }
+
+    .srv-acc-floating-card{
+        left:15px;
+        bottom:15px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .srv-acc-container{
+        padding:0 1.2rem;
+    }
+
+    .srv-acc-frame{
+        padding:40px 0 30px;
+    }
+
+    .srv-acc-tag-badge{
+        font-size:.72rem;
+        padding:.45rem 1rem;
+    }
+
+    .srv-acc-title{
+        font-size:1.9rem;
+        line-height:1.3;
+        margin-bottom:1.5rem;
+    }
+
+    .srv-acc-panel-hull{
+        max-width:360px;
+    }
+
+    .srv-accordion-trigger{
+        padding:1rem 1.25rem;
+    }
+
+    .srv-acc-title-text{
+        font-size:.95rem;
+        line-height:1.5;
+    }
+
+    .srv-accordion-content{
+        padding:0 1.25rem 1rem;
+    }
+
+    .srv-accordion-content p{
+        font-size:.9rem;
+    }
+
+}
+
+/* Small Mobiles */
+@media (max-width:576px){
+
+    .srv-acc-frame{
+        padding:35px 0 25px;
+    }
+
+    .srv-acc-title{
+        font-size:1.65rem;
+    }
+
+    .srv-acc-panel-hull{
+        max-width:100%;
+        border-radius:14px;
+    }
+
+    .srv-acc-main-img{
+        border-radius:14px;
+    }
+
+    .srv-acc-floating-card{
+        position:absolute;
+        left:10px;
+        right:10px;
+        bottom:10px;
+        padding:.75rem 1rem;
+        gap:.65rem;
+    }
+
+    .hud-circle-vector{
+        width:28px;
+        height:28px;
+    }
+
+    .srv-acc-floating-card h5{
+        font-size:.75rem;
+    }
+
+    .srv-acc-floating-card p{
+        font-size:.68rem;
+    }
+
+    .srv-accordion-trigger{
+        padding:.95rem 1rem;
+        gap:1rem;
+    }
+
+    .srv-accordion-content{
+        padding:0 1rem .9rem;
+    }
+
+}
+
+/* Very Small Devices */
+@media (max-width:380px){
+
+    .srv-acc-container{
+        padding:0 1rem;
+    }
+
+    .srv-acc-title{
+        font-size:1.45rem;
+    }
+
+    .srv-acc-tag-badge{
+        font-size:.68rem;
+    }
+
+    .srv-acc-title-text{
+        font-size:.88rem;
+    }
+
+    .srv-acc-floating-card{
+        padding:.65rem .85rem;
+    }
+
+    .srv-acc-floating-card h5{
+        font-size:.7rem;
+    }
+
+    .srv-acc-floating-card p{
+        font-size:.62rem;
+    }
+
+}
 </style>
 
 <script>
@@ -1645,6 +2072,148 @@
     }
 }
 
+/* ==========================================
+   CTA SECTION - RESPONSIVE ADD-ON
+========================================== */
+
+/* Large Tablets */
+@media (max-width:1200px){
+
+    .cta-container{
+        padding:0 1.5rem;
+        gap:3rem;
+    }
+
+    .cta-content-wrapper{
+        max-width:700px;
+    }
+
+    .cta-title{
+        font-size:2.1rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:991px){
+
+    .cta-frame{
+        padding:60px 0;
+    }
+
+    .cta-container{
+        flex-direction:column;
+        text-align:center;
+        gap:2.5rem;
+        padding:0 1.2rem;
+    }
+
+    .cta-content-wrapper{
+        max-width:100%;
+    }
+
+    .cta-title{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .cta-subtitle{
+        max-width:650px;
+        margin:0 auto;
+        font-size:1rem;
+    }
+
+    .cta-actions-hub{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:1rem;
+        width:100%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .cta-frame{
+        padding:50px 0;
+    }
+
+    .cta-container{
+        padding:0 1rem;
+        gap:2rem;
+    }
+
+    .cta-title{
+        font-size:1.75rem;
+        line-height:1.35;
+    }
+
+    .cta-subtitle{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .cta-actions-hub{
+        flex-direction:column;
+        width:100%;
+        align-items:stretch;
+    }
+
+    .btn-cta-glow,
+    .btn-cta-outline{
+        width:100%;
+        max-width:340px;
+        margin:0 auto;
+        text-align:center;
+        padding:1rem;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+    .cta-container{
+        padding:0 .9rem;
+    }
+
+    .cta-title{
+        font-size:1.45rem;
+        line-height:1.4;
+    }
+
+    .cta-subtitle{
+        font-size:.9rem;
+    }
+
+    .btn-cta-glow,
+    .btn-cta-outline{
+        max-width:100%;
+        font-size:.9rem;
+        padding:.95rem 1rem;
+    }
+
+}
+
+/* Extra Small Devices */
+@media (max-width:360px){
+
+    .cta-title{
+        font-size:1.25rem;
+    }
+
+    .cta-subtitle{
+        font-size:.85rem;
+    }
+
+    .btn-cta-glow,
+    .btn-cta-outline{
+        font-size:.85rem;
+        padding:.85rem;
+    }
+
+}
 </style>
 
 <script>
@@ -2029,6 +2598,220 @@
     .card-overlay-tr { right: 10px; top: -15px; }
 }
 
+/* ==================================================
+   RESPONSIVE ADD-ON - SERVICE SLA SECTION
+================================================== */
+
+/* Large Tablets */
+@media (max-width:1200px){
+
+    .sla-container{
+        padding:0 1.75rem;
+        gap:3.5rem;
+    }
+
+    .sla-title{
+        font-size:2.2rem;
+    }
+
+    .sla-graphic-hull{
+        max-width:420px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .sla-frame{
+        padding:45px 0 35px;
+    }
+
+    .sla-container{
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .sla-text-block{
+        order:1;
+        align-items:center;
+        text-align:center;
+    }
+
+    .sla-visual-block{
+        order:2;
+    }
+
+    .sla-desc{
+        max-width:700px;
+    }
+
+    .sla-parameters-track{
+        width:100%;
+        max-width:700px;
+        text-align:left;
+    }
+
+    .sla-graphic-hull{
+        margin:auto;
+    }
+
+    .card-overlay-tr{
+        right:15px;
+        top:15px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .sla-container{
+        padding:0 1.2rem;
+    }
+
+    .sla-frame{
+        padding:40px 0 30px;
+    }
+
+    .sla-tag-badge{
+        font-size:.72rem;
+        padding:.45rem 1rem;
+    }
+
+    .sla-title{
+        font-size:1.9rem;
+        line-height:1.3;
+    }
+
+    .sla-desc{
+        font-size:.95rem;
+        line-height:1.7;
+        margin-bottom:2rem;
+    }
+
+    .sla-parameter-card{
+        padding:1.2rem;
+        gap:1rem;
+    }
+
+    .sla-icon-box{
+        width:30px;
+        height:30px;
+        font-size:.8rem;
+    }
+
+    .sla-parameter-content h4{
+        font-size:1rem;
+    }
+
+    .sla-parameter-content p{
+        font-size:.9rem;
+    }
+
+    .sla-graphic-hull{
+        max-width:360px;
+    }
+
+    .card-overlay-tr{
+        top:10px;
+        right:10px;
+    }
+
+}
+
+/* Small Mobiles */
+@media (max-width:576px){
+
+    .sla-frame{
+        padding:35px 0 25px;
+    }
+
+    .sla-title{
+        font-size:1.65rem;
+    }
+
+    .sla-graphic-hull{
+        max-width:100%;
+        border-radius:14px;
+    }
+
+    .sla-main-img{
+        border-radius:14px;
+    }
+
+    .sla-floating-card{
+        left:10px;
+        right:10px;
+        top:auto;
+        bottom:10px;
+        padding:.75rem 1rem;
+        gap:.65rem;
+    }
+
+    .card-overlay-tr{
+        left:10px;
+        right:10px;
+        bottom:10px;
+        top:auto;
+    }
+
+    .sla-hud-meta h5{
+        font-size:.75rem;
+    }
+
+    .sla-hud-meta p{
+        font-size:.68rem;
+    }
+
+    .sla-parameter-card{
+        flex-direction:column;
+        align-items:flex-start;
+        text-align:left;
+    }
+
+}
+
+/* Extra Small Devices */
+@media (max-width:380px){
+
+    .sla-container{
+        padding:0 1rem;
+    }
+
+    .sla-title{
+        font-size:1.45rem;
+    }
+
+    .sla-tag-badge{
+        font-size:.68rem;
+    }
+
+    .sla-desc{
+        font-size:.9rem;
+    }
+
+    .sla-parameter-content h4{
+        font-size:.95rem;
+    }
+
+    .sla-parameter-content p{
+        font-size:.85rem;
+    }
+
+    .sla-floating-card{
+        padding:.65rem .85rem;
+    }
+
+    .sla-hud-meta h5{
+        font-size:.7rem;
+    }
+
+    .sla-hud-meta p{
+        font-size:.62rem;
+    }
+
+}
 </style>
 
 <script>
@@ -2432,6 +3215,232 @@
     .hud-bottom-left { left: 10px; bottom: -15px; }
 }
 
+/* =====================================================
+   SANDBOX RESPONSIVE ADD-ON
+===================================================== */
+
+/* Large Tablets */
+@media (max-width:992px){
+
+    .sandbox-frame{
+        padding:60px 0 40px;
+    }
+
+    .sandbox-container{
+        padding:0 1.5rem;
+    }
+
+    .sandbox-split-grid{
+        grid-template-columns:1fr;
+        gap:4rem;
+    }
+
+    .sandbox-visual-block{
+        order:1;
+    }
+
+    .sandbox-text-block{
+        order:2;
+        align-items:center;
+        text-align:center;
+    }
+
+    .sandbox-desc{
+        max-width:100%;
+    }
+
+    .sandbox-steps-track{
+        width:100%;
+        text-align:left;
+    }
+
+    .sandbox-graphic-hull{
+        max-width:520px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .sandbox-frame{
+        padding:50px 0 35px;
+    }
+
+    .sandbox-container{
+        padding:0 1.25rem;
+    }
+
+    .sandbox-title{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .sandbox-desc{
+        font-size:1rem;
+        margin-bottom:2rem;
+    }
+
+    .sandbox-tag-badge{
+        font-size:.75rem;
+        padding:.45rem 1rem;
+    }
+
+    .sandbox-graphic-hull{
+        width:100%;
+        max-width:100%;
+    }
+
+    .sandbox-main-img{
+        border-radius:14px;
+    }
+
+    /* Floating Card */
+    .hud-bottom-left{
+        left:15px;
+        bottom:15px;
+    }
+
+    .sandbox-floating-hud{
+        padding:.65rem 1rem;
+        max-width:220px;
+    }
+
+    .hud-meta-text h5{
+        font-size:.75rem;
+    }
+
+    .hud-meta-text p{
+        font-size:.68rem;
+    }
+
+    .sandbox-step-row{
+        gap:1rem;
+        padding-bottom:1.2rem;
+    }
+
+    .sandbox-step-icon{
+        width:38px;
+        height:38px;
+    }
+
+    .sandbox-step-content h4{
+        font-size:1rem;
+    }
+
+    .sandbox-step-content p{
+        font-size:.9rem;
+        line-height:1.6;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .sandbox-frame{
+        padding:45px 0 30px;
+    }
+
+    .sandbox-container{
+        padding:0 1rem;
+    }
+
+    .sandbox-title{
+        font-size:1.7rem;
+    }
+
+    .sandbox-desc{
+        font-size:.95rem;
+    }
+
+    .sandbox-tag-badge{
+        font-size:.7rem;
+        padding:.4rem .9rem;
+        margin-bottom:1rem;
+    }
+
+    .sandbox-graphic-hull{
+        border-radius:12px;
+    }
+
+    .sandbox-main-img{
+        border-radius:12px;
+    }
+
+    /* Floating card becomes inside image */
+    .sandbox-floating-hud{
+        left:10px;
+        right:10px;
+        bottom:10px;
+        width:auto;
+        max-width:none;
+        padding:.75rem 1rem;
+    }
+
+    .hud-bottom-left{
+        left:10px;
+        bottom:10px;
+    }
+
+    .sandbox-step-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:.8rem;
+    }
+
+    .sandbox-step-icon{
+        width:42px;
+        height:42px;
+    }
+
+    .sandbox-step-content{
+        width:100%;
+    }
+
+    .sandbox-step-content h4{
+        font-size:1rem;
+    }
+
+    .sandbox-step-content p{
+        font-size:.88rem;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .sandbox-title{
+        font-size:1.45rem;
+    }
+
+    .sandbox-desc{
+        font-size:.9rem;
+    }
+
+    .sandbox-floating-hud{
+        padding:.6rem .8rem;
+    }
+
+    .hud-meta-text h5{
+        font-size:.7rem;
+    }
+
+    .hud-meta-text p{
+        font-size:.62rem;
+    }
+
+    .sandbox-step-content h4{
+        font-size:.95rem;
+    }
+
+    .sandbox-step-content p{
+        font-size:.84rem;
+    }
+
+}
+
 </style>
 
 <script>
@@ -2477,7 +3486,7 @@
     
     <!-- Background Canvas Texture Layer Mapping -->
     <div class="api-bg-layer">
-        <img src="https://unsplash.com" alt="Cyber tech matrix binary network backdrop vector" class="api-mesh-img">
+        <img src="./Assests/cyptography shield.webp" alt="Cyber tech matrix binary network backdrop vector" class="api-mesh-img">
         <div class="api-ambient-glow sky-cyan-blur"></div>
     </div>
 
@@ -2842,6 +3851,174 @@ nexus.on(<span class="code-string">'deployment_complete'</span>, (node) => {
     .terminal-code-body code { font-size: 0.8rem; }
 }
 
+/* ===============================
+   TABLET
+================================= */
+@media (max-width:991px){
+
+    .api-frame{
+        overflow:hidden;
+    }
+
+    .api-container{
+        grid-template-columns:1fr;
+        gap:60px;
+        text-align:center;
+        padding:0 24px;
+    }
+
+    .api-text-block{
+        align-items:center;
+        order:1;
+    }
+
+    .api-terminal-block{
+        order:2;
+        width:100%;
+        max-width:100%;
+    }
+
+    .api-title{
+        font-size:2.2rem;
+        line-height:1.3;
+    }
+
+    .api-desc{
+        max-width:100%;
+    }
+
+    .api-actions-row{
+        justify-content:center;
+    }
+
+    .terminal-floating-status{
+        right:15px;
+        bottom:15px;
+    }
+}
+
+
+/* ===============================
+   MOBILE
+================================= */
+@media (max-width:767px){
+
+    .api-frame{
+        padding:45px 0;
+    }
+
+    .api-container{
+        padding:0 18px;
+        gap:45px;
+    }
+
+    .api-title{
+        font-size:1.8rem;
+        line-height:1.35;
+        word-break:break-word;
+    }
+
+    .api-desc{
+        font-size:0.95rem;
+        line-height:1.8;
+    }
+
+    .api-actions-row{
+        width:100%;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .btn-api-primary,
+    .btn-api-secondary{
+        width:100%;
+        text-align:center;
+    }
+
+    .terminal-shell-hull{
+        padding:18px;
+    }
+
+    .terminal-header-bar{
+        flex-wrap:wrap;
+    }
+
+    .terminal-tab-title{
+        width:100%;
+        margin-left:0;
+        margin-top:8px;
+        font-size:.7rem;
+        overflow-wrap:anywhere;
+    }
+
+    .terminal-code-body{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .terminal-code-body pre{
+        min-width:600px;
+        margin:0;
+    }
+
+    .terminal-code-body code{
+        font-size:.78rem;
+        line-height:1.6;
+        white-space:pre;
+    }
+
+    .terminal-floating-status{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin-top:18px;
+        width:100%;
+        justify-content:center;
+    }
+}
+
+
+/* ===============================
+   SMALL MOBILE
+================================= */
+@media (max-width:480px){
+
+    .api-container{
+        padding:0 15px;
+    }
+
+    .api-title{
+        font-size:1.55rem;
+    }
+
+    .api-tag-badge{
+        font-size:.72rem;
+        padding:.4rem .8rem;
+    }
+
+    .api-desc{
+        font-size:.9rem;
+    }
+
+    .terminal-shell-hull{
+        padding:15px;
+    }
+
+    .terminal-code-body code{
+        font-size:.72rem;
+    }
+
+    .window-dot{
+        width:8px;
+        height:8px;
+    }
+
+    .terminal-floating-status p{
+        font-size:.68rem;
+        text-align:center;
+        word-break:break-word;
+    }
+}
 </style>
 
 <script>
@@ -3053,6 +4230,144 @@ nexus.on(<span class="code-string">'deployment_complete'</span>, (node) => {
         width: 100%;
         text-align: center;
         padding: 0.9rem 0;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE ADD-ON - ONE LINE CTA SECTION
+========================================== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+
+    .one-line-cta-frame{
+        padding: 45px 0 30px;
+    }
+
+    .one-line-cta-container{
+        padding: 0 1.75rem;
+    }
+
+    .one-line-title{
+        font-size: 1.55rem;
+        line-height: 1.4;
+    }
+
+    .one-line-flex-row{
+        gap: 2rem;
+    }
+
+    .btn-one-line-glow{
+        padding: 0.85rem 1.8rem;
+    }
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .one-line-cta-frame{
+        padding:40px 0 30px;
+    }
+
+    .one-line-cta-container{
+        padding:0 1.5rem;
+    }
+
+    .one-line-flex-row{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        gap:1.75rem;
+    }
+
+    .one-line-title{
+        width:100%;
+        font-size:1.45rem;
+        line-height:1.45;
+    }
+
+    .one-line-actions{
+        width:100%;
+    }
+
+    .btn-one-line-glow{
+        width:100%;
+        max-width:320px;
+        margin:auto;
+        text-align:center;
+        padding:0.95rem 1.5rem;
+    }
+
+    .sky-glow-patch{
+        right:-20%;
+        opacity:.18;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width:576px){
+
+    .one-line-cta-frame{
+        padding:35px 0 25px;
+    }
+
+    .one-line-cta-container{
+        padding:0 1.2rem;
+    }
+
+    .one-line-title{
+        font-size:1.25rem;
+        line-height:1.5;
+        letter-spacing:-0.3px;
+    }
+
+    .btn-one-line-glow{
+        font-size:.95rem;
+        padding:0.9rem 1rem;
+        border-radius:10px;
+    }
+
+    .one-line-ambient-glow{
+        width:260px;
+        height:180px;
+        filter:blur(70px);
+    }
+}
+
+/* Small Phones */
+@media (max-width:480px){
+
+    .one-line-cta-container{
+        padding:0 1rem;
+    }
+
+    .one-line-title{
+        font-size:1.15rem;
+        line-height:1.55;
+    }
+
+    .btn-one-line-glow{
+        width:100%;
+        max-width:100%;
+        font-size:.9rem;
+    }
+
+    .sky-glow-patch{
+        display:none;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width:360px){
+
+    .one-line-title{
+        font-size:1.05rem;
+    }
+
+    .btn-one-line-glow{
+        padding:0.85rem;
+        font-size:.85rem;
     }
 }
 
@@ -3514,7 +4829,236 @@ nexus.on(<span class="code-string">'deployment_complete'</span>, (node) => {
     .floating-back-top-trigger { bottom: 1.5rem; right: 1.5rem; }
 }
 
+/* ==========================================================
+   FOOTER SECTION - RESPONSIVE ADD-ON
+========================================================== */
 
+/* Large Tablets */
+@media (max-width:992px){
+
+    .tech-footer-root{
+        padding:60px 0 40px;
+    }
+
+    .footer-grid-container{
+        grid-template-columns:1.3fr 1fr;
+        gap:3rem 2rem;
+        padding:0 2rem;
+    }
+
+    .footer-summary-block{
+        grid-column:1 / -1;
+        max-width:700px;
+    }
+
+    .footer-dispatch-column{
+        grid-column:1 / -1;
+        justify-self:start;
+        max-width:500px;
+    }
+
+    .footer-links-column{
+        justify-self:start;
+        min-width:auto;
+    }
+
+    .footer-base-compliance-row{
+        margin-top:3rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .tech-footer-root{
+        padding:55px 0 35px;
+    }
+
+    .footer-grid-container{
+        grid-template-columns:1fr;
+        gap:2.5rem;
+        padding:0 1.5rem;
+    }
+
+    .footer-summary-block,
+    .footer-links-column,
+    .footer-dispatch-column{
+        align-items:center;
+        justify-self:center;
+        text-align:center;
+        max-width:100%;
+        grid-column:auto;
+    }
+
+    .footer-brand-anchor{
+        justify-content:center;
+    }
+
+    .footer-corporate-desc{
+        max-width:600px;
+    }
+
+    .footer-location-line{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .footer-social-row{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .footer-links-stack{
+        align-items:center;
+    }
+
+    .column-title-heading::after{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .dispatch-input-row{
+        max-width:420px;
+    }
+
+    .footer-base-compliance-row{
+        margin-top:2.5rem;
+        padding:1.5rem 1.5rem 0;
+    }
+
+    .compliance-inner-flex{
+        flex-direction:column;
+        text-align:center;
+        gap:1rem;
+    }
+
+    .compliance-links-track{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:1rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .tech-footer-root{
+        padding:50px 0 30px;
+    }
+
+    .footer-grid-container{
+        padding:0 1rem;
+        gap:2rem;
+    }
+
+    .footer-brand-logo{
+        width:100px;
+        height:auto;
+    }
+
+    .footer-corporate-desc,
+    .dispatch-instructions-text{
+        font-size:.88rem;
+        line-height:1.7;
+    }
+
+    .location-string-text{
+        font-size:.82rem;
+    }
+
+    .column-title-heading{
+        font-size:.82rem;
+        margin-bottom:1rem;
+    }
+
+    .footer-links-stack{
+        gap:.75rem;
+    }
+
+    .footer-links-stack a{
+        font-size:.88rem;
+    }
+
+    .dispatch-text-input{
+        font-size:.88rem;
+        padding:.75rem 3.2rem .75rem 1rem;
+    }
+
+    .btn-dispatch-arrow{
+        width:34px;
+        height:34px;
+    }
+
+    .footer-base-compliance-row{
+        padding:1.25rem 1rem 0;
+    }
+
+    .footer-copyright-statement,
+    .compliance-links-track a{
+        font-size:.75rem;
+    }
+
+    .floating-back-top-trigger{
+        width:40px;
+        height:40px;
+        right:1rem;
+        bottom:1rem;
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width:380px){
+
+    .footer-grid-container{
+        padding:0 .8rem;
+    }
+
+    .footer-brand-logo{
+        width:90px;
+    }
+
+    .footer-corporate-desc,
+    .dispatch-instructions-text{
+        font-size:.84rem;
+    }
+
+    .location-string-text{
+        font-size:.78rem;
+    }
+
+    .footer-links-stack a{
+        font-size:.84rem;
+    }
+
+    .dispatch-text-input{
+        font-size:.84rem;
+    }
+
+    .btn-dispatch-arrow{
+        width:32px;
+        height:32px;
+    }
+
+    .footer-social-row{
+        gap:.65rem;
+    }
+
+    .social-circle-node{
+        width:34px;
+        height:34px;
+    }
+
+    .floating-back-top-trigger{
+        width:38px;
+        height:38px;
+        right:.8rem;
+        bottom:.8rem;
+    }
+
+}
 </style>
 
 <script>
